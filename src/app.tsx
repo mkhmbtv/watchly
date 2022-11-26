@@ -1,10 +1,9 @@
 import '@reach/dialog/styles.css'
 import * as React from 'react'
-import {Dialog} from '@reach/dialog'
 import {LoginForm, FormData} from './components/login-form'
+import {Modal, ModalOpenButton, ModalContents} from './components/modal'
 
 function App() {
-  const [openModal, setOpenModal] = React.useState('none')
   const login = (formData: FormData) => {
     console.log('login', formData)
   }
@@ -15,28 +14,26 @@ function App() {
   return (
     <div>
       <div>
-        <button onClick={() => setOpenModal('login')}>Login</button>
+        <Modal>
+          <ModalOpenButton>
+            <button>Login</button>
+          </ModalOpenButton>
+          <ModalContents aria-label="Login form" title="Login">
+            <LoginForm onSubmit={login} submitButton={<button>Login</button>} />
+          </ModalContents>
+        </Modal>
+        <Modal>
+          <ModalOpenButton>
+            <button>Register</button>
+          </ModalOpenButton>
+          <ModalContents aria-label="Registration form" title="Register">
+            <LoginForm
+              onSubmit={register}
+              submitButton={<button>Register</button>}
+            />
+          </ModalContents>
+        </Modal>
       </div>
-      <div>
-        <button onClick={() => setOpenModal('register')}>Register</button>
-      </div>
-      <Dialog aria-label="Login form" isOpen={openModal === 'login'}>
-        <div>
-          <button onClick={() => setOpenModal('none')}>Close</button>
-        </div>
-        <h3>Login</h3>
-        <LoginForm onSubmit={login} submitButton={<button>Login</button>} />
-      </Dialog>
-      <Dialog aria-label="Registration form" isOpen={openModal === 'register'}>
-        <div>
-          <button onClick={() => setOpenModal('none')}>Close</button>
-        </div>
-        <h3>Register</h3>
-        <LoginForm
-          onSubmit={register}
-          submitButton={<button>Register</button>}
-        />
-      </Dialog>
     </div>
   )
 }
