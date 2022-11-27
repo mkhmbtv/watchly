@@ -1,6 +1,7 @@
 import * as React from 'react'
 import {Dialog} from '@reach/dialog'
 import VisuallyHidden from '@reach/visually-hidden'
+import {CircleButton} from './button'
 
 function callAll<Args extends Array<unknown>>(
   ...fns: Array<((...args: Args) => unknown) | undefined>
@@ -13,24 +14,21 @@ type ModalContextType = {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-type WithChildren = {
-  children: React.ReactNode | Array<React.ReactNode>
+interface WithChildren {
+  children: React.ReactElement
 }
 
-interface Props extends WithChildren {
+interface Props {
   title: string
+  children: React.ReactNode | Array<React.ReactNode>
 }
 
 const ModalContext = React.createContext<ModalContextType | null>(null)
 
-function Modal({children}: WithChildren) {
+function Modal(props: React.PropsWithChildren) {
   const [isOpen, setIsOpen] = React.useState(false)
 
-  return (
-    <ModalContext.Provider value={{isOpen, setIsOpen}}>
-      {children}
-    </ModalContext.Provider>
-  )
+  return <ModalContext.Provider value={{isOpen, setIsOpen}} {...props} />
 }
 
 function useModalContext(): ModalContextType {
@@ -45,13 +43,7 @@ function useModalContext(): ModalContextType {
 function ModalCloseButton({children: child}: WithChildren) {
   const {setIsOpen} = useModalContext()
 
-  if (!React.isValidElement(child)) {
-    throw new Error(
-      'ModalCloseButton must have a valid React element as its child',
-    )
-  }
-
-  return React.cloneElement(child as React.ReactElement, {
+  return React.cloneElement(child, {
     onClick: callAll(() => setIsOpen(false), child.props?.onClick),
   })
 }
@@ -59,13 +51,7 @@ function ModalCloseButton({children: child}: WithChildren) {
 function ModalOpenButton({children: child}: WithChildren) {
   const {setIsOpen} = useModalContext()
 
-  if (!React.isValidElement(child)) {
-    throw new Error(
-      'ModalOpenButton must have a valid React element as its child',
-    )
-  }
-
-  return React.cloneElement(child as React.ReactElement, {
+  return React.cloneElement(child, {
     onClick: callAll(() => setIsOpen(true), child.props?.onClick),
   })
 }
@@ -73,7 +59,12 @@ function ModalOpenButton({children: child}: WithChildren) {
 function ModalContentsBase(props: React.PropsWithChildren) {
   const {isOpen, setIsOpen} = useModalContext()
   return (
-    <Dialog isOpen={isOpen} onDismiss={() => setIsOpen(false)} {...props} />
+    <Dialog
+      isOpen={isOpen}
+      onDismiss={() => setIsOpen(false)}
+      {...props}
+      className="max-w-md rounded-sm pb-14 my-[20vh] mx-auto shadow-lg sm:w-full sm:my-[10vh]"
+    />
   )
 }
 
@@ -82,10 +73,10 @@ function ModalContents({title, children, ...props}: Props) {
     <ModalContentsBase {...props}>
       <div className="flex justify-end">
         <ModalCloseButton>
-          <button className="rounded-full w-10 h-10 leading-none flex items-center justify-center border border-solid border-gray-100">
+          <CircleButton>
             <VisuallyHidden>Close</VisuallyHidden>
             <span aria-hidden>×</span>
-          </button>
+          </CircleButton>
         </ModalCloseButton>
       </div>
       <h3 className="text-center text-3xl font-medium">{title}</h3>

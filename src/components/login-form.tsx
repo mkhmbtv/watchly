@@ -1,4 +1,5 @@
 import * as React from 'react'
+import {Input, FormGroup} from './form-elements'
 
 export interface FormData {
   username: string
@@ -23,15 +24,18 @@ function LoginForm({onSubmit, submitButton}: Props) {
     })
   }
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form
+      onSubmit={handleSubmit}
+      className="flex flex-col items-stretch [&>div]:my-2.5 [&>div]:mx-auto [&>div]:w-full [&>div]:max-w-xs"
+    >
+      <FormGroup>
         <label htmlFor="username">Username</label>
-        <input id="username" />
-      </div>
-      <div>
-        <label htmlFor="password">Username</label>
-        <input id="password" type="password" />
-      </div>
+        <Input id="username" />
+      </FormGroup>
+      <FormGroup>
+        <label htmlFor="password">Password</label>
+        <Input id="password" type="password" />
+      </FormGroup>
       <div>{React.cloneElement(submitButton, {type: 'submit'})}</div>
     </form>
   )

@@ -1,7 +1,8 @@
-import '@reach/dialog/styles.css'
 import * as React from 'react'
 import {LoginForm, FormData} from './components/login-form'
+import {Logo} from './components/logo'
 import {Modal, ModalOpenButton, ModalContents} from './components/modal'
+import {Button} from './components/button'
 
 function App() {
   const login = (formData: FormData) => {
@@ -12,24 +13,29 @@ function App() {
   }
 
   return (
-    <div>
-      <div>
+    <div className="flex flex-col items-center justify-center w-full h-screen">
+      <Logo width="120" height="120" />
+      <h1 className="text-4xl mb-4 font-bold">Movify</h1>
+      <div className="grid grid-cols-2 gap-3">
         <Modal>
           <ModalOpenButton>
-            <button>Login</button>
+            <Button variant="primary">Login</Button>
           </ModalOpenButton>
           <ModalContents aria-label="Login form" title="Login">
-            <LoginForm onSubmit={login} submitButton={<button>Login</button>} />
+            <LoginForm
+              onSubmit={login}
+              submitButton={<Button variant="primary">Login</Button>}
+            />
           </ModalContents>
         </Modal>
         <Modal>
           <ModalOpenButton>
-            <button>Register</button>
+            <Button variant="secondary">Register</Button>
           </ModalOpenButton>
           <ModalContents aria-label="Registration form" title="Register">
             <LoginForm
               onSubmit={register}
-              submitButton={<button>Register</button>}
+              submitButton={<Button variant="secondary">Register</Button>}
             />
           </ModalContents>
         </Modal>
