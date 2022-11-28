@@ -6,12 +6,6 @@
     "description": "(1999)",
     "runtimeStr": "122 min",
     "genres": "Drama",
-    "genreList": [
-      {
-        "key": "Drama",
-        "value": "Drama"
-      }
-    ],
     "contentRating": "R",
     "imDbRating": "8.4",
     "imDbRatingVotes": "1152496",
@@ -48,16 +42,6 @@
     "description": "(2019)",
     "runtimeStr": "132 min",
     "genres": "Drama, Thriller",
-    "genreList": [
-      {
-        "key": "Drama",
-        "value": "Drama"
-      },
-      {
-        "key": "Thriller",
-        "value": "Thriller"
-      }
-    ],
     "contentRating": "R",
     "imDbRating": "8.5",
     "imDbRatingVotes": "793403",
@@ -94,16 +78,6 @@
     "description": "(1994)",
     "runtimeStr": "142 min",
     "genres": "Drama, Romance",
-    "genreList": [
-      {
-        "key": "Drama",
-        "value": "Drama"
-      },
-      {
-        "key": "Romance",
-        "value": "Romance"
-      }
-    ],
     "contentRating": "PG-13",
     "imDbRating": "8.8",
     "imDbRatingVotes": "2065704",
@@ -140,20 +114,6 @@
     "description": "(1993)",
     "runtimeStr": "195 min",
     "genres": "Biography, Drama, History",
-    "genreList": [
-      {
-        "key": "Biography",
-        "value": "Biography"
-      },
-      {
-        "key": "Drama",
-        "value": "Drama"
-      },
-      {
-        "key": "History",
-        "value": "History"
-      }
-    ],
     "contentRating": "R",
     "imDbRating": "9.0",
     "imDbRatingVotes": "1349460",
@@ -190,20 +150,6 @@
     "description": "(1991)",
     "runtimeStr": "118 min",
     "genres": "Crime, Drama, Thriller",
-    "genreList": [
-      {
-        "key": "Crime",
-        "value": "Crime"
-      },
-      {
-        "key": "Drama",
-        "value": "Drama"
-      },
-      {
-        "key": "Thriller",
-        "value": "Thriller"
-      }
-    ],
     "contentRating": "R",
     "imDbRating": "8.6",
     "imDbRatingVotes": "1425891",
@@ -240,20 +186,6 @@
     "description": "(2006)",
     "runtimeStr": "151 min",
     "genres": "Crime, Drama, Thriller",
-    "genreList": [
-      {
-        "key": "Crime",
-        "value": "Crime"
-      },
-      {
-        "key": "Drama",
-        "value": "Drama"
-      },
-      {
-        "key": "Thriller",
-        "value": "Thriller"
-      }
-    ],
     "contentRating": "R",
     "imDbRating": "8.5",
     "imDbRatingVotes": "1319605",
@@ -290,20 +222,6 @@
     "description": "(2003)",
     "runtimeStr": "201 min",
     "genres": "Action, Adventure, Drama",
-    "genreList": [
-      {
-        "key": "Action",
-        "value": "Action"
-      },
-      {
-        "key": "Adventure",
-        "value": "Adventure"
-      },
-      {
-        "key": "Drama",
-        "value": "Drama"
-      }
-    ],
     "contentRating": "PG-13",
     "imDbRating": "9.0",
     "imDbRatingVotes": "1837293",
@@ -340,20 +258,6 @@
     "description": "(1995)",
     "runtimeStr": "178 min",
     "genres": "Biography, Drama, History",
-    "genreList": [
-      {
-        "key": "Biography",
-        "value": "Biography"
-      },
-      {
-        "key": "Drama",
-        "value": "Drama"
-      },
-      {
-        "key": "History",
-        "value": "History"
-      }
-    ],
     "contentRating": "R",
     "imDbRating": "8.4",
     "imDbRatingVotes": "1035731",
@@ -390,12 +294,6 @@
     "description": "(1975)",
     "runtimeStr": "133 min",
     "genres": "Drama",
-    "genreList": [
-      {
-        "key": "Drama",
-        "value": "Drama"
-      }
-    ],
     "contentRating": "R",
     "imDbRating": "8.7",
     "imDbRatingVotes": "1004930",
@@ -432,20 +330,6 @@
     "description": "(1984)",
     "runtimeStr": "160 min",
     "genres": "Biography, Drama, Music",
-    "genreList": [
-      {
-        "key": "Biography",
-        "value": "Biography"
-      },
-      {
-        "key": "Drama",
-        "value": "Drama"
-      },
-      {
-        "key": "Music",
-        "value": "Music"
-      }
-    ],
     "contentRating": "R",
     "imDbRating": "8.4",
     "imDbRatingVotes": "401233",
@@ -482,20 +366,6 @@
     "description": "(1962)",
     "runtimeStr": "218 min",
     "genres": "Adventure, Biography, Drama",
-    "genreList": [
-      {
-        "key": "Adventure",
-        "value": "Adventure"
-      },
-      {
-        "key": "Biography",
-        "value": "Biography"
-      },
-      {
-        "key": "Drama",
-        "value": "Drama"
-      }
-    ],
     "contentRating": "Approved",
     "imDbRating": "8.3",
     "imDbRatingVotes": "294250",
