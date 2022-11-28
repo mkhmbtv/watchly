@@ -1,0 +1,528 @@
+[
+  {
+    "id": "tt0169547",
+    "image": "https://m.media-amazon.com/images/M/MV5BNTBmZWJkNjctNDhiNC00MGE2LWEwOTctZTk5OGVhMWMyNmVhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_Ratio0.6837_AL_.jpg",
+    "title": "American Beauty",
+    "description": "(1999)",
+    "runtimeStr": "122 min",
+    "genres": "Drama",
+    "genreList": [
+      {
+        "key": "Drama",
+        "value": "Drama"
+      }
+    ],
+    "contentRating": "R",
+    "imDbRating": "8.4",
+    "imDbRatingVotes": "1152496",
+    "metacriticRating": "84",
+    "plot": "A sexually frustrated suburban father has a mid-life crisis after becoming infatuated with his daughter's best friend.",
+    "stars": "Sam Mendes, Kevin Spacey, Annette Bening, Thora Birch, Wes Bentley",
+    "starList": [
+      {
+        "id": "tt0169547",
+        "name": "Sam Mendes"
+      },
+      {
+        "id": "tt0169547",
+        "name": "Kevin Spacey"
+      },
+      {
+        "id": "tt0169547",
+        "name": "Annette Bening"
+      },
+      {
+        "id": "tt0169547",
+        "name": "Thora Birch"
+      },
+      {
+        "id": "tt0169547",
+        "name": "Wes Bentley"
+      }
+    ]
+  },
+  {
+    "id": "tt6751668",
+    "image": "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Parasite",
+    "description": "(2019)",
+    "runtimeStr": "132 min",
+    "genres": "Drama, Thriller",
+    "genreList": [
+      {
+        "key": "Drama",
+        "value": "Drama"
+      },
+      {
+        "key": "Thriller",
+        "value": "Thriller"
+      }
+    ],
+    "contentRating": "R",
+    "imDbRating": "8.5",
+    "imDbRatingVotes": "793403",
+    "metacriticRating": "96",
+    "plot": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+    "stars": "Bong Joon Ho, Song Kang-ho, Lee Sun-kyun, Cho Yeo-jeong, Choi Woo-sik",
+    "starList": [
+      {
+        "id": "tt6751668",
+        "name": "Bong Joon Ho"
+      },
+      {
+        "id": "tt6751668",
+        "name": "Song Kang-ho"
+      },
+      {
+        "id": "tt6751668",
+        "name": "Lee Sun-kyun"
+      },
+      {
+        "id": "tt6751668",
+        "name": "Cho Yeo-jeong"
+      },
+      {
+        "id": "tt6751668",
+        "name": "Choi Woo-sik"
+      }
+    ]
+  },
+  {
+    "id": "tt0109830",
+    "image": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Forrest Gump",
+    "description": "(1994)",
+    "runtimeStr": "142 min",
+    "genres": "Drama, Romance",
+    "genreList": [
+      {
+        "key": "Drama",
+        "value": "Drama"
+      },
+      {
+        "key": "Romance",
+        "value": "Romance"
+      }
+    ],
+    "contentRating": "PG-13",
+    "imDbRating": "8.8",
+    "imDbRatingVotes": "2065704",
+    "metacriticRating": "82",
+    "plot": "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
+    "stars": "Robert Zemeckis, Tom Hanks, Robin Wright, Gary Sinise, Sally Field",
+    "starList": [
+      {
+        "id": "tt0109830",
+        "name": "Robert Zemeckis"
+      },
+      {
+        "id": "tt0109830",
+        "name": "Tom Hanks"
+      },
+      {
+        "id": "tt0109830",
+        "name": "Robin Wright"
+      },
+      {
+        "id": "tt0109830",
+        "name": "Gary Sinise"
+      },
+      {
+        "id": "tt0109830",
+        "name": "Sally Field"
+      }
+    ]
+  },
+  {
+    "id": "tt0108052",
+    "image": "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Schindler's List",
+    "description": "(1993)",
+    "runtimeStr": "195 min",
+    "genres": "Biography, Drama, History",
+    "genreList": [
+      {
+        "key": "Biography",
+        "value": "Biography"
+      },
+      {
+        "key": "Drama",
+        "value": "Drama"
+      },
+      {
+        "key": "History",
+        "value": "History"
+      }
+    ],
+    "contentRating": "R",
+    "imDbRating": "9.0",
+    "imDbRatingVotes": "1349460",
+    "metacriticRating": "94",
+    "plot": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+    "stars": "Steven Spielberg, Liam Neeson, Ralph Fiennes, Ben Kingsley, Caroline Goodall",
+    "starList": [
+      {
+        "id": "tt0108052",
+        "name": "Steven Spielberg"
+      },
+      {
+        "id": "tt0108052",
+        "name": "Liam Neeson"
+      },
+      {
+        "id": "tt0108052",
+        "name": "Ralph Fiennes"
+      },
+      {
+        "id": "tt0108052",
+        "name": "Ben Kingsley"
+      },
+      {
+        "id": "tt0108052",
+        "name": "Caroline Goodall"
+      }
+    ]
+  },
+  {
+    "id": "tt0102926",
+    "image": "https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Silence of the Lambs",
+    "description": "(1991)",
+    "runtimeStr": "118 min",
+    "genres": "Crime, Drama, Thriller",
+    "genreList": [
+      {
+        "key": "Crime",
+        "value": "Crime"
+      },
+      {
+        "key": "Drama",
+        "value": "Drama"
+      },
+      {
+        "key": "Thriller",
+        "value": "Thriller"
+      }
+    ],
+    "contentRating": "R",
+    "imDbRating": "8.6",
+    "imDbRatingVotes": "1425891",
+    "metacriticRating": "85",
+    "plot": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
+    "stars": "Jonathan Demme, Jodie Foster, Anthony Hopkins, Lawrence A. Bonney, Kasi Lemmons",
+    "starList": [
+      {
+        "id": "tt0102926",
+        "name": "Jonathan Demme"
+      },
+      {
+        "id": "tt0102926",
+        "name": "Jodie Foster"
+      },
+      {
+        "id": "tt0102926",
+        "name": "Anthony Hopkins"
+      },
+      {
+        "id": "tt0102926",
+        "name": "Lawrence A. Bonney"
+      },
+      {
+        "id": "tt0102926",
+        "name": "Kasi Lemmons"
+      }
+    ]
+  },
+  {
+    "id": "tt0407887",
+    "image": "https://m.media-amazon.com/images/M/MV5BMTI1MTY2OTIxNV5BMl5BanBnXkFtZTYwNjQ4NjY3._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Departed",
+    "description": "(2006)",
+    "runtimeStr": "151 min",
+    "genres": "Crime, Drama, Thriller",
+    "genreList": [
+      {
+        "key": "Crime",
+        "value": "Crime"
+      },
+      {
+        "key": "Drama",
+        "value": "Drama"
+      },
+      {
+        "key": "Thriller",
+        "value": "Thriller"
+      }
+    ],
+    "contentRating": "R",
+    "imDbRating": "8.5",
+    "imDbRatingVotes": "1319605",
+    "metacriticRating": "85",
+    "plot": "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.",
+    "stars": "Martin Scorsese, Leonardo DiCaprio, Matt Damon, Jack Nicholson, Mark Wahlberg",
+    "starList": [
+      {
+        "id": "tt0407887",
+        "name": "Martin Scorsese"
+      },
+      {
+        "id": "tt0407887",
+        "name": "Leonardo DiCaprio"
+      },
+      {
+        "id": "tt0407887",
+        "name": "Matt Damon"
+      },
+      {
+        "id": "tt0407887",
+        "name": "Jack Nicholson"
+      },
+      {
+        "id": "tt0407887",
+        "name": "Mark Wahlberg"
+      }
+    ]
+  },
+  {
+    "id": "tt0167260",
+    "image": "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Lord of the Rings: The Return of the King",
+    "description": "(2003)",
+    "runtimeStr": "201 min",
+    "genres": "Action, Adventure, Drama",
+    "genreList": [
+      {
+        "key": "Action",
+        "value": "Action"
+      },
+      {
+        "key": "Adventure",
+        "value": "Adventure"
+      },
+      {
+        "key": "Drama",
+        "value": "Drama"
+      }
+    ],
+    "contentRating": "PG-13",
+    "imDbRating": "9.0",
+    "imDbRatingVotes": "1837293",
+    "metacriticRating": "94",
+    "plot": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+    "stars": "Peter Jackson, Elijah Wood, Viggo Mortensen, Ian McKellen, Orlando Bloom",
+    "starList": [
+      {
+        "id": "tt0167260",
+        "name": "Peter Jackson"
+      },
+      {
+        "id": "tt0167260",
+        "name": "Elijah Wood"
+      },
+      {
+        "id": "tt0167260",
+        "name": "Viggo Mortensen"
+      },
+      {
+        "id": "tt0167260",
+        "name": "Ian McKellen"
+      },
+      {
+        "id": "tt0167260",
+        "name": "Orlando Bloom"
+      }
+    ]
+  },
+  {
+    "id": "tt0112573",
+    "image": "https://m.media-amazon.com/images/M/MV5BMzkzMmU0YTYtOWM3My00YzBmLWI0YzctOGYyNTkwMWE5MTJkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Braveheart",
+    "description": "(1995)",
+    "runtimeStr": "178 min",
+    "genres": "Biography, Drama, History",
+    "genreList": [
+      {
+        "key": "Biography",
+        "value": "Biography"
+      },
+      {
+        "key": "Drama",
+        "value": "Drama"
+      },
+      {
+        "key": "History",
+        "value": "History"
+      }
+    ],
+    "contentRating": "R",
+    "imDbRating": "8.4",
+    "imDbRatingVotes": "1035731",
+    "metacriticRating": "68",
+    "plot": "Scottish warrior William Wallace leads his countrymen in a rebellion to free his homeland from the tyranny of King Edward I of England.",
+    "stars": "Mel Gibson, Sophie Marceau, Patrick McGoohan, Angus Macfadyen",
+    "starList": [
+      {
+        "id": "tt0112573",
+        "name": "Mel Gibson"
+      },
+      {
+        "id": "tt0112573",
+        "name": "Mel Gibson"
+      },
+      {
+        "id": "tt0112573",
+        "name": "Sophie Marceau"
+      },
+      {
+        "id": "tt0112573",
+        "name": "Patrick McGoohan"
+      },
+      {
+        "id": "tt0112573",
+        "name": "Angus Macfadyen"
+      }
+    ]
+  },
+  {
+    "id": "tt0073486",
+    "image": "https://m.media-amazon.com/images/M/MV5BZjA0OWVhOTAtYWQxNi00YzNhLWI4ZjYtNjFjZTEyYjJlNDVlL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_Ratio0.6837_AL_.jpg",
+    "title": "One Flew Over the Cuckoo's Nest",
+    "description": "(1975)",
+    "runtimeStr": "133 min",
+    "genres": "Drama",
+    "genreList": [
+      {
+        "key": "Drama",
+        "value": "Drama"
+      }
+    ],
+    "contentRating": "R",
+    "imDbRating": "8.7",
+    "imDbRatingVotes": "1004930",
+    "metacriticRating": "84",
+    "plot": "In the Fall of 1963, a Korean War veteran and criminal pleads insanity and is admitted to a mental institution, where he rallies up the scared patients against the tyrannical nurse.",
+    "stars": "Milos Forman, Jack Nicholson, Louise Fletcher, Michael Berryman, Peter Brocco",
+    "starList": [
+      {
+        "id": "tt0073486",
+        "name": "Milos Forman"
+      },
+      {
+        "id": "tt0073486",
+        "name": "Jack Nicholson"
+      },
+      {
+        "id": "tt0073486",
+        "name": "Louise Fletcher"
+      },
+      {
+        "id": "tt0073486",
+        "name": "Michael Berryman"
+      },
+      {
+        "id": "tt0073486",
+        "name": "Peter Brocco"
+      }
+    ]
+  },
+  {
+    "id": "tt0086879",
+    "image": "https://m.media-amazon.com/images/M/MV5BNWJlNzUzNGMtYTAwMS00ZjI2LWFmNWQtODcxNWUxODA5YmU1XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Amadeus",
+    "description": "(1984)",
+    "runtimeStr": "160 min",
+    "genres": "Biography, Drama, Music",
+    "genreList": [
+      {
+        "key": "Biography",
+        "value": "Biography"
+      },
+      {
+        "key": "Drama",
+        "value": "Drama"
+      },
+      {
+        "key": "Music",
+        "value": "Music"
+      }
+    ],
+    "contentRating": "R",
+    "imDbRating": "8.4",
+    "imDbRatingVotes": "401233",
+    "metacriticRating": "88",
+    "plot": "The life, success and troubles of Wolfgang Amadeus Mozart, as told by Antonio Salieri, the contemporaneous composer who was deeply jealous of Mozart's talent and claimed to have murdered him.",
+    "stars": "Milos Forman, F. Murray Abraham, Tom Hulce, Elizabeth Berridge, Roy Dotrice",
+    "starList": [
+      {
+        "id": "tt0086879",
+        "name": "Milos Forman"
+      },
+      {
+        "id": "tt0086879",
+        "name": "F. Murray Abraham"
+      },
+      {
+        "id": "tt0086879",
+        "name": "Tom Hulce"
+      },
+      {
+        "id": "tt0086879",
+        "name": "Elizabeth Berridge"
+      },
+      {
+        "id": "tt0086879",
+        "name": "Roy Dotrice"
+      }
+    ]
+  },
+  {
+    "id": "tt0056172",
+    "image": "https://m.media-amazon.com/images/M/MV5BYWY5ZjhjNGYtZmI2Ny00ODM0LWFkNzgtZmI1YzA2N2MxMzA0XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Lawrence of Arabia",
+    "description": "(1962)",
+    "runtimeStr": "218 min",
+    "genres": "Adventure, Biography, Drama",
+    "genreList": [
+      {
+        "key": "Adventure",
+        "value": "Adventure"
+      },
+      {
+        "key": "Biography",
+        "value": "Biography"
+      },
+      {
+        "key": "Drama",
+        "value": "Drama"
+      }
+    ],
+    "contentRating": "Approved",
+    "imDbRating": "8.3",
+    "imDbRatingVotes": "294250",
+    "metacriticRating": "100",
+    "plot": "The story of T.E. Lawrence, the English officer who successfully united and led the diverse, often warring, Arab tribes during World War I in order to fight the Turks.",
+    "stars": "David Lean, Peter O'Toole, Alec Guinness, Anthony Quinn, Jack Hawkins",
+    "starList": [
+      {
+        "id": "tt0056172",
+        "name": "David Lean"
+      },
+      {
+        "id": "tt0056172",
+        "name": "Peter O'Toole"
+      },
+      {
+        "id": "tt0056172",
+        "name": "Alec Guinness"
+      },
+      {
+        "id": "tt0056172",
+        "name": "Anthony Quinn"
+      },
+      {
+        "id": "tt0056172",
+        "name": "Jack Hawkins"
+      }
+    ]
+  }
+]
