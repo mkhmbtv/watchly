@@ -4,6 +4,7 @@ import {FaSearch} from 'react-icons/fa'
 import {Input} from 'components/form-elements'
 import {Spinner} from 'components/spinner'
 import {Movie} from 'types/movies'
+import {MovieRow} from 'components/movie-row'
 
 function DiscoverMoviesScreen() {
   const [status, setStatus] = React.useState('idle')
@@ -15,7 +16,7 @@ function DiscoverMoviesScreen() {
   const isSuccess = status === 'success'
 
   React.useEffect(() => {
-    if (!queried) return
+    // if (!queried) return
     setStatus('loading')
     window
       .fetch(
@@ -28,7 +29,7 @@ function DiscoverMoviesScreen() {
         setData(data)
         setStatus('success')
       })
-  }, [queried, query])
+  }, [query])
 
   function handleSearch(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -56,14 +57,10 @@ function DiscoverMoviesScreen() {
       </form>
       {isSuccess ? (
         data?.movies?.length ? (
-          <ul>
+          <ul className="mt-5">
             {data?.movies?.map(movie => (
               <li key={movie.id} aria-label={movie.title}>
-                <div>
-                  <h2>{movie.title}</h2>
-                  <img src={movie.image} alt="poster" />
-                  {movie.plot}
-                </div>
+                <MovieRow movie={movie} />
               </li>
             ))}
           </ul>
