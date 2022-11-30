@@ -1,34 +1,41 @@
 import * as React from 'react'
 import Tooltip from '@reach/tooltip'
-import {FaSearch} from 'react-icons/fa'
+import {FaSearch, FaTimes} from 'react-icons/fa'
 import {Input} from 'components/form-elements'
 import {Spinner} from 'components/spinner'
 import {Movie} from 'types/movies'
 import {MovieRow} from 'components/movie-row'
+import {client} from 'utils/api-client'
+
+interface Movies {
+  movies: Movie[]
+}
 
 function DiscoverMoviesScreen() {
   const [status, setStatus] = React.useState('idle')
-  const [data, setData] = React.useState<{movies: Movie[]} | null>(null)
+  const [data, setData] = React.useState<Movies | null>(null)
   const [query, setQuery] = React.useState('')
   const [queried, setQueried] = React.useState(false)
+  const [error, setError] = React.useState<Error | null>(null)
 
   const isLoading = status === 'loading'
   const isSuccess = status === 'success'
+  const isError = status === 'error'
 
   React.useEffect(() => {
     // if (!queried) return
     setStatus('loading')
-    window
-      .fetch(
-        `${process.env.REACT_APP_API_URL}/movies?query=${encodeURIComponent(
-          query,
-        )}`,
-      )
-      .then(res => res.json())
-      .then(data => {
-        setData(data)
+
+    client<Movies>(`movies?query=${encodeURIComponent(query)}`).then(
+      data => {
         setStatus('success')
-      })
+        setData(data)
+      },
+      error => {
+        setStatus('error')
+        setError(error)
+      },
+    )
   }, [query])
 
   function handleSearch(event: React.FormEvent<HTMLFormElement>) {
@@ -50,11 +57,23 @@ function DiscoverMoviesScreen() {
               type="submit"
               className="relative -ml-9 border-0 bg-transparent"
             >
-              {isLoading ? <Spinner /> : <FaSearch aria-label="search" />}
+              {isLoading ? (
+                <Spinner />
+              ) : isError ? (
+                <FaTimes aria-label="error" className="text-red-500" />
+              ) : (
+                <FaSearch aria-label="search" />
+              )}
             </button>
           </label>
         </Tooltip>
       </form>
+      {isError ? (
+        <div className="text-red-500">
+          <p>There was an error:</p>
+          <pre>{error?.message}</pre>
+        </div>
+      ) : null}
       {isSuccess ? (
         data?.movies?.length ? (
           <ul className="mt-5">
