@@ -6,37 +6,20 @@ import {Spinner} from 'components/spinner'
 import {Movie} from 'types/movies'
 import {MovieRow} from 'components/movie-row'
 import {client} from 'utils/api-client'
+import {useAsync} from 'hooks/useAsync'
 
 interface Movies {
   movies: Movie[]
 }
 
 function DiscoverMoviesScreen() {
-  const [status, setStatus] = React.useState('idle')
-  const [data, setData] = React.useState<Movies | null>(null)
+  const {data, isLoading, isSuccess, isError, error, run} = useAsync<Movies>()
   const [query, setQuery] = React.useState('')
   const [queried, setQueried] = React.useState(false)
-  const [error, setError] = React.useState<Error | null>(null)
-
-  const isLoading = status === 'loading'
-  const isSuccess = status === 'success'
-  const isError = status === 'error'
 
   React.useEffect(() => {
-    // if (!queried) return
-    setStatus('loading')
-
-    client<Movies>(`movies?query=${encodeURIComponent(query)}`).then(
-      data => {
-        setStatus('success')
-        setData(data)
-      },
-      error => {
-        setStatus('error')
-        setError(error)
-      },
-    )
-  }, [query])
+    run(client<Movies>(`movies?query=${encodeURIComponent(query)}`))
+  }, [query, run])
 
   function handleSearch(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
