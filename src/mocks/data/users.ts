@@ -1,5 +1,5 @@
 import {HttpError} from '../error'
-import {User, UserFormData} from 'types/user'
+import {User, UserFormData, SanitizedUser, AuthUser} from 'types/user'
 
 const usersKey = '__movify_users__'
 type UserStore = {
@@ -18,8 +18,6 @@ try {
   persist()
 }
 
-type SanitizedUser = Omit<User, 'passwordHash'>
-
 function validateUserForm({username, password}: UserFormData) {
   if (!username) {
     throw new HttpError(400, 'A username is required')
@@ -32,7 +30,7 @@ function validateUserForm({username, password}: UserFormData) {
 async function authenticate({
   username,
   password,
-}: UserFormData): Promise<SanitizedUser & {token: string}> {
+}: UserFormData): Promise<AuthUser> {
   validateUserForm({username, password})
   const id = hash(username)
   const user = users[id] || {}
