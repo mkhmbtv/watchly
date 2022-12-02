@@ -3,6 +3,7 @@ import {rest} from 'msw'
 import * as usersDB from '../data/users'
 import * as moviesDB from '../data/movies'
 import {getErrorMessage} from 'utils/error'
+import {UserFormData} from 'types/user'
 
 const apiUrl = process.env.REACT_APP_API_URL
 
@@ -10,11 +11,11 @@ const handlers: Array<RestHandler<MockedRequest<DefaultBodyType>>> = [
   rest.post(`${apiUrl}/login`, async (req, res, ctx) => {
     const {username, password} = await req.json()
     const user = await usersDB.authenticate({username, password})
-    return res(ctx.json({user}))
+    return res(ctx.json(user))
   }),
   rest.post(`${apiUrl}/register`, async (req, res, ctx) => {
     const {username, password} = await req.json()
-    const userFields = {username, password}
+    const userFields: UserFormData = {username, password}
     await usersDB.create(userFields)
     let user
     try {

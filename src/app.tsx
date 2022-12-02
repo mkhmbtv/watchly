@@ -1,46 +1,25 @@
 import * as React from 'react'
-import {LoginForm, FormData} from './components/login-form'
-import {Logo} from './components/logo'
-import {Modal, ModalOpenButton, ModalContents} from './components/modal'
-import {Button} from './components/button'
+import * as session from './services/session'
+import {AuthUser, UserFormData} from './types/user'
+import {AuthenticatedApp} from 'authenticated-app'
+import {UnauthenticatedApp} from 'unauthenticated-app'
 
 function App() {
-  const login = (formData: FormData) => {
-    console.log('login', formData)
-  }
-  const register = (formData: FormData) => {
-    console.log('register', formData)
+  const [user, setUser] = React.useState<AuthUser | null>(null)
+
+  const login = (formData: UserFormData) =>
+    session.login(formData).then(u => setUser(u))
+  const register = (formData: UserFormData) =>
+    session.register(formData).then(u => setUser(u))
+  const logout = () => {
+    session.logout()
+    setUser(null)
   }
 
-  return (
-    <div className="flex flex-col items-center justify-center w-full h-screen">
-      <Logo width="120" height="120" />
-      <h1 className="text-4xl mb-4 font-bold">Movify</h1>
-      <div className="grid grid-cols-2 gap-3">
-        <Modal>
-          <ModalOpenButton>
-            <Button variant="primary">Login</Button>
-          </ModalOpenButton>
-          <ModalContents aria-label="Login form" title="Login">
-            <LoginForm
-              onSubmit={login}
-              submitButton={<Button variant="primary">Login</Button>}
-            />
-          </ModalContents>
-        </Modal>
-        <Modal>
-          <ModalOpenButton>
-            <Button variant="secondary">Register</Button>
-          </ModalOpenButton>
-          <ModalContents aria-label="Registration form" title="Register">
-            <LoginForm
-              onSubmit={register}
-              submitButton={<Button variant="secondary">Register</Button>}
-            />
-          </ModalContents>
-        </Modal>
-      </div>
-    </div>
+  return user ? (
+    <AuthenticatedApp user={user} logout={logout} />
+  ) : (
+    <UnauthenticatedApp login={login} register={register} />
   )
 }
 

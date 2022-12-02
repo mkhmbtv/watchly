@@ -37,7 +37,7 @@ async function authenticate({
   if (user.passwordHash === hash(password)) {
     return {
       ...sanitizeUser(user),
-      token: Buffer.from(user.id).toString('base64'),
+      token: window.btoa(user.id),
     }
   }
   throw new HttpError(400, 'Invalid username or password')

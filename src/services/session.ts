@@ -7,21 +7,23 @@ async function getToken() {
   return window.localStorage.getItem(localStorageKey)
 }
 
+type AuthenticateUser = (credentials: UserFormData) => Promise<AuthUser>
+
 async function handleUserResponse(user: AuthUser): Promise<AuthUser> {
   window.localStorage.setItem(localStorageKey, user.token)
   return user
 }
 
-function login({username, password}: UserFormData): Promise<AuthUser> {
+const login: AuthenticateUser = ({username, password}) => {
   return client<AuthUser>('login', {data: {username, password}}).then(
     handleUserResponse,
   )
 }
 
-function register({username, password}: UserFormData): Promise<AuthUser> {
-  return client<AuthUser>('register', {
-    data: {username, password},
-  }).then(handleUserResponse)
+const register: AuthenticateUser = ({username, password}) => {
+  return client<AuthUser>('register', {data: {username, password}}).then(
+    handleUserResponse,
+  )
 }
 
 function logout() {
