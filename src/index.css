@@ -51,3 +51,7 @@ a:hover,
 a:focus {
   text-decoration: underline;
 }
+
+pre {
+  font-size: 0.875em;
+}

@@ -7,7 +7,8 @@ function client<TResponse>(
   endpoint: string,
   {data, token, headers: customHeaders, ...customConfig}: ClientOptions = {},
 ): Promise<TResponse> {
-  const headers = new Headers()
+  const headers = customHeaders ? new Headers(customHeaders) : new Headers()
+
   if (data) {
     headers.set('Content-Type', 'application/json')
   }
@@ -18,10 +19,7 @@ function client<TResponse>(
   const config: RequestInit = {
     method: data ? 'POST' : 'GET',
     body: data ? JSON.stringify(data) : undefined,
-    headers: {
-      ...headers,
-      ...customHeaders,
-    },
+    headers,
     ...customConfig,
   }
 

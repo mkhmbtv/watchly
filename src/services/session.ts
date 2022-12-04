@@ -8,26 +8,38 @@ async function getToken() {
 }
 
 type AuthenticateUser = (credentials: UserFormData) => Promise<AuthUser>
+interface UserDataResponse {
+  user: AuthUser
+}
 
-async function handleUserResponse(user: AuthUser): Promise<AuthUser> {
+async function getUser(): Promise<AuthUser | null> {
+  const token = await getToken()
+  if (!token) {
+    return Promise.resolve(null)
+  }
+
+  return client<{user: AuthUser}>('me', {token}).then(data => data.user)
+}
+
+async function handleUserResponse({user}: UserDataResponse): Promise<AuthUser> {
   window.localStorage.setItem(localStorageKey, user.token)
   return user
 }
 
 const login: AuthenticateUser = ({username, password}) => {
-  return client<AuthUser>('login', {data: {username, password}}).then(
+  return client<UserDataResponse>('login', {data: {username, password}}).then(
     handleUserResponse,
   )
 }
 
 const register: AuthenticateUser = ({username, password}) => {
-  return client<AuthUser>('register', {data: {username, password}}).then(
-    handleUserResponse,
-  )
+  return client<UserDataResponse>('register', {
+    data: {username, password},
+  }).then(handleUserResponse)
 }
 
-function logout() {
+async function logout() {
   window.localStorage.removeItem(localStorageKey)
 }
 
-export {getToken, login, register, logout}
+export {getToken, getUser, login, register, logout}

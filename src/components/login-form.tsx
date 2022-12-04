@@ -47,7 +47,7 @@ function LoginForm({onSubmit, submitButton}: Props) {
           ...(Array.isArray(submitButton.props.children)
             ? submitButton.props.children
             : [submitButton.props.children]),
-          isLoading ? <Spinner className="inline-block ml-1" /> : null,
+          isLoading ? <Spinner className="ml-1" /> : null,
         )}
       </div>
       {isError ? <ErrorMessage error={error as Error} /> : null}

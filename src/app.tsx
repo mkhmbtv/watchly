@@ -3,17 +3,44 @@ import * as session from './services/session'
 import {AuthUser, UserFormData} from './types/user'
 import {AuthenticatedApp} from 'authenticated-app'
 import {UnauthenticatedApp} from 'unauthenticated-app'
+import {useAsync} from './hooks/useAsync'
+import {FullPageSpinner} from './components/spinner'
 
 function App() {
-  const [user, setUser] = React.useState<AuthUser | null>(null)
+  const {
+    data: user,
+    isIdle,
+    isLoading,
+    isError,
+    error,
+    run,
+    setData,
+  } = useAsync<AuthUser | null>()
 
   const login = (formData: UserFormData) =>
-    session.login(formData).then(u => setUser(u))
+    session.login(formData).then(user => setData(user))
   const register = (formData: UserFormData) =>
-    session.register(formData).then(u => setUser(u))
+    session.register(formData).then(user => setData(user))
   const logout = () => {
     session.logout()
-    setUser(null)
+    setData(null)
+  }
+
+  React.useEffect(() => {
+    run(session.getUser())
+  }, [run])
+
+  if (isLoading || isIdle) {
+    return <FullPageSpinner />
+  }
+
+  if (isError) {
+    return (
+      <div className="text-red-500 h-screen flex flex-col justify-center items-center">
+        <p>Uh oh... There is a problem. Try refreshing the app.</p>
+        <pre>{error?.message}</pre>
+      </div>
+    )
   }
 
   return user ? (

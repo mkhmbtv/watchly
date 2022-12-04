@@ -104,4 +104,4 @@ function hash(str: string): string {
   return String(hash >>> 0)
 }
 
-export {authenticate, create, update, remove}
+export {authenticate, create, update, remove, read}
