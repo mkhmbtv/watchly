@@ -44,7 +44,16 @@ const handlers: Array<RestHandler<MockedRequest<DefaultBodyType>>> = [
   }),
 
   rest.get(`${apiUrl}/me`, async (req, res, ctx) => {
-    const user = await getUser(req)
+    let user
+    try {
+      user = await getUser(req)
+    } catch (error) {
+      return res(
+        ctx.delay(delay),
+        ctx.status(401),
+        ctx.json({status: 401, message: getErrorMessage(error)}),
+      )
+    }
     const token = getToken(req)
     return res(ctx.delay(delay), ctx.json({user: {...user, token}}))
   }),

@@ -1,3 +1,5 @@
+import * as session from 'services/session'
+
 type ClientOptions = {
   data?: Record<string, unknown>
   token?: string
@@ -26,6 +28,11 @@ function client<TResponse>(
   return window
     .fetch(`${process.env.REACT_APP_API_URL}/${endpoint}`, config)
     .then(async response => {
+      if (response.status === 401) {
+        await session.logout()
+        window.location.assign(window.location.href)
+        return Promise.reject({message: 'Please re-authenticate'})
+      }
       const data = await response.json()
       if (response.ok) {
         return data
