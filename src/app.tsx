@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as session from './services/session'
+import {BrowserRouter as Router} from 'react-router-dom'
 import {AuthUser, UserFormData} from './types/user'
 import {AuthenticatedApp} from 'authenticated-app'
 import {UnauthenticatedApp} from 'unauthenticated-app'
@@ -44,7 +45,9 @@ function App() {
   }
 
   return user ? (
-    <AuthenticatedApp user={user} logout={logout} />
+    <Router>
+      <AuthenticatedApp user={user} logout={logout} />
+    </Router>
   ) : (
     <UnauthenticatedApp login={login} register={register} />
   )

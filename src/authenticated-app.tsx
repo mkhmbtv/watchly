@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {AuthUser} from './types/user'
 import {DiscoverMoviesScreen} from './screens/discover'
-import {Button} from 'components/button'
+import {Navbar} from './components/navbar'
 
 type Props = {
   user: AuthUser
@@ -11,12 +11,7 @@ type Props = {
 function AuthenticatedApp({user, logout}: Props) {
   return (
     <div>
-      <div className="flex items-center absolute top-2.5 right-2.5">
-        {user.username}
-        <Button variant="secondary" className="ml-2.5" onClick={logout}>
-          Logout
-        </Button>
-      </div>
+      <Navbar user={user} logout={logout} />
       <div>
         <DiscoverMoviesScreen />
       </div>
