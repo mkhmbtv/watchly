@@ -4,7 +4,10 @@ import './bootsrtap'
 import App from './app'
 import {worker} from './mocks/server/dev-server'
 
-if (process.env.NODE_ENV === 'development') {
+if (
+  process.env.NODE_ENV === 'development' ||
+  process.env.NODE_ENV === 'production'
+) {
   worker.start()
 }
 

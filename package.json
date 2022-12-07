@@ -29,7 +29,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint './src/**/*.{ts,tsx}'"
+    "lint": "eslint './src/**/*.{ts,tsx}'",
+    "serve": "serve --no-clipboard --single --listen 8811 build"
   },
   "eslintConfig": {
     "extends": [
@@ -55,6 +56,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "postcss": "^8.4.19",
     "prettier": "2.8.0",
+    "serve": "^14.1.2",
     "tailwindcss": "^3.2.4"
   },
   "msw": {
