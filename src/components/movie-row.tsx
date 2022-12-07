@@ -1,4 +1,5 @@
 import * as React from 'react'
+import {Link} from 'react-router-dom'
 import {Movie} from 'types/movies'
 
 interface Props {
@@ -12,7 +13,8 @@ function MovieRow({movie}: Props) {
 
   return (
     <div className="flex items-center justify-end relative">
-      <div
+      <Link
+        to={`/movie/${movie.id}`}
         aria-labelledby={id}
         className="grow-[2] border-b-[1px] py-4 border-solid border-gray-300 grid grid-cols-[128px_1fr] gap-5"
       >
@@ -30,7 +32,7 @@ function MovieRow({movie}: Props) {
           </div>
           <p className="mt-2 font-thin">{stars}</p>
         </div>
-      </div>
+      </Link>
     </div>
   )
 }

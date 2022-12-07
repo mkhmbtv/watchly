@@ -1,8 +1,32 @@
 import * as React from 'react'
-import movies from 'mocks/data/movies.json'
+import {useParams} from 'react-router-dom'
+import {client} from 'utils/api-client'
+import {useAsync} from 'hooks/useAsync'
+import {Movie} from 'types/movies'
+import {AuthUser} from 'types/user'
+import moviePosterPlaceholerSvg from 'assets/movie-poster-placeholder.svg'
 
-function MovieScreen() {
-  const movie = movies[0]
+const loadingMovie = {
+  title: 'Loading...',
+  image: `${moviePosterPlaceholerSvg}`,
+  description: '(...)',
+  genres: 'Loading...',
+  plot: 'Loading...',
+  imDbRating: '0.0',
+  imDbRatingVotes: '0',
+  runtimeStr: 'Loading...',
+  contentRating: 'G',
+  starList: [{name: 'Loading...'}],
+}
+
+function MovieScreen({user}: {user: AuthUser}) {
+  const {movieId} = useParams()
+  const {data, run} = useAsync<{movie: Movie}>()
+
+  React.useEffect(() => {
+    run(client<{movie: Movie}>(`movies/${movieId}`, {token: user.token}))
+  }, [movieId, run, user.token])
+
   const {
     title,
     image,
@@ -10,9 +34,11 @@ function MovieScreen() {
     genres,
     plot,
     imDbRating,
+    imDbRatingVotes,
     runtimeStr,
     contentRating,
-  } = movie
+    starList,
+  } = data?.movie ?? loadingMovie
 
   return (
     <div>
@@ -29,9 +55,7 @@ function MovieScreen() {
                 <h1 className="font-bold text-4xl">
                   {title} {description}
                 </h1>
-                <p className="font-thin">
-                  Directed by {movie.starList[0].name}
-                </p>
+                <p className="font-thin">Directed by {starList[0].name}</p>
               </div>
               <div className="font-light text-gray-700">
                 <span className="border-[1px] rounded-sm py-px px-1 mr-1.5 shadow-sm border-gray-500 text-gray-500">
@@ -48,8 +72,7 @@ function MovieScreen() {
         <div className="leading-tight">
           <div className="text-4xl font-bold text-green-600">{imDbRating}</div>
           <small className="font-light">
-            {Number(movie.imDbRatingVotes).toLocaleString().replace(/,/g, ' ')}{' '}
-            votes
+            {Number(imDbRatingVotes).toLocaleString().replace(/,/g, ' ')} votes
           </small>
         </div>
       </div>

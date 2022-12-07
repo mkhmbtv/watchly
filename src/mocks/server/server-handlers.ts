@@ -69,6 +69,19 @@ const handlers: Array<RestHandler<MockedRequest<DefaultBodyType>>> = [
     }
     return res(ctx.json({movies: matchingMovies}))
   }),
+
+  rest.get(`${apiUrl}/movies/:movieId`, async (req, res, ctx) => {
+    const {movieId} = req.params
+    const movie = await moviesDB.read(movieId as string)
+    if (!movie) {
+      return res(
+        ctx.delay(delay),
+        ctx.status(404),
+        ctx.json({status: 404, message: 'Movie not found'}),
+      )
+    }
+    return res(ctx.delay(delay), ctx.json({movie}))
+  }),
 ]
 
 const getToken = (req: MockedRequest) =>

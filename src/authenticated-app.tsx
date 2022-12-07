@@ -1,8 +1,9 @@
 import * as React from 'react'
-import {AuthUser} from './types/user'
+import {Routes, Route} from 'react-router-dom'
 import {DiscoverMoviesScreen} from './screens/discover'
 import {MovieScreen} from 'screens/movie'
 import {Navbar} from './components/navbar'
+import {AuthUser} from './types/user'
 
 type Props = {
   user: AuthUser
@@ -14,10 +15,18 @@ function AuthenticatedApp({user, logout}: Props) {
     <div>
       <Navbar user={user} logout={logout} />
       <div className="max-w-4xl m-auto py-10 w-[90vw]">
-        {/* <DiscoverMoviesScreen /> */}
-        <MovieScreen />
+        <AppRoutes user={user} />
       </div>
     </div>
+  )
+}
+
+function AppRoutes({user}: {user: AuthUser}) {
+  return (
+    <Routes>
+      <Route path="/discover" element={<DiscoverMoviesScreen />} />
+      <Route path="/movie/:movieId" element={<MovieScreen user={user} />} />
+    </Routes>
   )
 }
 
