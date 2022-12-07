@@ -31,7 +31,7 @@ function DiscoverMoviesScreen() {
   }
 
   return (
-    <div className="max-w-3xl m-auto py-10 w-[90vw]">
+    <div>
       <form onSubmit={handleSearch}>
         <Input placeholder="Search movies" id="search" className="w-full" />
         <Tooltip label="Search movies">
