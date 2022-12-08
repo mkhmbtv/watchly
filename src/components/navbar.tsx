@@ -39,15 +39,15 @@ function NavLink({
 
 function Navbar({user, logout}: Props) {
   return (
-    <div className="px-[15vw] py-9">
-      <nav className="max-w-8xl mx-auto flex items-center justify-between">
-        <Link to="/">
+    <div className="py-9">
+      <nav className="max-w-4.5xl mx-auto flex items-center justify-between sm:flex-col">
+        <Link to="/discover">
           <div className="flex items-center">
             <Logo width="60" height="60" />
             <h1 className="text-3xl font-semibold ml-2">Movify</h1>
           </div>
         </Link>
-        <ul className="flex items-center">
+        <ul className="flex items-center sm:flex-col sm:mb-5">
           {LINKS.map(link => (
             <NavLink key={link.name} to={link.to}>
               {link.name}

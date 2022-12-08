@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './bootsrtap'
+import './bootstrap'
 import App from './app'
 import {worker} from './mocks/server/dev-server'
 

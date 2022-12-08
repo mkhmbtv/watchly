@@ -36,6 +36,11 @@ module.exports = {
         500: 'var(--color-orange-500)',
       },
     },
+    extend: {
+      maxWidth: {
+        '4.5xl': '59rem',
+      },
+    },
   },
   plugins: [],
 }

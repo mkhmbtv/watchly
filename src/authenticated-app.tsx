@@ -15,7 +15,7 @@ function AuthenticatedApp({user, logout}: Props) {
   return (
     <div>
       <Navbar user={user} logout={logout} />
-      <div className="max-w-4xl m-auto py-10 w-[90vw]">
+      <div className="max-w-4.5xl m-auto py-10 w-[90vw]">
         <AppRoutes user={user} />
       </div>
     </div>
