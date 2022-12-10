@@ -2,8 +2,9 @@ import {MockedRequest, RestHandler, DefaultBodyType} from 'msw'
 import {rest} from 'msw'
 import * as usersDB from '../data/users'
 import * as moviesDB from '../data/movies'
+import * as logEntriesDB from '../data/log-entries'
 import {HttpError} from '../error'
-import {getErrorMessage} from 'utils/error'
+import {getErrorMessage, getErrorStatus} from 'utils/error'
 import {UserFormData} from 'types/user'
 
 const apiUrl = process.env.REACT_APP_API_URL
@@ -81,6 +82,77 @@ const handlers: Array<RestHandler<MockedRequest<DefaultBodyType>>> = [
       )
     }
     return res(ctx.delay(delay), ctx.json({movie}))
+  }),
+
+  rest.get(`${apiUrl}/log-entries`, async (req, res, ctx) => {
+    const user = await getUser(req)
+    const logEntries = await logEntriesDB.readByUser(user.id)
+    const logEntriesAndMovies = await Promise.all(
+      logEntries.map(async logEntry => ({
+        ...logEntry,
+        movie: await moviesDB.read(logEntry.movieId),
+      })),
+    )
+    return res(ctx.delay(delay), ctx.json({logEntries: logEntriesAndMovies}))
+  }),
+
+  rest.post(`${apiUrl}/log-entries`, async (req, res, ctx) => {
+    try {
+      const {movieId} = (await req.json()) as {movieId: string}
+      const user = await getUser(req)
+      const logEntry = await logEntriesDB.create({
+        movieId,
+        userId: user.id,
+      })
+      const movie = await moviesDB.read(movieId)
+      return res(ctx.delay(delay), ctx.json({logEntry: {...logEntry, movie}}))
+    } catch (error) {
+      const status = getErrorStatus(error)
+      return res(
+        ctx.delay(delay),
+        ctx.status(status),
+        ctx.json({status, message: getErrorMessage(error)}),
+      )
+    }
+  }),
+
+  rest.put(`${apiUrl}/log-entries/:logEntryId`, async (req, res, ctx) => {
+    try {
+      const {logEntryId} = req.params as {logEntryId: string}
+      const user = await getUser(req)
+      const updates = await req.json()
+      await logEntriesDB.authorize(user.id, logEntryId)
+      const updatedLogEntry = await logEntriesDB.update(logEntryId, updates)
+      const movie = await moviesDB.read(updatedLogEntry.movieId)
+      return res(
+        ctx.delay(delay),
+        ctx.json({logEntry: {...updatedLogEntry, movie}}),
+      )
+    } catch (error) {
+      const status = getErrorStatus(error)
+      return res(
+        ctx.delay(delay),
+        ctx.status(status),
+        ctx.json({status, message: getErrorMessage(error)}),
+      )
+    }
+  }),
+
+  rest.delete(`${apiUrl}/log-entries/:logEntryId`, async (req, res, ctx) => {
+    try {
+      const user = await getUser(req)
+      const {logEntryId} = req.params as {logEntryId: string}
+      await logEntriesDB.authorize(user.id, logEntryId)
+      await logEntriesDB.remove(logEntryId)
+      return res(ctx.json({success: true}))
+    } catch (error) {
+      const status = getErrorStatus(error)
+      return res(
+        ctx.delay(delay),
+        ctx.status(status),
+        ctx.json({status, message: getErrorMessage(error)}),
+      )
+    }
   }),
 ]
 
