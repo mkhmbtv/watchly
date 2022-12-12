@@ -8,7 +8,10 @@ if (
   process.env.NODE_ENV === 'development' ||
   process.env.NODE_ENV === 'production'
 ) {
-  worker.start()
+  worker.start({
+    quiet: true,
+    onUnhandledRequest: 'bypass',
+  })
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)

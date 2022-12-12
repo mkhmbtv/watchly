@@ -29,11 +29,10 @@ function Button({
   )
 }
 
-function CircleButton({
-  className,
-  children,
-  ...props
-}: JSX.IntrinsicElements['button']) {
+const CircleButton = React.forwardRef<
+  HTMLButtonElement,
+  JSX.IntrinsicElements['button']
+>(function CircleButton({className, children, ...props}, ref) {
   return (
     <button
       className={clsx(
@@ -41,10 +40,11 @@ function CircleButton({
         className,
       )}
       {...props}
+      ref={ref}
     >
       {children}
     </button>
   )
-}
+})
 
 export {Button, CircleButton}

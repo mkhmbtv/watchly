@@ -1,5 +1,6 @@
 import * as React from 'react'
 import {useParams} from 'react-router-dom'
+import {StatusButtons} from 'components/status-buttons'
 import {client} from 'utils/api-client'
 import {useAsync} from 'hooks/useAsync'
 import {Movie} from 'types/movies'
@@ -69,11 +70,19 @@ function MovieScreen({user}: {user: AuthUser}) {
           </div>
           <p className="text-lg font-light">{plot}</p>
         </div>
-        <div className="leading-tight">
-          <div className="text-4xl font-bold text-green-600">{imDbRating}</div>
-          <small className="font-light">
-            {Number(imDbRatingVotes).toLocaleString().replace(/,/g, ' ')} votes
-          </small>
+        <div>
+          <div className="leading-tight">
+            <div className="text-4xl font-bold text-green-600">
+              {imDbRating}
+            </div>
+            <small className="font-light">
+              {Number(imDbRatingVotes).toLocaleString().replace(/,/g, ' ')}{' '}
+              votes
+            </small>
+          </div>
+          <div className="flex gap-4 mt-7 text-lg">
+            <StatusButtons />
+          </div>
         </div>
       </div>
     </div>
