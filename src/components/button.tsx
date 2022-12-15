@@ -35,12 +35,12 @@ const CircleButton = React.forwardRef<
 >(function CircleButton({className, children, ...props}, ref) {
   return (
     <button
+      ref={ref}
       className={clsx(
         'rounded-full w-10 h-10 leading-none flex items-center justify-center border border-solid border-gray-200',
         className,
       )}
       {...props}
-      ref={ref}
     >
       {children}
     </button>

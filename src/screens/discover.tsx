@@ -6,20 +6,49 @@ import {Spinner} from 'components/spinner'
 import {Movie} from 'types/movies'
 import {MovieRow} from 'components/movie-row'
 import {client} from 'utils/api-client'
-import {useAsync} from 'hooks/useAsync'
+import {getErrorMessage} from 'utils/error'
+import {useQuery} from 'react-query'
+import {AuthUser} from 'types/user'
+import moviePosterPlaceholerSvg from 'assets/movie-poster-placeholder.svg'
 
-interface Movies {
-  movies: Movie[]
+const loadingMovie = {
+  title: 'Loading...',
+  image: `${moviePosterPlaceholerSvg}`,
+  description: '(...)',
+  genres: 'Loading...',
+  plot: 'Loading...',
+  imDbRating: '0.0',
+  imDbRatingVotes: '0',
+  metacriticRating: '0',
+  runtimeStr: 'Loading...',
+  contentRating: 'G',
+  stars: 'Loading...',
+  starList: [{id: '0', name: '...'}],
+  loadingMovie: true,
 }
 
-function DiscoverMoviesScreen() {
-  const {data, isLoading, isSuccess, isError, error, run} = useAsync<Movies>()
+const loadingMovies = Array.from({length: 10}, (v, idx) => ({
+  id: `loading-book-${idx}`,
+  ...loadingMovie,
+}))
+
+function DiscoverMoviesScreen({user}: {user: AuthUser}) {
   const [query, setQuery] = React.useState('')
   const [queried, setQueried] = React.useState(false)
 
-  React.useEffect(() => {
-    run(client<Movies>(`movies?query=${encodeURIComponent(query)}`))
-  }, [query, run])
+  const {
+    data: movies = loadingMovies,
+    isLoading,
+    isSuccess,
+    isError,
+    error,
+  } = useQuery({
+    queryKey: ['movieSearch', {query}],
+    queryFn: () =>
+      client<{movies: Movie[]}>(`movies?query=${encodeURIComponent(query)}`, {
+        token: user.token,
+      }).then(data => data.movies),
+  })
 
   function handleSearch(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -54,22 +83,37 @@ function DiscoverMoviesScreen() {
       {isError ? (
         <div className="text-red-500">
           <p>There was an error:</p>
-          <pre>{error?.message}</pre>
+          <pre>{getErrorMessage(error)}</pre>
         </div>
       ) : null}
-      {isSuccess ? (
-        data?.movies?.length ? (
-          <ul className="mt-5">
-            {data?.movies?.map(movie => (
-              <li key={movie.id} aria-label={movie.title}>
-                <MovieRow movie={movie} />
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p>No movies found. Try another search</p>
-        )
-      ) : null}
+      <div>
+        {queried ? null : (
+          <div className="mt-5 text-lg text-center font-light leading-8">
+            <p>Welcome to the discover page.</p>
+            <p>Here&apos;s what we&apos;ve been watching... </p>
+            {isLoading ? (
+              <div className="w-full m-auto">
+                <Spinner />
+              </div>
+            ) : isSuccess && movies.length ? (
+              <p>Here you go! Find more movies with the search bar above.</p>
+            ) : isSuccess && !movies.length ? (
+              <p>Sorry, we couldn&apos;t find any movies for you...</p>
+            ) : null}
+          </div>
+        )}
+      </div>
+      {movies.length ? (
+        <ul className="mt-5">
+          {movies?.map(movie => (
+            <li key={movie.id} aria-label={movie.title}>
+              <MovieRow movie={movie} />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No movies found. Try another search</p>
+      )}
     </div>
   )
 }

@@ -28,7 +28,7 @@ async function create({
   userId,
   notes = '',
   rating = -1,
-  watchedDate,
+  watchedDate = null,
   favorite = false,
 }: Omit<LogEntry, 'id'>): Promise<LogEntry> {
   if (!movieId) {
@@ -97,7 +97,7 @@ function read(id: string): LogEntry {
 
 function validateLogEntry(id: string): void {
   load()
-  if (logEntries[id]) {
+  if (!logEntries[id]) {
     throw new HttpError(404, `No log entry with the id of ${id}`)
   }
 }

@@ -62,13 +62,21 @@ const handlers: Array<RestHandler<MockedRequest<DefaultBodyType>>> = [
   rest.get(`${apiUrl}/movies`, async (req, res, ctx) => {
     const query = req.url.searchParams.get('query')
     let matchingMovies = []
+
     if (query) {
       matchingMovies = await moviesDB.query(query)
     } else {
-      const allMovies = moviesDB.getMovies()
-      matchingMovies = allMovies.slice(0, 10)
+      const token = getToken(req)
+      if (token) {
+        const user = await getUser(req)
+        const allMovies = await getMoviesNotLoggedByUser(user.id)
+        matchingMovies = allMovies.slice(0, 10)
+      } else {
+        const allMovies = await moviesDB.readManyNotLogged([])
+        matchingMovies = allMovies.slice(0, 10)
+      }
     }
-    return res(ctx.json({movies: matchingMovies}))
+    return res(ctx.delay(delay), ctx.json({movies: matchingMovies}))
   }),
 
   rest.get(`${apiUrl}/movies/:movieId`, async (req, res, ctx) => {
@@ -93,7 +101,7 @@ const handlers: Array<RestHandler<MockedRequest<DefaultBodyType>>> = [
         movie: await moviesDB.read(logEntry.movieId),
       })),
     )
-    return res(ctx.delay(delay), ctx.json({logEntries: logEntriesAndMovies}))
+    return res(ctx.json({logEntries: logEntriesAndMovies}))
   }),
 
   rest.post(`${apiUrl}/log-entries`, async (req, res, ctx) => {
@@ -173,6 +181,14 @@ async function getUser(req: MockedRequest) {
   }
   const user = await usersDB.read(userId)
   return user
+}
+
+async function getMoviesNotLoggedByUser(userId: string) {
+  const usersMovieIds = (await logEntriesDB.readByUser(userId)).map(
+    log => log.movieId,
+  )
+  const movies = await moviesDB.readManyNotLogged(usersMovieIds)
+  return movies
 }
 
 export {handlers}

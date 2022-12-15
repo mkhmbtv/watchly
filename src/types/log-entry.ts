@@ -4,6 +4,6 @@ export interface LogEntry {
   userId: string
   notes?: string
   rating?: number
-  watchedDate?: number
+  watchedDate?: number | null
   favorite?: boolean
 }

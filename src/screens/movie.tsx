@@ -2,12 +2,13 @@ import * as React from 'react'
 import {useParams} from 'react-router-dom'
 import {StatusButtons} from 'components/status-buttons'
 import {client} from 'utils/api-client'
-import {useAsync} from 'hooks/useAsync'
 import {Movie} from 'types/movies'
 import {AuthUser} from 'types/user'
 import moviePosterPlaceholerSvg from 'assets/movie-poster-placeholder.svg'
+import {useQuery} from 'react-query'
 
 const loadingMovie = {
+  id: '0',
   title: 'Loading...',
   image: `${moviePosterPlaceholerSvg}`,
   description: '(...)',
@@ -15,18 +16,24 @@ const loadingMovie = {
   plot: 'Loading...',
   imDbRating: '0.0',
   imDbRatingVotes: '0',
+  metacriticRating: '0',
   runtimeStr: 'Loading...',
   contentRating: 'G',
-  starList: [{name: 'Loading...'}],
+  stars: 'Loading...',
+  starList: [{id: '0', name: '...'}],
+  loadingMovie: true,
 }
 
 function MovieScreen({user}: {user: AuthUser}) {
   const {movieId} = useParams()
-  const {data, run} = useAsync<{movie: Movie}>()
 
-  React.useEffect(() => {
-    run(client<{movie: Movie}>(`movies/${movieId}`, {token: user.token}))
-  }, [movieId, run, user.token])
+  const {data: movie = loadingMovie} = useQuery({
+    queryKey: ['movie', {movieId}],
+    queryFn: () =>
+      client<{movie: Movie}>(`movies/${movieId}`, {token: user.token}).then(
+        data => data.movie,
+      ),
+  })
 
   const {
     title,
@@ -39,7 +46,7 @@ function MovieScreen({user}: {user: AuthUser}) {
     runtimeStr,
     contentRating,
     starList,
-  } = data?.movie ?? loadingMovie
+  } = movie
 
   return (
     <div>
@@ -80,9 +87,11 @@ function MovieScreen({user}: {user: AuthUser}) {
               votes
             </small>
           </div>
-          <div className="flex gap-4 mt-7 text-lg">
-            <StatusButtons />
-          </div>
+          {movie.loadingMovie ? null : (
+            <div className="flex gap-4 mt-7">
+              <StatusButtons user={user} movie={movie} />
+            </div>
+          )}
         </div>
       </div>
     </div>

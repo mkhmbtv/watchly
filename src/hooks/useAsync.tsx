@@ -134,6 +134,7 @@ function useAsync<DataType>(initialState?: AsyncState<DataType>) {
     setError,
     run,
     data,
+    status,
     error,
     reset,
   }

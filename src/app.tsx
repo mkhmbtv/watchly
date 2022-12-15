@@ -1,6 +1,7 @@
 import * as React from 'react'
 import * as session from './services/session'
 import {BrowserRouter as Router} from 'react-router-dom'
+import {useQueryClient} from 'react-query'
 import {AuthUser, UserFormData} from './types/user'
 import {AuthenticatedApp} from 'authenticated-app'
 import {UnauthenticatedApp} from 'unauthenticated-app'
@@ -18,12 +19,15 @@ function App() {
     setData,
   } = useAsync<AuthUser | null>()
 
+  const queryClient = useQueryClient()
+
   const login = (formData: UserFormData) =>
     session.login(formData).then(user => setData(user))
   const register = (formData: UserFormData) =>
     session.register(formData).then(user => setData(user))
   const logout = () => {
     session.logout()
+    queryClient.clear()
     setData(null)
   }
 

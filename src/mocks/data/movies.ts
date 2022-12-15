@@ -4,12 +4,12 @@ import {Movie} from 'types/movies'
 
 const movies: Movie[] = [...moviesData]
 
-function getMovies() {
-  return movies
-}
-
 async function read(movieId: string): Promise<Movie | undefined> {
   return movies.find(movie => movie.id === movieId)
+}
+
+async function readManyNotLogged(ids: string[]): Promise<Movie[]> {
+  return movies.filter(movie => !ids.includes(movie.id))
 }
 
 async function query(search: string) {
@@ -18,4 +18,4 @@ async function query(search: string) {
   })
 }
 
-export {getMovies, read, query}
+export {read, readManyNotLogged, query}

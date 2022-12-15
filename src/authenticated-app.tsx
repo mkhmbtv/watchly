@@ -25,7 +25,7 @@ function AuthenticatedApp({user, logout}: Props) {
 function AppRoutes({user}: {user: AuthUser}) {
   return (
     <Routes>
-      <Route path="/discover" element={<DiscoverMoviesScreen />} />
+      <Route path="/discover" element={<DiscoverMoviesScreen user={user} />} />
       <Route path="/movie/:movieId" element={<MovieScreen user={user} />} />
       <Route path="*" element={<NotFoundScreen />} />
     </Routes>

@@ -12,6 +12,7 @@ export interface Movie {
   plot: string
   stars: string
   starList: Star[]
+  loadingMovie?: boolean
 }
 
 interface Star {
