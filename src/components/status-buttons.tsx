@@ -1,15 +1,17 @@
 import * as React from 'react'
 import clsx from 'clsx'
-import {useQuery, useMutation, useQueryClient} from 'react-query'
 import Tooltip from '@reach/tooltip'
 import {useAsync} from 'hooks/useAsync'
-import {client} from 'utils/api-client'
+import {
+  useLogEntry,
+  useCreateLogEntry,
+  useUpdateLogEntry,
+  useRemoveLogEntry,
+} from 'utils/log-entries'
 import {AuthUser} from 'types/user'
 import {Movie} from 'types/movies'
-import {LogEntry} from 'types/log-entry'
 import {CircleButton} from './button'
 import {Spinner} from './spinner'
-
 import {
   FaEye,
   FaEyeSlash,
@@ -57,48 +59,11 @@ interface StatusButtonsProps {
 }
 
 function StatusButtons({user, movie}: StatusButtonsProps) {
-  const logEntries = useQuery({
-    queryKey: 'log-entries',
-    queryFn: () =>
-      client<{logEntries: LogEntry[]}>('log-entries', {token: user.token}).then(
-        data => data.logEntries,
-      ),
-  })
+  const logEntry = useLogEntry(user, movie.id)
 
-  const logEntry =
-    logEntries.data?.find(entry => entry.movieId === movie.id) ?? null
-
-  const queryClient = useQueryClient()
-  const {mutateAsync: create} = useMutation(
-    ({movieId}: {movieId: string}) => {
-      return client('log-entries', {data: {movieId}, token: user.token})
-    },
-    {
-      onSettled: () => queryClient.invalidateQueries('log-entries'),
-    },
-  )
-
-  const {mutateAsync: update} = useMutation(
-    (updates: Partial<LogEntry>) => {
-      return client(`log-entries/${updates.id}`, {
-        method: 'PUT',
-        data: updates,
-        token: user.token,
-      })
-    },
-    {
-      onSettled: () => queryClient.invalidateQueries('log-entries'),
-    },
-  )
-
-  const {mutateAsync: remove} = useMutation(
-    ({id}: {id: string}) => {
-      return client(`log-entries/${id}`, {method: 'DELETE', token: user.token})
-    },
-    {
-      onSettled: () => queryClient.invalidateQueries('log-entries'),
-    },
-  )
+  const {mutateAsync: create} = useCreateLogEntry(user)
+  const {mutateAsync: update} = useUpdateLogEntry(user)
+  const {mutateAsync: remove} = useRemoveLogEntry(user)
 
   return (
     <React.Fragment>

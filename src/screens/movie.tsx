@@ -1,39 +1,13 @@
 import * as React from 'react'
 import {useParams} from 'react-router-dom'
 import {StatusButtons} from 'components/status-buttons'
-import {client} from 'utils/api-client'
-import {Movie} from 'types/movies'
+import {useMovie} from 'utils/movies'
 import {AuthUser} from 'types/user'
-import moviePosterPlaceholerSvg from 'assets/movie-poster-placeholder.svg'
-import {useQuery} from 'react-query'
-
-const loadingMovie = {
-  id: '0',
-  title: 'Loading...',
-  image: `${moviePosterPlaceholerSvg}`,
-  description: '(...)',
-  genres: 'Loading...',
-  plot: 'Loading...',
-  imDbRating: '0.0',
-  imDbRatingVotes: '0',
-  metacriticRating: '0',
-  runtimeStr: 'Loading...',
-  contentRating: 'G',
-  stars: 'Loading...',
-  starList: [{id: '0', name: '...'}],
-  loadingMovie: true,
-}
 
 function MovieScreen({user}: {user: AuthUser}) {
-  const {movieId} = useParams()
+  const {movieId} = useParams() as {movieId: string}
 
-  const {data: movie = loadingMovie} = useQuery({
-    queryKey: ['movie', {movieId}],
-    queryFn: () =>
-      client<{movie: Movie}>(`movies/${movieId}`, {token: user.token}).then(
-        data => data.movie,
-      ),
-  })
+  const movie = useMovie(movieId, user)
 
   const {
     title,

@@ -3,52 +3,19 @@ import Tooltip from '@reach/tooltip'
 import {FaSearch, FaTimes} from 'react-icons/fa'
 import {Input} from 'components/form-elements'
 import {Spinner} from 'components/spinner'
-import {Movie} from 'types/movies'
 import {MovieRow} from 'components/movie-row'
-import {client} from 'utils/api-client'
 import {getErrorMessage} from 'utils/error'
-import {useQuery} from 'react-query'
 import {AuthUser} from 'types/user'
-import moviePosterPlaceholerSvg from 'assets/movie-poster-placeholder.svg'
-
-const loadingMovie = {
-  title: 'Loading...',
-  image: `${moviePosterPlaceholerSvg}`,
-  description: '(...)',
-  genres: 'Loading...',
-  plot: 'Loading...',
-  imDbRating: '0.0',
-  imDbRatingVotes: '0',
-  metacriticRating: '0',
-  runtimeStr: 'Loading...',
-  contentRating: 'G',
-  stars: 'Loading...',
-  starList: [{id: '0', name: '...'}],
-  loadingMovie: true,
-}
-
-const loadingMovies = Array.from({length: 10}, (v, idx) => ({
-  id: `loading-book-${idx}`,
-  ...loadingMovie,
-}))
+import {useMovieSearch} from 'utils/movies'
 
 function DiscoverMoviesScreen({user}: {user: AuthUser}) {
   const [query, setQuery] = React.useState('')
   const [queried, setQueried] = React.useState(false)
 
-  const {
-    data: movies = loadingMovies,
-    isLoading,
-    isSuccess,
-    isError,
-    error,
-  } = useQuery({
-    queryKey: ['movieSearch', {query}],
-    queryFn: () =>
-      client<{movies: Movie[]}>(`movies?query=${encodeURIComponent(query)}`, {
-        token: user.token,
-      }).then(data => data.movies),
-  })
+  const {movies, isLoading, isSuccess, isError, error} = useMovieSearch(
+    query,
+    user,
+  )
 
   function handleSearch(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
