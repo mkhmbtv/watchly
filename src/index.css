@@ -45,3 +45,35 @@ input[type='search']::-webkit-search-results-decoration {
 pre {
   font-size: 0.875em;
 }
+
+/* styles for Rating component */
+[class*='log-entry-'] input[type='radio']:checked ~ label {
+  color: var(--color-gray-200);
+}
+
+[class*='log-entry-'] input[type='radio']:checked + label {
+  color: var(--color-orange-500);
+}
+
+[class*='log-entry-'] input[type='radio']:hover ~ label {
+  color: var(--color-gray-200) !important;
+}
+
+[class*='log-entry-'] input[type='radio']:hover + label {
+  color: var(--color-orange-500) !important;
+}
+
+[class*='log-entry-']:hover input[type='radio'] + label {
+  color: var(--color-orange-500);
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

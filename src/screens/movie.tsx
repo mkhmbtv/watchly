@@ -1,12 +1,15 @@
 import * as React from 'react'
 import {useParams} from 'react-router-dom'
 import {StatusButtons} from 'components/status-buttons'
+import {Rating} from 'components/rating'
 import {useMovie} from 'utils/movies'
 import {AuthUser} from 'types/user'
+import {useLogEntry} from 'utils/log-entries'
 
 function MovieScreen({user}: {user: AuthUser}) {
   const {movieId} = useParams() as {movieId: string}
 
+  const logEntry = useLogEntry(user, movieId)
   const movie = useMovie(movieId, user)
 
   const {
@@ -62,10 +65,15 @@ function MovieScreen({user}: {user: AuthUser}) {
             </small>
           </div>
           {movie.loadingMovie ? null : (
-            <div className="flex gap-4 mt-7">
+            <div className="flex gap-4 mt-5">
               <StatusButtons user={user} movie={movie} />
             </div>
           )}
+          {logEntry?.watchedDate ? (
+            <div className="mt-5">
+              <Rating logEntry={logEntry} user={user} />
+            </div>
+          ) : null}
         </div>
       </div>
     </div>
