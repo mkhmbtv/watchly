@@ -1,13 +1,21 @@
 import * as React from 'react'
 import {Link} from 'react-router-dom'
+import {Rating} from './rating'
+import {StatusButtons} from './status-buttons'
 import {Movie} from 'types/movies'
+import {AuthUser} from 'types/user'
+import {useLogEntry} from 'utils/log-entries'
+import {formatDate} from 'utils/misc'
 
 interface Props {
   movie: Movie
+  user: AuthUser
 }
 
-function MovieRow({movie}: Props) {
-  const {title, image, description, stars} = movie
+function MovieRow({movie, user}: Props) {
+  const {title, image, description, plot} = movie
+
+  const logEntry = useLogEntry(user, movie.id)
 
   const id = `movie-row-movie-${movie.id}`
 
@@ -25,14 +33,29 @@ function MovieRow({movie}: Props) {
             className="max-h-full w-full border-white border-4 border-solid hover:border-4 hover:border-solid hover:border-green-500"
           />
         </div>
-        <div className="flex-1">
-          <div className="flex items-center">
-            <h2 className="text-xl font-medium mr-1 text-gray-900">{title}</h2>
-            <span className="font-thin">{description}</span>
+        <div className="flex-1 text-gray-800">
+          <div className="flex items-center justify-between">
+            <div>
+              <h2 className="text-xl font-medium ">
+                {title}
+                <span className="ml-1 text-base font-thin">{description}</span>
+              </h2>
+            </div>
+            {logEntry?.watchedDate ? (
+              <i className=" font-light">
+                Watched {formatDate(logEntry.watchedDate)}
+              </i>
+            ) : null}
           </div>
-          <p className="mt-2 font-thin">{stars}</p>
+          {logEntry?.watchedDate ? (
+            <Rating logEntry={logEntry} user={user} />
+          ) : null}
+          <p className="mt-3 font-light">{plot}</p>
         </div>
       </Link>
+      <div className="absolute left-36 bottom-5 flex gap-8 text-gray-500">
+        <StatusButtons user={user} movie={movie} />
+      </div>
     </div>
   )
 }

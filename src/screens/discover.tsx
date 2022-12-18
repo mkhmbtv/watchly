@@ -74,7 +74,7 @@ function DiscoverMoviesScreen({user}: {user: AuthUser}) {
         <ul className="mt-5">
           {movies?.map(movie => (
             <li key={movie.id} aria-label={movie.title}>
-              <MovieRow movie={movie} />
+              <MovieRow movie={movie} user={user} />
             </li>
           ))}
         </ul>

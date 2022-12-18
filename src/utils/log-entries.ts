@@ -1,13 +1,13 @@
 import {useQuery, useMutation, useQueryClient} from 'react-query'
 import {client} from './api-client'
 import {AuthUser} from 'types/user'
-import {LogEntry} from 'types/log-entry'
+import {LogEntry, LogEntryWithMovie} from 'types/log-entry'
 
 function useLogEntries(user: AuthUser) {
   const {data} = useQuery({
     queryKey: 'log-entries',
     queryFn: () =>
-      client<{logEntries: LogEntry[]}>('log-entries', {
+      client<{logEntries: LogEntryWithMovie[]}>('log-entries', {
         token: user.token,
       }).then(data => data.logEntries),
   })

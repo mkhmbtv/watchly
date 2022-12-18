@@ -7,7 +7,7 @@ import {AuthUser} from 'types/user'
 
 const LINKS = [
   {name: 'Watchlist', to: '/watchlist'},
-  {name: 'Films', to: '/films'},
+  {name: 'History', to: '/history'},
   {name: 'Discover', to: '/discover'},
 ]
 
