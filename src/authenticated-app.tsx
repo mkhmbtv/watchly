@@ -1,12 +1,23 @@
 import * as React from 'react'
 import {Routes, Route} from 'react-router-dom'
+import {ErrorBoundary} from 'react-error-boundary'
 import {DiscoverMoviesScreen} from './screens/discover'
 import {MovieScreen} from './screens/movie'
 import {WatchlistScreen} from './screens/watchlist'
 import {HistoryScreen} from 'screens/history'
 import {NotFoundScreen} from './screens/not-found'
 import {Navbar} from './components/navbar'
+import {ErrorMessage, FullPageErrorFallback} from 'components/errors'
 import {AuthUser} from './types/user'
+
+function ErrorFallback({error}: {error: Error}) {
+  return (
+    <ErrorMessage
+      error={error}
+      className="flex flex-col h-full justify-center items-center"
+    />
+  )
+}
 
 type Props = {
   user: AuthUser
@@ -15,12 +26,14 @@ type Props = {
 
 function AuthenticatedApp({user, logout}: Props) {
   return (
-    <div>
+    <ErrorBoundary FallbackComponent={FullPageErrorFallback}>
       <Navbar user={user} logout={logout} />
-      <div className="max-w-4.5xl m-auto py-10 w-[90vw]">
-        <AppRoutes user={user} />
-      </div>
-    </div>
+      <main className="max-w-4.5xl m-auto py-10 w-[90vw]">
+        <ErrorBoundary FallbackComponent={ErrorFallback}>
+          <AppRoutes user={user} />
+        </ErrorBoundary>
+      </main>
+    </ErrorBoundary>
   )
 }
 
