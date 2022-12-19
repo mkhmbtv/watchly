@@ -1,15 +1,22 @@
 import {useQuery, useMutation, useQueryClient} from 'react-query'
 import {client} from './api-client'
+import {setQueryDataForMovie} from './movies'
 import {AuthUser} from 'types/user'
 import {LogEntry, LogEntryWithMovie} from 'types/log-entry'
 
 function useLogEntries(user: AuthUser) {
+  const queryClient = useQueryClient()
   const {data} = useQuery({
     queryKey: 'log-entries',
     queryFn: () =>
       client<{logEntries: LogEntryWithMovie[]}>('log-entries', {
         token: user.token,
       }).then(data => data.logEntries),
+    onSuccess(logEntries) {
+      for (const logEntry of logEntries) {
+        setQueryDataForMovie(queryClient, logEntry.movie)
+      }
+    },
   })
 
   return data ?? []

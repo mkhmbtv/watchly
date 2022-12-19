@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {useQuery, useQueryClient} from 'react-query'
+import {QueryClient, useQuery, useQueryClient} from 'react-query'
 import {client} from './api-client'
 import {AuthUser} from 'types/user'
 import {Movie} from 'types/movies'
@@ -37,16 +37,26 @@ function useMovie(movieId: string, user: AuthUser): Movie {
   return data ?? {...loadingMovie, id: 'loading-movie'}
 }
 
-const getMovieSearchConfig = (query: string, user: AuthUser) => ({
+const getMovieSearchConfig = (
+  query: string,
+  user: AuthUser,
+  queryClient: QueryClient,
+) => ({
   queryKey: ['movieSearch', {query}],
   queryFn: () =>
     client<{movies: Movie[]}>(`movies?query=${encodeURIComponent(query)}`, {
       token: user.token,
     }).then(data => data.movies),
+  onSuccess(movies: Movie[]) {
+    for (const movie of movies) {
+      setQueryDataForMovie(queryClient, movie)
+    }
+  },
 })
 
 function useMovieSearch(query: string, user: AuthUser) {
-  const result = useQuery(getMovieSearchConfig(query, user))
+  const queryClient = useQueryClient()
+  const result = useQuery(getMovieSearchConfig(query, user, queryClient))
   return {...result, movies: result.data ?? loadingMovies}
 }
 
@@ -54,8 +64,17 @@ function useRefetchMovieSearchQuery(user: AuthUser) {
   const queryClient = useQueryClient()
   return React.useCallback(async () => {
     queryClient.removeQueries('movieSearch')
-    await queryClient.prefetchQuery(getMovieSearchConfig('', user))
+    await queryClient.prefetchQuery(getMovieSearchConfig('', user, queryClient))
   }, [queryClient, user])
 }
 
-export {useMovie, useMovieSearch, useRefetchMovieSearchQuery}
+function setQueryDataForMovie(queryClient: QueryClient, movie: Movie) {
+  return queryClient.setQueryData(['movie', {movieId: movie.id}], movie)
+}
+
+export {
+  useMovie,
+  useMovieSearch,
+  useRefetchMovieSearchQuery,
+  setQueryDataForMovie,
+}
