@@ -1,5 +1,6 @@
 import * as React from 'react'
 import {useUpdateLogEntry} from 'utils/log-entries'
+import {ErrorMessage} from './errors'
 import {LogEntry} from 'types/log-entry'
 import {AuthUser} from 'types/user'
 import {FaStar} from 'react-icons/fa'
@@ -10,7 +11,7 @@ interface Props {
 }
 
 function Rating({logEntry, user}: Props) {
-  const {mutate: update} = useUpdateLogEntry(user)
+  const {mutate: update, isError, error} = useUpdateLogEntry(user)
 
   const rootClassName = `log-entry-${logEntry.id}`
 
@@ -54,6 +55,13 @@ function Rating({logEntry, user}: Props) {
       className={`${rootClassName} inline-flex items-center`}
     >
       <span className="flex">{stars}</span>
+      {isError ? (
+        <ErrorMessage
+          error={error as Error}
+          variant="inline"
+          className="ml-1.5 text-xs"
+        />
+      ) : null}
     </div>
   )
 }

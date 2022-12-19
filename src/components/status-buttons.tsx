@@ -29,10 +29,14 @@ type TooltipButtonProps = {
 }
 
 function TooltipButton({label, onClick, icon, ...rest}: TooltipButtonProps) {
-  const {isLoading, isError, error, run} = useAsync()
+  const {isLoading, isError, error, run, reset} = useAsync()
 
   const handleClick = () => {
-    run(onClick())
+    if (isError) {
+      reset()
+    } else {
+      run(onClick())
+    }
   }
 
   return (
