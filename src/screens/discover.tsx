@@ -1,12 +1,12 @@
 import * as React from 'react'
 import Tooltip from '@reach/tooltip'
 import {FaSearch, FaTimes} from 'react-icons/fa'
+import {useMovieSearch, useRefetchMovieSearchQuery} from 'utils/movies'
 import {Input} from 'components/form-elements'
 import {Spinner} from 'components/spinner'
 import {MovieRow} from 'components/movie-row'
 import {getErrorMessage} from 'utils/error'
 import {AuthUser} from 'types/user'
-import {useMovieSearch} from 'utils/movies'
 
 function DiscoverMoviesScreen({user}: {user: AuthUser}) {
   const [query, setQuery] = React.useState('')
@@ -16,6 +16,14 @@ function DiscoverMoviesScreen({user}: {user: AuthUser}) {
     query,
     user,
   )
+
+  const refetchMovieSearchQuery = useRefetchMovieSearchQuery(user)
+
+  React.useEffect(() => {
+    return () => {
+      refetchMovieSearchQuery()
+    }
+  }, [refetchMovieSearchQuery])
 
   function handleSearch(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()

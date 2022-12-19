@@ -1,4 +1,5 @@
-import {useQuery} from 'react-query'
+import * as React from 'react'
+import {useQuery, useQueryClient} from 'react-query'
 import {client} from './api-client'
 import {AuthUser} from 'types/user'
 import {Movie} from 'types/movies'
@@ -36,16 +37,25 @@ function useMovie(movieId: string, user: AuthUser): Movie {
   return data ?? {...loadingMovie, id: 'loading-movie'}
 }
 
-function useMovieSearch(query: string, user: AuthUser) {
-  const result = useQuery({
-    queryKey: ['movieSearch', {query}],
-    queryFn: () =>
-      client<{movies: Movie[]}>(`movies?query=${encodeURIComponent(query)}`, {
-        token: user.token,
-      }).then(data => data.movies),
-  })
+const getMovieSearchConfig = (query: string, user: AuthUser) => ({
+  queryKey: ['movieSearch', {query}],
+  queryFn: () =>
+    client<{movies: Movie[]}>(`movies?query=${encodeURIComponent(query)}`, {
+      token: user.token,
+    }).then(data => data.movies),
+})
 
+function useMovieSearch(query: string, user: AuthUser) {
+  const result = useQuery(getMovieSearchConfig(query, user))
   return {...result, movies: result.data ?? loadingMovies}
 }
 
-export {useMovie, useMovieSearch}
+function useRefetchMovieSearchQuery(user: AuthUser) {
+  const queryClient = useQueryClient()
+  return React.useCallback(async () => {
+    queryClient.removeQueries('movieSearch')
+    await queryClient.prefetchQuery(getMovieSearchConfig('', user))
+  }, [queryClient, user])
+}
+
+export {useMovie, useMovieSearch, useRefetchMovieSearchQuery}
