@@ -1,10 +1,17 @@
 import * as React from 'react'
+import debounceFn from 'debounce-fn'
 import {useParams} from 'react-router-dom'
 import {StatusButtons} from 'components/status-buttons'
 import {Rating} from 'components/rating'
+import {Modal, ModalOpenButton, ModalContents} from 'components/modal'
+import {Button} from 'components/button'
+import {Input} from 'components/form-elements'
+import {Spinner} from 'components/spinner'
+import {ErrorMessage} from 'components/errors'
 import {useMovie} from 'utils/movies'
+import {useLogEntry, useUpdateLogEntry} from 'utils/log-entries'
 import {AuthUser} from 'types/user'
-import {useLogEntry} from 'utils/log-entries'
+import {LogEntryWithMovie} from 'types/log-entry'
 
 function MovieScreen({user}: {user: AuthUser}) {
   const {movieId} = useParams() as {movieId: string}
@@ -74,9 +81,67 @@ function MovieScreen({user}: {user: AuthUser}) {
               <Rating logEntry={logEntry} user={user} />
             </div>
           ) : null}
+          <div className="mt-5">
+            {!movie.loadingMovie && logEntry ? (
+              <NotesModal user={user} logEntry={logEntry} />
+            ) : null}
+          </div>
         </div>
       </div>
     </div>
+  )
+}
+
+interface NotesModalProps {
+  user: AuthUser
+  logEntry: LogEntryWithMovie
+}
+
+function NotesModal({user, logEntry}: NotesModalProps) {
+  const {mutate, isLoading, isError, error} = useUpdateLogEntry(user)
+
+  const debouncedMutate = React.useMemo(
+    () => debounceFn(mutate, {wait: 300}),
+    [mutate],
+  )
+
+  const handleNotesChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    debouncedMutate({id: logEntry.id, notes: e.target.value})
+  }
+
+  return (
+    <Modal>
+      <ModalOpenButton>
+        <Button variant="primary">
+          {logEntry.notes ? 'Edit notes' : 'Add notes'}
+        </Button>
+      </ModalOpenButton>
+      <ModalContents aria-label="Notes textarea" title="Notes" variant="wide">
+        <div>
+          <label
+            htmlFor="notes"
+            className="inline-block mb-2 mr-2.5 italic font-light"
+          >
+            Add your personal notes
+          </label>
+          {isError ? (
+            <ErrorMessage
+              error={error as Error}
+              variant="inline"
+              className="ml-1.5 text-xs"
+            />
+          ) : null}
+          {isLoading ? <Spinner /> : null}
+        </div>
+        <Input
+          type="textarea"
+          id="notes"
+          className="w-full min-h-[300px]"
+          onChange={handleNotesChange}
+          defaultValue={logEntry.notes}
+        />
+      </ModalContents>
+    </Modal>
   )
 }
 

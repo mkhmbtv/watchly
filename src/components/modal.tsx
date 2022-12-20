@@ -1,4 +1,5 @@
 import * as React from 'react'
+import clsx from 'clsx'
 import {Dialog} from '@reach/dialog'
 import VisuallyHidden from '@reach/visually-hidden'
 import {CircleButton} from './button'
@@ -16,11 +17,6 @@ type ModalContextType = {
 
 interface WithChildren {
   children: React.ReactElement
-}
-
-interface Props {
-  title: string
-  children: React.ReactNode | Array<React.ReactNode>
 }
 
 const ModalContext = React.createContext<ModalContextType | null>(null)
@@ -56,19 +52,37 @@ function ModalOpenButton({children: child}: WithChildren) {
   })
 }
 
-function ModalContentsBase(props: React.PropsWithChildren) {
+interface ModelContentsBaseProps {
+  variant?: 'medium' | 'wide'
+}
+
+function ModalContentsBase({
+  variant = 'medium',
+  ...rest
+}: ModelContentsBaseProps) {
   const {isOpen, setIsOpen} = useModalContext()
   return (
     <Dialog
       isOpen={isOpen}
       onDismiss={() => setIsOpen(false)}
-      {...props}
-      className="max-w-md rounded-sm pb-14 my-[20vh] mx-auto shadow-lg sm:w-full sm:my-[10vh]"
+      className={clsx(
+        'rounded-sm pb-14 my-[20vh] mx-auto shadow-lg sm:w-full sm:my-[10vh]',
+        {
+          'max-w-md': variant === 'medium',
+          'max-w-xl': variant === 'wide',
+        },
+      )}
+      {...rest}
     />
   )
 }
 
-function ModalContents({title, children, ...props}: Props) {
+interface ModelContentsProps extends ModelContentsBaseProps {
+  title: string
+  children: React.ReactNode
+}
+
+function ModalContents({title, children, ...props}: ModelContentsProps) {
   return (
     <ModalContentsBase {...props}>
       <div className="flex justify-end">
