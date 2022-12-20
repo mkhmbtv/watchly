@@ -1,4 +1,4 @@
-import {useQuery, useMutation, useQueryClient} from 'react-query'
+import {useQuery, useMutation, useQueryClient, MutateOptions} from 'react-query'
 import {client} from './api-client'
 import {setQueryDataForMovie} from './movies'
 import {AuthUser} from 'types/user'
@@ -27,7 +27,10 @@ function useLogEntry(user: AuthUser, movieId: string) {
   return logEntries.find(entry => entry.movieId === movieId) ?? null
 }
 
-function useCreateLogEntry(user: AuthUser) {
+function useCreateLogEntry(
+  user: AuthUser,
+  options?: MutateOptions<unknown, unknown, unknown, unknown>,
+) {
   const queryClient = useQueryClient()
   return useMutation(
     ({movieId}: {movieId: string}) => {
@@ -35,11 +38,15 @@ function useCreateLogEntry(user: AuthUser) {
     },
     {
       onSettled: () => queryClient.invalidateQueries('log-entries'),
+      ...options,
     },
   )
 }
 
-function useUpdateLogEntry(user: AuthUser) {
+function useUpdateLogEntry(
+  user: AuthUser,
+  options?: MutateOptions<unknown, unknown, unknown, unknown>,
+) {
   const queryClient = useQueryClient()
   return useMutation(
     (updates: Partial<LogEntry>) => {
@@ -50,12 +57,36 @@ function useUpdateLogEntry(user: AuthUser) {
       })
     },
     {
+      onMutate: async updatedLogEntry => {
+        await queryClient.cancelQueries('log-entries')
+        const prevLogEntries =
+          queryClient.getQueryData<LogEntryWithMovie[]>('log-entries')
+
+        if (prevLogEntries) {
+          queryClient.setQueryData<LogEntryWithMovie[] | undefined>(
+            'log-entries',
+            old => {
+              return old?.map(entry =>
+                entry.id === updatedLogEntry.id
+                  ? {...entry, ...updatedLogEntry}
+                  : entry,
+              )
+            },
+          )
+        }
+
+        return () => queryClient.setQueryData('log-entries', prevLogEntries)
+      },
       onSettled: () => queryClient.invalidateQueries('log-entries'),
+      ...options,
     },
   )
 }
 
-function useRemoveLogEntry(user: AuthUser) {
+function useRemoveLogEntry(
+  user: AuthUser,
+  options?: MutateOptions<unknown, unknown, unknown, unknown>,
+) {
   const queryClient = useQueryClient()
   return useMutation(
     ({id}: {id: string}) => {
@@ -65,7 +96,23 @@ function useRemoveLogEntry(user: AuthUser) {
       })
     },
     {
+      onMutate: ({id}) => {
+        const prevLogEntries =
+          queryClient.getQueryData<LogEntryWithMovie[]>('log-entries')
+
+        if (prevLogEntries) {
+          queryClient.setQueryData<LogEntryWithMovie[] | undefined>(
+            'log-entries',
+            old => {
+              return old?.filter(entry => entry.id !== id)
+            },
+          )
+        }
+
+        return () => queryClient.setQueryData('log-entries', prevLogEntries)
+      },
       onSettled: () => queryClient.invalidateQueries('log-entries'),
+      ...options,
     },
   )
 }

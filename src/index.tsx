@@ -27,6 +27,11 @@ const queryClient = new QueryClient({
         else return false
       },
     },
+    mutations: {
+      onError(error, variables, recover) {
+        return typeof recover === 'function' ? recover() : null
+      },
+    },
   },
 })
 
