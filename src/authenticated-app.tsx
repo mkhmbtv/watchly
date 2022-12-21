@@ -9,6 +9,7 @@ import {NotFoundScreen} from './screens/not-found'
 import {Navbar} from './components/navbar'
 import {ErrorMessage, FullPageErrorFallback} from 'components/errors'
 import {AuthUser} from './types/user'
+import {FavoritesScreen} from 'screens/favorites'
 
 function ErrorFallback({error}: {error: Error}) {
   return (
@@ -44,6 +45,7 @@ function AppRoutes({user}: {user: AuthUser}) {
       <Route path="/movie/:movieId" element={<MovieScreen user={user} />} />
       <Route path="/watchlist" element={<WatchlistScreen user={user} />} />
       <Route path="/history" element={<HistoryScreen user={user} />} />
+      <Route path="/favorites" element={<FavoritesScreen user={user} />} />
       <Route path="*" element={<NotFoundScreen />} />
     </Routes>
   )
