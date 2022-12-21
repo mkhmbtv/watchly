@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {QueryClient, QueryClientProvider} from 'react-query'
 import './bootstrap'
+import {AuthProvider} from './context/auth-context'
 import App from './app'
 import {worker} from './mocks/server/dev-server'
 import {getErrorStatus} from 'utils/error'
@@ -38,6 +39,8 @@ const queryClient = new QueryClient({
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <QueryClientProvider client={queryClient}>
-    <App />
+    <AuthProvider>
+      <App />
+    </AuthProvider>
   </QueryClientProvider>,
 )
