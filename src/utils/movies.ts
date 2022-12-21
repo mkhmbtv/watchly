@@ -1,8 +1,7 @@
 import * as React from 'react'
 import {QueryClient, useQuery, useQueryClient} from 'react-query'
-import {useAuth} from 'context/auth-context'
-import {client} from './api-client'
-import {AuthUser} from 'types/user'
+import {useClient} from 'context/auth-context'
+import {client as apiClient} from './api-client'
 import {Movie} from 'types/movies'
 import moviePosterPlaceholerSvg from 'assets/movie-poster-placeholder.svg'
 
@@ -27,28 +26,25 @@ const loadingMovies = Array.from({length: 10}, (v, idx) => ({
   ...loadingMovie,
 }))
 
-function useMovie(movieId: string): Movie {
-  const {user} = useAuth()
+function useMovie(movieId: string) {
+  const client = useClient<{movie: Movie}>()
   const {data} = useQuery({
     queryKey: ['movie', {movieId}],
-    queryFn: () =>
-      client<{movie: Movie}>(`movies/${movieId}`, {token: user?.token}).then(
-        data => data.movie,
-      ),
+    queryFn: () => client(`movies/${movieId}`).then(data => data?.movie),
   })
   return data ?? {...loadingMovie, id: 'loading-movie'}
 }
 
 const getMovieSearchConfig = (
   query: string,
-  user: AuthUser,
+  client: typeof apiClient<{movies: Movie[]}>,
   queryClient: QueryClient,
 ) => ({
   queryKey: ['movieSearch', {query}],
   queryFn: () =>
-    client<{movies: Movie[]}>(`movies?query=${encodeURIComponent(query)}`, {
-      token: user.token,
-    }).then(data => data.movies),
+    client(`movies?query=${encodeURIComponent(query)}`).then(
+      data => data.movies,
+    ),
   onSuccess(movies: Movie[]) {
     for (const movie of movies) {
       setQueryDataForMovie(queryClient, movie)
@@ -57,21 +53,21 @@ const getMovieSearchConfig = (
 })
 
 function useMovieSearch(query: string) {
-  const {user} = useAuth()
+  const client = useClient<{movies: Movie[]}>()
   const queryClient = useQueryClient()
-  const result = useQuery(getMovieSearchConfig(query, user!, queryClient))
+  const result = useQuery(getMovieSearchConfig(query, client, queryClient))
   return {...result, movies: result.data ?? loadingMovies}
 }
 
 function useRefetchMovieSearchQuery() {
-  const {user} = useAuth()
+  const client = useClient<{movies: Movie[]}>()
   const queryClient = useQueryClient()
   return React.useCallback(async () => {
     queryClient.removeQueries('movieSearch')
     await queryClient.prefetchQuery(
-      getMovieSearchConfig('', user!, queryClient),
+      getMovieSearchConfig('', client, queryClient),
     )
-  }, [queryClient, user])
+  }, [client, queryClient])
 }
 
 function setQueryDataForMovie(queryClient: QueryClient, movie: Movie) {

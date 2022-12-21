@@ -3,6 +3,7 @@ import * as session from 'services/session'
 import {useQueryClient} from 'react-query'
 import {AuthUser, UserFormData} from 'types/user'
 import {useAsync} from 'hooks/useAsync'
+import {client} from 'utils/api-client'
 import {FullPageSpinner} from 'components/spinner'
 
 type AuthContextType = {
@@ -73,4 +74,14 @@ function useAuth() {
   return context
 }
 
-export {AuthProvider, useAuth}
+function useClient<TResponse>() {
+  const {user} = useAuth()
+  const token = user?.token
+  return React.useCallback(
+    (endpoint: string, config?: Parameters<typeof client>[1]) =>
+      client<TResponse>(endpoint, {...config, token}),
+    [token],
+  )
+}
+
+export {AuthProvider, useAuth, useClient}

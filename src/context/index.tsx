@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {QueryClient, QueryClientProvider} from 'react-query'
 import {BrowserRouter as Router} from 'react-router-dom'
-import {AuthProvider} from 'context/auth-context'
+import {AuthProvider} from './auth-context'
 import {getErrorStatus} from 'utils/error'
 
 const queryClient = new QueryClient({
