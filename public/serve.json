@@ -2,7 +2,7 @@
   "redirects": [
     { 
       "source": "/",
-      "destination": "/discover",
+      "destination": "/watchlist",
       "type": 302
     }
   ]
