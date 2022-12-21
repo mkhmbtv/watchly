@@ -8,7 +8,6 @@ import {HistoryScreen} from 'screens/history'
 import {NotFoundScreen} from './screens/not-found'
 import {Navbar} from './components/navbar'
 import {ErrorMessage, FullPageErrorFallback} from 'components/errors'
-import {AuthUser} from './types/user'
 import {FavoritesScreen} from 'screens/favorites'
 
 function ErrorFallback({error}: {error: Error}) {
@@ -20,32 +19,27 @@ function ErrorFallback({error}: {error: Error}) {
   )
 }
 
-type Props = {
-  user: AuthUser
-  logout: () => void
-}
-
-function AuthenticatedApp({user, logout}: Props) {
+function AuthenticatedApp() {
   return (
     <ErrorBoundary FallbackComponent={FullPageErrorFallback}>
-      <Navbar user={user} logout={logout} />
+      <Navbar />
       <main className="max-w-4.5xl m-auto py-10 w-[90vw]">
         <ErrorBoundary FallbackComponent={ErrorFallback}>
-          <AppRoutes user={user} />
+          <AppRoutes />
         </ErrorBoundary>
       </main>
     </ErrorBoundary>
   )
 }
 
-function AppRoutes({user}: {user: AuthUser}) {
+function AppRoutes() {
   return (
     <Routes>
-      <Route path="/discover" element={<DiscoverMoviesScreen user={user} />} />
-      <Route path="/movie/:movieId" element={<MovieScreen user={user} />} />
-      <Route path="/watchlist" element={<WatchlistScreen user={user} />} />
-      <Route path="/history" element={<HistoryScreen user={user} />} />
-      <Route path="/favorites" element={<FavoritesScreen user={user} />} />
+      <Route path="/discover" element={<DiscoverMoviesScreen />} />
+      <Route path="/movie/:movieId" element={<MovieScreen />} />
+      <Route path="/watchlist" element={<WatchlistScreen />} />
+      <Route path="/history" element={<HistoryScreen />} />
+      <Route path="/favorites" element={<FavoritesScreen />} />
       <Route path="*" element={<NotFoundScreen />} />
     </Routes>
   )

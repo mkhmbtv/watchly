@@ -10,14 +10,13 @@ import {Spinner} from 'components/spinner'
 import {ErrorMessage} from 'components/errors'
 import {useMovie} from 'utils/movies'
 import {useLogEntry, useUpdateLogEntry} from 'utils/log-entries'
-import {AuthUser} from 'types/user'
 import {LogEntryWithMovie} from 'types/log-entry'
 
-function MovieScreen({user}: {user: AuthUser}) {
+function MovieScreen() {
   const {movieId} = useParams() as {movieId: string}
 
-  const logEntry = useLogEntry(user, movieId)
-  const movie = useMovie(movieId, user)
+  const logEntry = useLogEntry(movieId)
+  const movie = useMovie(movieId)
 
   const {
     title,
@@ -73,17 +72,17 @@ function MovieScreen({user}: {user: AuthUser}) {
           </div>
           {movie.loadingMovie ? null : (
             <div className="flex gap-4 mt-5">
-              <StatusButtons user={user} movie={movie} />
+              <StatusButtons movie={movie} />
             </div>
           )}
           {logEntry?.watchedDate ? (
             <div className="mt-5">
-              <Rating logEntry={logEntry} user={user} />
+              <Rating logEntry={logEntry} />
             </div>
           ) : null}
           <div className="mt-5">
             {!movie.loadingMovie && logEntry ? (
-              <NotesModal user={user} logEntry={logEntry} />
+              <NotesModal logEntry={logEntry} />
             ) : null}
           </div>
         </div>
@@ -93,12 +92,11 @@ function MovieScreen({user}: {user: AuthUser}) {
 }
 
 interface NotesModalProps {
-  user: AuthUser
   logEntry: LogEntryWithMovie
 }
 
-function NotesModal({user, logEntry}: NotesModalProps) {
-  const {mutate, isLoading, isError, error} = useUpdateLogEntry(user)
+function NotesModal({logEntry}: NotesModalProps) {
+  const {mutate, isLoading, isError, error} = useUpdateLogEntry()
 
   const debouncedMutate = React.useMemo(
     () => debounceFn(mutate, {wait: 300}),

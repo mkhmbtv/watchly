@@ -1,16 +1,17 @@
 import {useQuery, useMutation, useQueryClient, MutateOptions} from 'react-query'
 import {client} from './api-client'
+import {useAuth} from 'context/auth-context'
 import {setQueryDataForMovie} from './movies'
-import {AuthUser} from 'types/user'
 import {LogEntry, LogEntryWithMovie} from 'types/log-entry'
 
-function useLogEntries(user: AuthUser) {
+function useLogEntries() {
+  const {user} = useAuth()
   const queryClient = useQueryClient()
   const {data} = useQuery({
     queryKey: 'log-entries',
     queryFn: () =>
       client<{logEntries: LogEntryWithMovie[]}>('log-entries', {
-        token: user.token,
+        token: user?.token,
       }).then(data => data.logEntries),
     onSuccess(logEntries) {
       for (const logEntry of logEntries) {
@@ -22,19 +23,19 @@ function useLogEntries(user: AuthUser) {
   return data ?? []
 }
 
-function useLogEntry(user: AuthUser, movieId: string) {
-  const logEntries = useLogEntries(user)
+function useLogEntry(movieId: string) {
+  const logEntries = useLogEntries()
   return logEntries.find(entry => entry.movieId === movieId) ?? null
 }
 
 function useCreateLogEntry(
-  user: AuthUser,
   options?: MutateOptions<unknown, unknown, unknown, unknown>,
 ) {
+  const {user} = useAuth()
   const queryClient = useQueryClient()
   return useMutation(
     ({movieId}: {movieId: string}) => {
-      return client('log-entries', {data: {movieId}, token: user.token})
+      return client('log-entries', {data: {movieId}, token: user?.token})
     },
     {
       onSettled: () => queryClient.invalidateQueries('log-entries'),
@@ -44,16 +45,16 @@ function useCreateLogEntry(
 }
 
 function useUpdateLogEntry(
-  user: AuthUser,
   options?: MutateOptions<unknown, unknown, unknown, unknown>,
 ) {
+  const {user} = useAuth()
   const queryClient = useQueryClient()
   return useMutation(
     (updates: Partial<LogEntry>) => {
       return client(`log-entries/${updates.id}`, {
         method: 'PUT',
         data: updates,
-        token: user.token,
+        token: user?.token,
       })
     },
     {
@@ -84,15 +85,15 @@ function useUpdateLogEntry(
 }
 
 function useRemoveLogEntry(
-  user: AuthUser,
   options?: MutateOptions<unknown, unknown, unknown, unknown>,
 ) {
+  const {user} = useAuth()
   const queryClient = useQueryClient()
   return useMutation(
     ({id}: {id: string}) => {
       return client(`log-entries/${id}`, {
         method: 'DELETE',
-        token: user.token,
+        token: user?.token,
       })
     },
     {

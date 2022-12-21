@@ -1,12 +1,10 @@
 import * as React from 'react'
 import {LogEntryList} from 'components/log-entry-list'
 import {Link} from 'components/link'
-import {AuthUser} from 'types/user'
 
-function FavoritesScreen({user}: {user: AuthUser}) {
+function FavoritesScreen() {
   return (
     <LogEntryList
-      user={user}
       filterListItems={logEntry => Boolean(logEntry.favorite)}
       noListItems={
         <p>

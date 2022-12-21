@@ -3,6 +3,7 @@ import * as session from './services/session'
 import {BrowserRouter as Router} from 'react-router-dom'
 import {useQueryClient} from 'react-query'
 import {AuthUser, UserFormData} from './types/user'
+import {AuthContext} from 'context/auth-context'
 import {AuthenticatedApp} from 'authenticated-app'
 import {UnauthenticatedApp} from 'unauthenticated-app'
 import {useAsync} from './hooks/useAsync'
@@ -13,6 +14,7 @@ function App() {
     data: user,
     isIdle,
     isLoading,
+    isSuccess,
     isError,
     error,
     run,
@@ -48,13 +50,21 @@ function App() {
     )
   }
 
-  return user ? (
-    <Router>
-      <AuthenticatedApp user={user} logout={logout} />
-    </Router>
-  ) : (
-    <UnauthenticatedApp login={login} register={register} />
-  )
+  if (isSuccess) {
+    const props = {user, login, register, logout}
+    return (
+      <AuthContext.Provider value={props}>
+        {user ? (
+          <Router>
+            <AuthenticatedApp />
+          </Router>
+        ) : (
+          <UnauthenticatedApp />
+        )}
+      </AuthContext.Provider>
+    )
+  }
+  return null
 }
 
 export default App

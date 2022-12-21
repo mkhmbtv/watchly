@@ -2,16 +2,14 @@ import * as React from 'react'
 import {useUpdateLogEntry} from 'utils/log-entries'
 import {ErrorMessage} from './errors'
 import {LogEntry} from 'types/log-entry'
-import {AuthUser} from 'types/user'
 import {FaStar} from 'react-icons/fa'
 
 interface Props {
   logEntry: LogEntry
-  user: AuthUser
 }
 
-function Rating({logEntry, user}: Props) {
-  const {mutate: update, isError, error} = useUpdateLogEntry(user)
+function Rating({logEntry}: Props) {
+  const {mutate: update, isError, error} = useUpdateLogEntry()
 
   const rootClassName = `log-entry-${logEntry.id}`
 

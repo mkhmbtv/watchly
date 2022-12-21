@@ -6,18 +6,14 @@ import {Input} from 'components/form-elements'
 import {Spinner} from 'components/spinner'
 import {MovieRow} from 'components/movie-row'
 import {getErrorMessage} from 'utils/error'
-import {AuthUser} from 'types/user'
 
-function DiscoverMoviesScreen({user}: {user: AuthUser}) {
+function DiscoverMoviesScreen() {
   const [query, setQuery] = React.useState('')
   const [queried, setQueried] = React.useState(false)
 
-  const {movies, isLoading, isSuccess, isError, error} = useMovieSearch(
-    query,
-    user,
-  )
+  const {movies, isLoading, isSuccess, isError, error} = useMovieSearch(query)
 
-  const refetchMovieSearchQuery = useRefetchMovieSearchQuery(user)
+  const refetchMovieSearchQuery = useRefetchMovieSearchQuery()
 
   React.useEffect(() => {
     return () => {
@@ -82,7 +78,7 @@ function DiscoverMoviesScreen({user}: {user: AuthUser}) {
         <ul className="mt-5">
           {movies?.map(movie => (
             <li key={movie.id} aria-label={movie.title}>
-              <MovieRow movie={movie} user={user} />
+              <MovieRow movie={movie} />
             </li>
           ))}
         </ul>

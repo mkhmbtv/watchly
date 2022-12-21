@@ -2,22 +2,19 @@ import * as React from 'react'
 import {useLogEntries} from 'utils/log-entries'
 import {MovieRow} from './movie-row'
 import {LogEntryWithMovie} from 'types/log-entry'
-import {AuthUser} from 'types/user'
 
 type Props = {
-  user: AuthUser
   filterListItems: (listItem: LogEntryWithMovie) => boolean
   noListItems: React.ReactElement
   noFilteredListItems: React.ReactElement
 }
 
 function LogEntryList({
-  user,
   filterListItems,
   noListItems,
   noFilteredListItems,
 }: Props) {
-  const logEntries = useLogEntries(user)
+  const logEntries = useLogEntries()
 
   const filteredListItems = logEntries?.filter(filterListItems)
 
@@ -40,7 +37,7 @@ function LogEntryList({
     <ul>
       {filteredListItems?.map(li => (
         <li key={li.id}>
-          <MovieRow movie={li.movie} user={user} />
+          <MovieRow movie={li.movie} />
         </li>
       ))}
     </ul>

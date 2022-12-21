@@ -1,9 +1,9 @@
 import * as React from 'react'
 import {Link, useMatch} from 'react-router-dom'
 import clsx from 'clsx'
+import {useAuth} from 'context/auth-context'
 import {Logo} from './logo'
 import {Button} from './button'
-import {AuthUser} from 'types/user'
 
 const LINKS = [
   {name: 'Watchlist', to: '/watchlist'},
@@ -11,11 +11,6 @@ const LINKS = [
   {name: 'Favorites', to: '/favorites'},
   {name: 'Discover', to: '/discover'},
 ]
-
-type Props = {
-  user: AuthUser
-  logout: () => void
-}
 
 function NavLink({
   to,
@@ -38,7 +33,8 @@ function NavLink({
   )
 }
 
-function Navbar({user, logout}: Props) {
+function Navbar() {
+  const {user, logout} = useAuth()
   return (
     <div className="py-9">
       <nav className="max-w-4.5xl mx-auto flex items-center justify-between sm:flex-col">
@@ -56,7 +52,7 @@ function Navbar({user, logout}: Props) {
           ))}
         </ul>
         <div className="flex items-center">
-          <span className="text-lg">{user.username}</span>
+          <span className="text-lg">{user?.username}</span>
           <Button variant="secondary" className="ml-2.5" onClick={logout}>
             Logout
           </Button>

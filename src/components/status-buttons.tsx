@@ -8,7 +8,6 @@ import {
   useUpdateLogEntry,
   useRemoveLogEntry,
 } from 'utils/log-entries'
-import {AuthUser} from 'types/user'
 import {Movie} from 'types/movies'
 import {CircleButton} from './button'
 import {Spinner} from './spinner'
@@ -58,16 +57,15 @@ function TooltipButton({label, onClick, icon, ...rest}: TooltipButtonProps) {
 }
 
 interface StatusButtonsProps {
-  user: AuthUser
   movie: Movie
 }
 
-function StatusButtons({user, movie}: StatusButtonsProps) {
-  const logEntry = useLogEntry(user, movie.id)
+function StatusButtons({movie}: StatusButtonsProps) {
+  const logEntry = useLogEntry(movie.id)
 
-  const {mutateAsync: create} = useCreateLogEntry(user)
-  const {mutateAsync: update} = useUpdateLogEntry(user)
-  const {mutateAsync: remove} = useRemoveLogEntry(user)
+  const {mutateAsync: create} = useCreateLogEntry()
+  const {mutateAsync: update} = useUpdateLogEntry()
+  const {mutateAsync: remove} = useRemoveLogEntry()
 
   return (
     <React.Fragment>

@@ -3,14 +3,10 @@ import {LoginForm} from './components/login-form'
 import {Logo} from './components/logo'
 import {Modal, ModalOpenButton, ModalContents} from './components/modal'
 import {Button} from './components/button'
-import {UserFormData} from './types/user'
+import {useAuth} from 'context/auth-context'
 
-type Props = {
-  login: (credentials: UserFormData) => Promise<void>
-  register: (credentials: UserFormData) => Promise<void>
-}
-
-function UnauthenticatedApp({login, register}: Props) {
+function UnauthenticatedApp() {
+  const {login, register} = useAuth()
   return (
     <div className="flex flex-col items-center justify-center w-full h-screen">
       <Logo width="120" height="120" />

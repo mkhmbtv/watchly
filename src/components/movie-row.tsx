@@ -3,19 +3,17 @@ import {Link} from 'react-router-dom'
 import {Rating} from './rating'
 import {StatusButtons} from './status-buttons'
 import {Movie} from 'types/movies'
-import {AuthUser} from 'types/user'
 import {useLogEntry} from 'utils/log-entries'
 import {formatDate} from 'utils/misc'
 
 interface Props {
   movie: Movie
-  user: AuthUser
 }
 
-function MovieRow({movie, user}: Props) {
+function MovieRow({movie}: Props) {
   const {title, image, description, plot} = movie
 
-  const logEntry = useLogEntry(user, movie.id)
+  const logEntry = useLogEntry(movie.id)
 
   const id = `movie-row-movie-${movie.id}`
 
@@ -47,14 +45,12 @@ function MovieRow({movie, user}: Props) {
               </i>
             ) : null}
           </div>
-          {logEntry?.watchedDate ? (
-            <Rating logEntry={logEntry} user={user} />
-          ) : null}
+          {logEntry?.watchedDate ? <Rating logEntry={logEntry} /> : null}
           <p className="mt-3 font-light">{plot}</p>
         </div>
       </Link>
       <div className="absolute left-36 bottom-5 flex gap-8 text-gray-500">
-        <StatusButtons user={user} movie={movie} />
+        <StatusButtons movie={movie} />
       </div>
     </div>
   )

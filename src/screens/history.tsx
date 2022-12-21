@@ -1,12 +1,10 @@
 import * as React from 'react'
 import {LogEntryList} from 'components/log-entry-list'
 import {Link} from 'components/link'
-import {AuthUser} from 'types/user'
 
-function HistoryScreen({user}: {user: AuthUser}) {
+function HistoryScreen() {
   return (
     <LogEntryList
-      user={user}
       filterListItems={li => Boolean(li.watchedDate)}
       noListItems={
         <p>
