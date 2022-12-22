@@ -31,19 +31,35 @@ function AuthProvider({children}: {children: React.ReactNode}) {
 
   const queryClient = useQueryClient()
 
-  const login = (formData: UserFormData) =>
-    session.login(formData).then(user => setData(user))
-  const register = (formData: UserFormData) =>
-    session.register(formData).then(user => setData(user))
-  const logout = () => {
+  const login = React.useCallback(
+    (formData: UserFormData) =>
+      session.login(formData).then(user => setData(user)),
+    [setData],
+  )
+  const register = React.useCallback(
+    (formData: UserFormData) =>
+      session.register(formData).then(user => setData(user)),
+    [setData],
+  )
+  const logout = React.useCallback(() => {
     session.logout()
     queryClient.clear()
     setData(null)
-  }
+  }, [queryClient, setData])
 
   React.useEffect(() => {
     run(session.getUser())
   }, [run])
+
+  const props = React.useMemo(
+    () => ({
+      user,
+      login,
+      register,
+      logout,
+    }),
+    [login, logout, register, user],
+  )
 
   if (isLoading || isIdle) {
     return <FullPageSpinner />
@@ -59,7 +75,6 @@ function AuthProvider({children}: {children: React.ReactNode}) {
   }
 
   if (isSuccess) {
-    const props = {user, login, register, logout}
     return <AuthContext.Provider value={props}>{children}</AuthContext.Provider>
   }
 
