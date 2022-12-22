@@ -48,8 +48,9 @@ function AuthProvider({children}: {children: React.ReactNode}) {
   }, [queryClient, setData])
 
   React.useEffect(() => {
-    run(session.getUser())
-  }, [run])
+    const userDataPromise = session.getUserData(queryClient)
+    run(userDataPromise)
+  }, [queryClient, run])
 
   const props = React.useMemo(
     () => ({

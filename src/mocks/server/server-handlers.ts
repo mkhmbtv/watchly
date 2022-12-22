@@ -59,6 +59,31 @@ const handlers: Array<RestHandler<MockedRequest<DefaultBodyType>>> = [
     return res(ctx.delay(delay), ctx.json({user: {...user, token}}))
   }),
 
+  rest.get(`${apiUrl}/bootstrap`, async (req, res, ctx) => {
+    try {
+      const user = await getUser(req)
+      const token = getToken(req)
+      const logEntries = await logEntriesDB.readByUser(user.id)
+      const logEntriesAndMovies = await Promise.all(
+        logEntries.map(async logEntry => ({
+          ...logEntry,
+          movie: await moviesDB.read(logEntry.movieId),
+        })),
+      )
+      return res(
+        ctx.delay(delay),
+        ctx.json({user: {...user, token}, logEntries: logEntriesAndMovies}),
+      )
+    } catch (error) {
+      const status = getErrorStatus(error)
+      return res(
+        ctx.delay(delay),
+        ctx.status(status),
+        ctx.json({status, message: getErrorMessage(error)}),
+      )
+    }
+  }),
+
   rest.get(`${apiUrl}/movies`, async (req, res, ctx) => {
     const query = req.url.searchParams.get('query')
     let matchingMovies = []

@@ -1,5 +1,8 @@
+import {QueryClient} from 'react-query'
 import {client} from 'utils/api-client'
+import {setQueryDataForMovie} from 'utils/movies'
 import {AuthUser, UserFormData} from 'types/user'
+import {LogEntryWithMovie} from 'types/log-entry'
 
 const localStorageKey = '__app_auth_token__'
 
@@ -12,13 +15,24 @@ interface UserDataResponse {
   user: AuthUser
 }
 
-async function getUser(): Promise<AuthUser | null> {
+async function getUserData(queryClient: QueryClient): Promise<AuthUser | null> {
+  let user = null
   const token = await getToken()
-  if (!token) {
-    return Promise.resolve(null)
+  if (token) {
+    const data = await client<{
+      user: AuthUser
+      logEntries: LogEntryWithMovie[]
+    }>('bootstrap', {token})
+    queryClient.setQueryData('log-entries', data.logEntries)
+
+    for (const logEntry of data.logEntries) {
+      setQueryDataForMovie(queryClient, logEntry.movie)
+    }
+
+    user = data.user
   }
 
-  return client<{user: AuthUser}>('me', {token}).then(data => data.user)
+  return user
 }
 
 async function handleUserResponse({user}: UserDataResponse): Promise<AuthUser> {
@@ -42,4 +56,4 @@ async function logout() {
   window.localStorage.removeItem(localStorageKey)
 }
 
-export {getToken, getUser, login, register, logout}
+export {getToken, getUserData, login, register, logout}
