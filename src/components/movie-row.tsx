@@ -49,9 +49,11 @@ function MovieRow({movie}: Props) {
           <p className="mt-3 font-light">{plot}</p>
         </div>
       </Link>
-      <div className="absolute left-36 bottom-5 flex gap-8 text-gray-500">
-        <StatusButtons movie={movie} />
-      </div>
+      {!movie.loadingMovie ? (
+        <div className="absolute left-36 bottom-5 flex gap-8 text-gray-500">
+          <StatusButtons movie={movie} />
+        </div>
+      ) : null}
     </div>
   )
 }

@@ -58,7 +58,14 @@ function MovieScreen() {
               </div>
             </div>
           </div>
-          <p className="text-lg font-light">{plot}</p>
+          <p className="text-lg font-light mb-4">{plot}</p>
+          <div className="font-light">
+            <span className="font-semibold">Starring </span>
+            {starList
+              .slice(1)
+              .map(star => star.name)
+              .join(', ')}
+          </div>
         </div>
         <div>
           <div className="leading-tight">
@@ -66,7 +73,7 @@ function MovieScreen() {
               {imDbRating}
             </div>
             <small className="font-light">
-              {Number(imDbRatingVotes).toLocaleString().replace(/,/g, ' ')}{' '}
+              {Number(imDbRatingVotes).toLocaleString().replace(/,/g, ' ')} IMDb
               votes
             </small>
           </div>
