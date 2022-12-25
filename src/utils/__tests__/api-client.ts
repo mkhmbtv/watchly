@@ -1,9 +1,8 @@
 import {rest, server, RestRequest} from 'mocks/server/test-server'
 import {client} from '../api-client'
+import * as session from 'services/session'
 
-beforeAll(() => server.listen())
-afterAll(() => server.close())
-afterEach(() => server.resetHandlers())
+jest.mock('services/session')
 
 const apiUrl = process.env.REACT_APP_API_URL
 
@@ -72,4 +71,30 @@ test('provided data is stringified and the method defaults to POST', async () =>
   const result = await client(endpoint, {data: mockData})
 
   expect(result).toEqual(mockData)
+})
+
+test('Unsuccessull request results in a rejected promise', async () => {
+  const endpoint = 'test-endpoint'
+  const testMessage = {message: 'test error'}
+  server.use(
+    rest.get(`${apiUrl}/${endpoint}`, async (req, res, ctx) => {
+      return res(ctx.status(400), ctx.json(testMessage))
+    }),
+  )
+  await expect(client(endpoint)).rejects.toEqual(testMessage)
+})
+
+test('logs the user out if the request returns a status of 401', async () => {
+  const endpoint = 'test-endpoint'
+  const mockRes = {mockValue: 'VALUE'}
+  server.use(
+    rest.get(`${apiUrl}/${endpoint}`, async (req, res, ctx) => {
+      return res(ctx.status(401), ctx.json(mockRes))
+    }),
+  )
+
+  const error = (await client(endpoint).catch(e => e)) as {message: string}
+
+  expect(error.message).toMatchInlineSnapshot(`"Please re-authenticate"`)
+  expect(session.logout).toHaveBeenCalledTimes(1)
 })
