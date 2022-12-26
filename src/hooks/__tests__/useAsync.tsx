@@ -22,44 +22,54 @@ function deferred() {
   return {promise, resolve, reject}
 }
 
+const initialAsyncState = {
+  data: null,
+  isIdle: true,
+  isLoading: false,
+  isError: false,
+  isSuccess: false,
+
+  error: null,
+  status: 'idle',
+  run: expect.any(Function),
+  reset: expect.any(Function),
+  setData: expect.any(Function),
+  setError: expect.any(Function),
+}
+
+const pendingAsyncState = {
+  ...initialAsyncState,
+  status: 'pending',
+  isIdle: false,
+  isLoading: true,
+}
+
+const resolvedAsyncState = {
+  ...initialAsyncState,
+  status: 'resolved',
+  isIdle: false,
+  isSuccess: true,
+}
+
+const rejectedAsyncState = {
+  ...initialAsyncState,
+  status: 'rejected',
+  isIdle: false,
+  isError: true,
+}
+
 test('calling run with a promise which resolves', async () => {
   const {promise, resolve} = deferred()
   const {result} = renderHook(() => useAsync())
 
-  expect(result.current).toEqual({
-    status: 'idle',
-    isIdle: true,
-    isLoading: false,
-    isSuccess: false,
-    isError: false,
-    error: null,
-    data: null,
-
-    setData: expect.any(Function),
-    setError: expect.any(Function),
-    run: expect.any(Function),
-    reset: expect.any(Function),
-  })
+  expect(result.current).toEqual(initialAsyncState)
 
   let p: Promise<unknown>
   act(() => {
     p = result.current.run(promise)
   })
 
-  expect(result.current).toEqual({
-    status: 'pending',
-    isIdle: false,
-    isLoading: true,
-    isSuccess: false,
-    isError: false,
-    error: null,
-    data: null,
-
-    setData: expect.any(Function),
-    setError: expect.any(Function),
-    run: expect.any(Function),
-    reset: expect.any(Function),
-  })
+  expect(result.current).toEqual(pendingAsyncState)
 
   const resolvedValue = Symbol('resolved value')
   await act(async () => {
@@ -68,119 +78,41 @@ test('calling run with a promise which resolves', async () => {
   })
 
   expect(result.current).toEqual({
-    status: 'resolved',
-    isIdle: false,
-    isLoading: false,
-    isSuccess: true,
-    isError: false,
-    error: null,
+    ...resolvedAsyncState,
     data: resolvedValue,
-
-    setData: expect.any(Function),
-    setError: expect.any(Function),
-    run: expect.any(Function),
-    reset: expect.any(Function),
   })
 
   act(() => {
     result.current.reset()
   })
 
-  expect(result.current).toEqual({
-    status: 'idle',
-    isIdle: true,
-    isLoading: false,
-    isSuccess: false,
-    isError: false,
-    error: null,
-    data: null,
-
-    setData: expect.any(Function),
-    setError: expect.any(Function),
-    run: expect.any(Function),
-    reset: expect.any(Function),
-  })
+  expect(result.current).toEqual(initialAsyncState)
 })
 
 test('calling run with a promise which rejects', async () => {
   const {promise, reject} = deferred()
   const {result} = renderHook(() => useAsync())
 
-  expect(result.current).toEqual({
-    status: 'idle',
-    isIdle: true,
-    isLoading: false,
-    isSuccess: false,
-    isError: false,
-    error: null,
-    data: null,
-
-    setData: expect.any(Function),
-    setError: expect.any(Function),
-    run: expect.any(Function),
-    reset: expect.any(Function),
-  })
+  expect(result.current).toEqual(initialAsyncState)
 
   let p: Promise<unknown>
   act(() => {
     p = result.current.run(promise)
   })
 
-  expect(result.current).toEqual({
-    status: 'pending',
-    isIdle: false,
-    isLoading: true,
-    isSuccess: false,
-    isError: false,
-    error: null,
-    data: null,
-
-    setData: expect.any(Function),
-    setError: expect.any(Function),
-    run: expect.any(Function),
-    reset: expect.any(Function),
-  })
+  expect(result.current).toEqual(pendingAsyncState)
 
   const rejectedValue = Symbol('rejected value')
   await act(async () => {
     reject?.(rejectedValue)
     await p.catch(() => {
-      // Catching
+      // Ignore error
     })
   })
 
   expect(result.current).toEqual({
-    status: 'rejected',
-    isIdle: false,
-    isLoading: false,
-    isSuccess: false,
-    isError: true,
+    ...rejectedAsyncState,
     error: rejectedValue,
-    data: null,
-
-    setData: expect.any(Function),
-    setError: expect.any(Function),
-    run: expect.any(Function),
-    reset: expect.any(Function),
-  })
-
-  act(() => {
-    result.current.reset()
-  })
-
-  expect(result.current).toEqual({
-    status: 'idle',
-    isIdle: true,
-    isLoading: false,
-    isSuccess: false,
-    isError: false,
-    error: null,
-    data: null,
-
-    setData: expect.any(Function),
-    setError: expect.any(Function),
-    run: expect.any(Function),
-    reset: expect.any(Function),
   })
 })
 
@@ -189,18 +121,8 @@ test('can specify an initial state', async () => {
   const initialState = {status: 'resolved' as const, data: mockData}
   const {result} = renderHook(() => useAsync(initialState))
   expect(result.current).toEqual({
-    status: 'resolved',
-    isIdle: false,
-    isLoading: false,
-    isSuccess: true,
-    isError: false,
-    error: null,
+    ...resolvedAsyncState,
     data: mockData,
-
-    setData: expect.any(Function),
-    setError: expect.any(Function),
-    run: expect.any(Function),
-    reset: expect.any(Function),
   })
 })
 
@@ -213,18 +135,8 @@ test('can set the data', async () => {
   })
 
   expect(result.current).toEqual({
-    status: 'resolved',
-    isIdle: false,
-    isLoading: false,
-    isSuccess: true,
-    isError: false,
-    error: null,
+    ...resolvedAsyncState,
     data: mockData,
-
-    setData: expect.any(Function),
-    setError: expect.any(Function),
-    run: expect.any(Function),
-    reset: expect.any(Function),
   })
 })
 
@@ -237,18 +149,8 @@ test('can set the error', async () => {
   })
 
   expect(result.current).toEqual({
-    status: 'rejected',
-    isIdle: false,
-    isLoading: false,
-    isSuccess: false,
-    isError: true,
+    ...rejectedAsyncState,
     error: mockError,
-    data: null,
-
-    setData: expect.any(Function),
-    setError: expect.any(Function),
-    run: expect.any(Function),
-    reset: expect.any(Function),
   })
 })
 
@@ -269,20 +171,7 @@ test('No state updates happen if the component is unmounted while pending', asyn
     await p
   })
 
-  expect(result.current).toEqual({
-    status: 'pending',
-    isIdle: false,
-    isLoading: true,
-    isSuccess: false,
-    isError: false,
-    error: null,
-    data: null,
-
-    setData: expect.any(Function),
-    setError: expect.any(Function),
-    run: expect.any(Function),
-    reset: expect.any(Function),
-  })
+  expect(result.current).toEqual(pendingAsyncState)
 
   expect(console.error).not.toHaveBeenCalled()
 })
