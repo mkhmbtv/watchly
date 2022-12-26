@@ -29,11 +29,11 @@ type AsyncState<DataType> =
   | {
       status: 'resolved'
       data: DataType
-      error: null
+      error?: null
     }
   | {
       status: 'rejected'
-      data: null
+      data?: null
       error: Error
     }
 
