@@ -1,3 +1,4 @@
+import {Buffer} from 'buffer'
 import {HttpError} from '../error'
 import {User, UserFormData, SanitizedUser, AuthUser} from 'types/user'
 
@@ -5,7 +6,7 @@ const usersKey = '__movify_users__'
 type UserStore = {
   [key: string]: User
 }
-const users: UserStore = {}
+let users: UserStore = {}
 
 const persist = () =>
   window.localStorage.setItem(usersKey, JSON.stringify(users))
@@ -37,7 +38,7 @@ async function authenticate({
   if (user.passwordHash === hash(password)) {
     return {
       ...sanitizeUser(user),
-      token: window.btoa(user.id),
+      token: Buffer.from(user.id, 'binary').toString('base64'),
     }
   }
   throw new HttpError(400, 'Invalid username or password')
@@ -104,4 +105,9 @@ function hash(str: string): string {
   return String(hash >>> 0)
 }
 
-export {authenticate, create, update, remove, read}
+async function reset() {
+  users = {}
+  persist()
+}
+
+export {authenticate, create, update, remove, read, reset}

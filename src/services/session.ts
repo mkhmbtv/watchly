@@ -56,4 +56,4 @@ async function logout() {
   window.localStorage.removeItem(localStorageKey)
 }
 
-export {getToken, getUserData, login, register, logout}
+export {getToken, getUserData, login, register, logout, localStorageKey}

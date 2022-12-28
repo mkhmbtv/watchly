@@ -8,7 +8,7 @@ export interface Movie {
   contentRating: string
   imDbRating: string
   imDbRatingVotes: string
-  metacriticRating: string
+  metacriticRating?: string
   plot: string
   stars: string
   starList: Star[]

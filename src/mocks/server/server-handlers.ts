@@ -1,5 +1,6 @@
 import {MockedRequest, RestHandler, DefaultBodyType} from 'msw'
 import {rest} from 'msw'
+import {Buffer} from 'buffer'
 import * as usersDB from '../data/users'
 import * as moviesDB from '../data/movies'
 import * as logEntriesDB from '../data/log-entries'
@@ -200,7 +201,7 @@ async function getUser(req: MockedRequest) {
   }
   let userId
   try {
-    userId = window.atob(token)
+    userId = Buffer.from(token, 'base64').toString('binary')
   } catch (e) {
     throw new HttpError(401, 'Invalid token. Please login again.')
   }
