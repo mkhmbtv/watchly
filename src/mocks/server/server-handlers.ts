@@ -6,7 +6,7 @@ import * as moviesDB from '../data/movies'
 import * as logEntriesDB from '../data/log-entries'
 import {HttpError} from '../error'
 import {getErrorMessage, getErrorStatus} from 'utils/error'
-import {UserFormData} from 'types/user'
+import {UserCredentials} from 'types/user'
 
 const apiUrl = process.env.REACT_APP_API_URL
 const delay = process.env.NODE_ENV === 'test' ? 0 : 1500
@@ -14,7 +14,7 @@ const delay = process.env.NODE_ENV === 'test' ? 0 : 1500
 const handlers: Array<RestHandler<MockedRequest<DefaultBodyType>>> = [
   rest.post(`${apiUrl}/login`, async (req, res, ctx) => {
     const {username, password} = await req.json()
-    const userFields: UserFormData = {username, password}
+    const userFields: UserCredentials = {username, password}
     let user
     try {
       user = await usersDB.authenticate(userFields)
@@ -30,7 +30,7 @@ const handlers: Array<RestHandler<MockedRequest<DefaultBodyType>>> = [
 
   rest.post(`${apiUrl}/register`, async (req, res, ctx) => {
     const {username, password} = await req.json()
-    const userFields: UserFormData = {username, password}
+    const userFields: UserCredentials = {username, password}
     await usersDB.create(userFields)
     let user
     try {

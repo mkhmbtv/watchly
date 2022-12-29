@@ -6,9 +6,11 @@ export interface SanitizedUser extends BaseUser {
   id: string
 }
 
-export interface UserFormData extends BaseUser {
+export interface UserCredentials extends BaseUser {
   password: string
 }
+
+export interface UserCredentialsWithId extends UserCredentials, SanitizedUser {}
 
 export interface User extends SanitizedUser {
   passwordHash: string

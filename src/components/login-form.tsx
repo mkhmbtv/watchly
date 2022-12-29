@@ -3,10 +3,10 @@ import {useAsync} from 'hooks/useAsync'
 import {Input, FormGroup} from './form-elements'
 import {Spinner} from './spinner'
 import {ErrorMessage} from './errors'
-import {UserFormData} from 'types/user'
+import {UserCredentials} from 'types/user'
 
 type Props = {
-  onSubmit: (formData: UserFormData) => Promise<void>
+  onSubmit: (formData: UserCredentials) => Promise<void>
   submitButton: React.ReactElement
 }
 

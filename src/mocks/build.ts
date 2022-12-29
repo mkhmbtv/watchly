@@ -1,10 +1,6 @@
 import {faker} from '@faker-js/faker'
-import {UserFormData} from 'types/user'
+import {UserCredentialsWithId} from 'types/user'
 import {Movie} from 'types/movies'
-
-type UserCredentialsWithId = {
-  id: string
-} & UserFormData
 
 function buildUser(overrides?: UserCredentialsWithId): UserCredentialsWithId {
   return {

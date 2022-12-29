@@ -1,15 +1,15 @@
 import * as React from 'react'
 import * as session from 'services/session'
 import {useQueryClient} from 'react-query'
-import {AuthUser, UserFormData} from 'types/user'
+import {AuthUser, UserCredentials} from 'types/user'
 import {useAsync} from 'hooks/useAsync'
 import {client} from 'utils/api-client'
 import {FullPageSpinner} from 'components/spinner'
 
 type AuthContextType = {
   user?: AuthUser | null
-  login: (formData: UserFormData) => Promise<void>
-  register: (formData: UserFormData) => Promise<void>
+  login: (formData: UserCredentials) => Promise<void>
+  register: (formData: UserCredentials) => Promise<void>
   logout: () => void
 }
 
@@ -32,12 +32,12 @@ function AuthProvider({children}: {children: React.ReactNode}) {
   const queryClient = useQueryClient()
 
   const login = React.useCallback(
-    (formData: UserFormData) =>
+    (formData: UserCredentials) =>
       session.login(formData).then(user => setData(user)),
     [setData],
   )
   const register = React.useCallback(
-    (formData: UserFormData) =>
+    (formData: UserCredentials) =>
       session.register(formData).then(user => setData(user)),
     [setData],
   )

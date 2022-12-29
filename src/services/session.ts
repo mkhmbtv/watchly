@@ -1,7 +1,7 @@
 import {QueryClient} from 'react-query'
 import {client} from 'utils/api-client'
 import {setQueryDataForMovie} from 'utils/movies'
-import {AuthUser, UserFormData} from 'types/user'
+import {AuthUser, UserCredentials} from 'types/user'
 import {LogEntryWithMovie} from 'types/log-entry'
 
 const localStorageKey = '__app_auth_token__'
@@ -10,7 +10,7 @@ async function getToken() {
   return window.localStorage.getItem(localStorageKey)
 }
 
-type AuthenticateUser = (credentials: UserFormData) => Promise<AuthUser>
+type AuthenticateUser = (credentials: UserCredentials) => Promise<AuthUser>
 interface UserDataResponse {
   user: AuthUser
 }
