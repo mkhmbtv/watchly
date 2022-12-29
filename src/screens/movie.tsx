@@ -10,6 +10,7 @@ import {Spinner} from 'components/spinner'
 import {ErrorMessage} from 'components/errors'
 import {useMovie} from 'utils/movies'
 import {useLogEntry, useUpdateLogEntry} from 'utils/log-entries'
+import {formatNumberString} from 'utils/misc'
 import {LogEntryWithMovie} from 'types/log-entry'
 
 function MovieScreen() {
@@ -73,8 +74,7 @@ function MovieScreen() {
               {imDbRating}
             </div>
             <small className="font-light">
-              {Number(imDbRatingVotes).toLocaleString().replace(/,/g, ' ')} IMDb
-              votes
+              {formatNumberString(imDbRatingVotes)} IMDb votes
             </small>
           </div>
           {movie.loadingMovie ? null : (

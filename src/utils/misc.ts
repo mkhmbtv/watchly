@@ -5,4 +5,7 @@ const formatDate = (date: number) =>
     year: '2-digit',
   }).format(date)
 
-export {formatDate}
+const formatNumberString = (str: string) =>
+  Number(str).toLocaleString().replace(/,/g, ' ')
+
+export {formatDate, formatNumberString}
