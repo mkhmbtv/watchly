@@ -7,7 +7,7 @@ type LogEntryStore = {
   [key: string]: LogEntry
 }
 
-const logEntries: LogEntryStore = {}
+let logEntries: LogEntryStore = {}
 
 const persist = () =>
   window.localStorage.setItem(logEntriesKey, JSON.stringify(logEntries))
@@ -112,4 +112,9 @@ function hash(str: string): string {
   return String(hash >>> 0)
 }
 
-export {authorize, create, update, remove, read, readMany, readByUser}
+async function reset() {
+  logEntries = {}
+  persist()
+}
+
+export {authorize, create, update, remove, read, readMany, readByUser, reset}

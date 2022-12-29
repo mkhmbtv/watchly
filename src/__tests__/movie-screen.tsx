@@ -1,66 +1,19 @@
 import * as React from 'react'
 import {
-  render as rtlRender,
+  render,
   screen,
-  waitForElementToBeRemoved,
-  RenderOptions,
-} from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
-import {buildUser, buildMovie} from 'mocks/build'
-import * as usersDB from 'mocks/data/users'
-import * as moviesDB from 'mocks/data/movies'
+  userEvent,
+  waitForLoadingToFinish,
+} from 'mocks/test-utils'
+import {buildMovie} from 'mocks/build'
 import * as session from 'services/session'
+import * as moviesDB from 'mocks/data/movies'
 import {formatNumberString} from 'utils/misc'
-import {AppProviders} from 'context'
 import {App} from 'app'
-import {AuthUser, UserCredentialsWithId} from 'types/user'
 
 afterEach(async () => {
-  await Promise.all([session.logout(), usersDB.reset(), moviesDB.reset()])
+  await session.logout()
 })
-
-async function waitForLoadingToFinish() {
-  return waitForElementToBeRemoved(
-    () => [
-      ...screen.queryAllByLabelText(/loading/i),
-      ...screen.queryAllByText(/loading/i),
-    ],
-    {
-      timeout: 7000,
-    },
-  )
-}
-
-async function loginAsUser(userProperties?: UserCredentialsWithId) {
-  const user = buildUser(userProperties)
-  await usersDB.create(user)
-  const authUser = await usersDB.authenticate(user)
-  window.localStorage.setItem(session.localStorageKey, authUser.token)
-  return authUser
-}
-
-type RenderConfig = {
-  user?: AuthUser | null
-  route?: string
-} & RenderOptions
-
-async function render(
-  ui: React.ReactElement,
-  {route = '/watchlist', user, ...renderOptions}: RenderConfig,
-) {
-  if (typeof user === 'undefined') {
-    user = await loginAsUser()
-  }
-
-  window.history.pushState({}, 'test page', route)
-
-  const utils = rtlRender(ui, {wrapper: AppProviders, ...renderOptions})
-  await waitForLoadingToFinish()
-  return {
-    ...utils,
-    user,
-  }
-}
 
 test('renders all the movie information', async () => {
   const movie = await moviesDB.create(buildMovie())
