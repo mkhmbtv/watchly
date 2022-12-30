@@ -23,7 +23,7 @@ async function waitForLoadingToFinish() {
   )
 }
 
-async function loginAsUser(userProperties?: UserCredentialsWithId) {
+async function loginAsUser(userProperties?: Partial<UserCredentialsWithId>) {
   const user = buildUser(userProperties)
   await usersDB.create(user)
   const authUser = await usersDB.authenticate(user)

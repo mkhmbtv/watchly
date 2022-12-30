@@ -1,13 +1,16 @@
 import * as React from 'react'
+import {faker} from '@faker-js/faker'
 import {
   render,
   screen,
   userEvent,
+  loginAsUser,
   waitForLoadingToFinish,
 } from 'mocks/test-utils'
-import {buildMovie} from 'mocks/build'
+import {buildMovie, buildLogEntry} from 'mocks/build'
 import * as session from 'services/session'
 import * as moviesDB from 'mocks/data/movies'
+import * as logEntriesDB from 'mocks/data/log-entries'
 import {formatNumberString} from 'utils/misc'
 import {App} from 'app'
 
@@ -102,4 +105,133 @@ test('can create a log entry for the movie', async () => {
     screen.queryByRole('button', {name: /unmark as favorite/i}),
   ).not.toBeInTheDocument()
   expect(screen.queryByRole('radio', {name: /star/i})).not.toBeInTheDocument()
+})
+
+test('can remove a log entry for the movie', async () => {
+  const user = await loginAsUser()
+  const movie = await moviesDB.create(buildMovie())
+  await logEntriesDB.create(buildLogEntry({user, movie}))
+  const route = `/movie/${movie.id}`
+
+  await render(<App />, {route, user})
+
+  const removeFromListButton = screen.getByRole('button', {
+    name: /remove from list/i,
+  })
+  userEvent.click(removeFromListButton)
+  expect(removeFromListButton).toBeDisabled()
+
+  await waitForLoadingToFinish()
+
+  expect(
+    screen.getByRole('button', {name: /add to watchlist/i}),
+  ).toBeInTheDocument()
+
+  expect(
+    screen.queryByRole('button', {name: /remove from list/i}),
+  ).not.toBeInTheDocument()
+  expect(
+    screen.queryByRole('button', {name: /mark as watched/i}),
+  ).not.toBeInTheDocument()
+  expect(
+    screen.queryByRole('button', {name: /unmark as watched/i}),
+  ).not.toBeInTheDocument()
+  expect(
+    screen.queryByRole('button', {name: /mark as favorite/i}),
+  ).not.toBeInTheDocument()
+  expect(
+    screen.queryByRole('button', {name: /unmark as favorite/i}),
+  ).not.toBeInTheDocument()
+  expect(screen.queryByRole('button', {name: /notes/i})).not.toBeInTheDocument()
+  expect(screen.queryByRole('radio', {name: /star/i})).not.toBeInTheDocument()
+})
+
+test('can mark a log entry as watched', async () => {
+  const user = await loginAsUser()
+  const movie = await moviesDB.create(buildMovie())
+  const logEntry = await logEntriesDB.create(
+    buildLogEntry({user, movie, watchedDate: null}),
+  )
+  const route = `/movie/${movie.id}`
+
+  await render(<App />, {route, user})
+
+  const markAsWatchedButton = screen.getByRole('button', {
+    name: 'Mark as watched',
+  })
+  userEvent.click(markAsWatchedButton)
+  expect(markAsWatchedButton).toBeDisabled()
+
+  await waitForLoadingToFinish()
+
+  expect(
+    screen.getByRole('button', {name: /unmark as watched/i}),
+  ).toBeInTheDocument()
+  expect(screen.queryAllByRole('radio', {name: /star/i})).toHaveLength(5)
+
+  expect(
+    screen.queryByRole('button', {name: 'Mark as watched'}),
+  ).not.toBeInTheDocument()
+  expect(await logEntriesDB.read(logEntry.id).watchedDate).not.toBeNull()
+})
+
+test('can mark a log entry as favorite', async () => {
+  const user = await loginAsUser()
+  const movie = await moviesDB.create(buildMovie())
+  const logEntry = await logEntriesDB.create(
+    buildLogEntry({user, movie, favorite: false}),
+  )
+  const route = `/movie/${movie.id}`
+
+  await render(<App />, {route, user})
+
+  const markAsFavoriteButton = screen.getByRole('button', {
+    name: 'Mark as favorite',
+  })
+  userEvent.click(markAsFavoriteButton)
+  expect(markAsFavoriteButton).toBeDisabled()
+
+  await waitForLoadingToFinish()
+
+  expect(
+    screen.getByRole('button', {name: /unmark as favorite/i}),
+  ).toBeInTheDocument()
+  expect(await logEntriesDB.read(logEntry.id)).toMatchObject({
+    favorite: true,
+  })
+
+  expect(
+    screen.queryByRole('button', {name: 'Mark as favorite'}),
+  ).not.toBeInTheDocument()
+})
+
+test('can edit a note', async () => {
+  jest.useFakeTimers()
+
+  const user = await loginAsUser()
+  const movie = await moviesDB.create(buildMovie())
+  const logEntry = await logEntriesDB.create(buildLogEntry({user, movie}))
+  const route = `/movie/${movie.id}`
+
+  await render(<App />, {route, user})
+
+  const openNotesModalButton = screen.getByRole('button', {name: /notes/i})
+  userEvent.click(openNotesModalButton)
+
+  const newNotes = faker.lorem.words()
+  const notesTextarea = screen.getByRole('textbox', {
+    name: /add your personal notes/i,
+  })
+
+  userEvent.clear(notesTextarea)
+  userEvent.type(notesTextarea, newNotes)
+
+  await screen.findByLabelText(/loading/i)
+
+  await waitForLoadingToFinish()
+
+  expect(notesTextarea).toHaveValue(newNotes)
+  expect(await logEntriesDB.read(logEntry.id)).toMatchObject({
+    notes: newNotes,
+  })
 })
