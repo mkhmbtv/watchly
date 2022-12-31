@@ -13,15 +13,44 @@ import * as moviesDB from 'mocks/data/movies'
 import * as logEntriesDB from 'mocks/data/log-entries'
 import {formatNumberString} from 'utils/misc'
 import {App} from 'app'
+import {AuthUser} from 'types/user'
+import {Movie} from 'types/movies'
+import {LogEntry} from 'types/log-entry'
 
 afterEach(async () => {
   await session.logout()
 })
 
-test('renders all the movie information', async () => {
-  const movie = await moviesDB.create(buildMovie())
+type RenderParams = {
+  user?: AuthUser
+  movie?: Movie
+  logEntry?: LogEntry | null
+}
+
+async function renderMovieScreen({user, movie, logEntry}: RenderParams = {}) {
+  if (typeof user === 'undefined') {
+    user = await loginAsUser()
+  }
+  if (typeof movie === 'undefined') {
+    movie = await moviesDB.create(buildMovie())
+  }
+  if (typeof logEntry === 'undefined') {
+    logEntry = await logEntriesDB.create(buildLogEntry({user, movie}))
+  }
+
   const route = `/movie/${movie.id}`
-  await render(<App />, {route})
+  const utils = await render(<App />, {route, user})
+
+  return {
+    ...utils,
+    user,
+    movie,
+    logEntry,
+  }
+}
+
+test('renders all the movie information', async () => {
+  const {movie} = await renderMovieScreen({logEntry: null})
 
   const title = `${movie.title} ${movie.description}`
   const director = movie.starList[0].name
@@ -71,9 +100,7 @@ test('renders all the movie information', async () => {
 })
 
 test('can create a log entry for the movie', async () => {
-  const movie = await moviesDB.create(buildMovie())
-  const route = `/movie/${movie.id}`
-  await render(<App />, {route})
+  await renderMovieScreen({logEntry: null})
 
   const addToWatchlistButton = screen.getByRole('button', {
     name: /add to watchlist/i,
@@ -108,12 +135,7 @@ test('can create a log entry for the movie', async () => {
 })
 
 test('can remove a log entry for the movie', async () => {
-  const user = await loginAsUser()
-  const movie = await moviesDB.create(buildMovie())
-  await logEntriesDB.create(buildLogEntry({user, movie}))
-  const route = `/movie/${movie.id}`
-
-  await render(<App />, {route, user})
+  await renderMovieScreen()
 
   const removeFromListButton = screen.getByRole('button', {
     name: /remove from list/i,
@@ -152,9 +174,7 @@ test('can mark a log entry as watched', async () => {
   const logEntry = await logEntriesDB.create(
     buildLogEntry({user, movie, watchedDate: null}),
   )
-  const route = `/movie/${movie.id}`
-
-  await render(<App />, {route, user})
+  await renderMovieScreen({user, movie, logEntry})
 
   const markAsWatchedButton = screen.getByRole('button', {
     name: 'Mark as watched',
@@ -181,9 +201,7 @@ test('can mark a log entry as favorite', async () => {
   const logEntry = await logEntriesDB.create(
     buildLogEntry({user, movie, favorite: false}),
   )
-  const route = `/movie/${movie.id}`
-
-  await render(<App />, {route, user})
+  await renderMovieScreen({user, movie, logEntry})
 
   const markAsFavoriteButton = screen.getByRole('button', {
     name: 'Mark as favorite',
@@ -208,12 +226,7 @@ test('can mark a log entry as favorite', async () => {
 test('can edit a note', async () => {
   jest.useFakeTimers()
 
-  const user = await loginAsUser()
-  const movie = await moviesDB.create(buildMovie())
-  const logEntry = await logEntriesDB.create(buildLogEntry({user, movie}))
-  const route = `/movie/${movie.id}`
-
-  await render(<App />, {route, user})
+  const {logEntry} = await renderMovieScreen()
 
   const openNotesModalButton = screen.getByRole('button', {name: /notes/i})
   userEvent.click(openNotesModalButton)
@@ -231,7 +244,8 @@ test('can edit a note', async () => {
   await waitForLoadingToFinish()
 
   expect(notesTextarea).toHaveValue(newNotes)
-  expect(await logEntriesDB.read(logEntry.id)).toMatchObject({
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  expect(await logEntriesDB.read(logEntry!.id)).toMatchObject({
     notes: newNotes,
   })
 })
