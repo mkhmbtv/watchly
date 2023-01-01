@@ -173,5 +173,5 @@ test('No state updates happen if the component is unmounted while pending', asyn
 
   expect(result.current).toEqual(pendingAsyncState)
 
-  expect(console.error).not.toHaveBeenCalled()
+  expect(spy).not.toHaveBeenCalled()
 })

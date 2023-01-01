@@ -1,9 +1,11 @@
 import {server} from 'mocks/server/test-server'
 import '@testing-library/jest-dom'
-import {act} from '@testing-library/react'
+import {act, configure} from '@testing-library/react'
 import * as usersDB from 'mocks/data/users'
 import * as moviesDB from 'mocks/data/movies'
 import * as logEntriesDB from 'mocks/data/log-entries'
+
+configure({defaultHidden: true})
 
 beforeAll(() => server.listen())
 afterAll(() => server.close())

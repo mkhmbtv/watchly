@@ -1,5 +1,6 @@
 import * as React from 'react'
 import {faker} from '@faker-js/faker'
+import {server, rest} from 'mocks/server/test-server'
 import {
   render,
   screen,
@@ -16,6 +17,8 @@ import {App} from 'app'
 import {AuthUser} from 'types/user'
 import {Movie} from 'types/movies'
 import {LogEntry} from 'types/log-entry'
+
+const apiUrl = process.env.REACT_APP_API_URL
 
 afterEach(async () => {
   await session.logout()
@@ -247,5 +250,64 @@ test('can edit a note', async () => {
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   expect(await logEntriesDB.read(logEntry!.id)).toMatchObject({
     notes: newNotes,
+  })
+})
+
+describe('console errors', () => {
+  let consoleSpy: jest.SpyInstance
+  beforeAll(() => {
+    consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {
+      //
+    })
+  })
+
+  afterAll(() => {
+    consoleSpy.mockRestore()
+  })
+
+  test('shows an error message when a movie fails to load', async () => {
+    const movie = buildMovie({id: 'BAD_ID'})
+
+    await renderMovieScreen({movie, logEntry: null})
+
+    expect(
+      (await screen.findByRole('alert')).textContent,
+    ).toMatchInlineSnapshot(`"There was an error:Movie not found"`)
+    expect(consoleSpy).toHaveBeenCalled()
+  })
+
+  test('note update failures are displayed', async () => {
+    jest.useFakeTimers()
+    const testErrorMessage = 'test error message'
+
+    await renderMovieScreen()
+
+    server.use(
+      rest.put(`${apiUrl}/log-entries/:logEntryId`, async (req, res, ctx) => {
+        return res(
+          ctx.status(400),
+          ctx.json({status: 400, message: testErrorMessage}),
+        )
+      }),
+    )
+
+    const openNotesModalButton = screen.getByRole('button', {name: /notes/i})
+    userEvent.click(openNotesModalButton)
+
+    const newNotes = faker.lorem.words()
+    const notesTextarea = screen.getByRole('textbox', {
+      name: /add your personal notes/i,
+    })
+
+    userEvent.clear(notesTextarea)
+    userEvent.type(notesTextarea, newNotes)
+
+    await screen.findByLabelText(/loading/i)
+
+    await waitForLoadingToFinish()
+
+    expect(screen.getByRole('alert').textContent).toMatchInlineSnapshot(
+      `"There was an error:test error message"`,
+    )
   })
 })
