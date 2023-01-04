@@ -1,4 +1,4 @@
-import {Movie} from './movies'
+import {Movie} from './movie'
 
 export interface LogEntry {
   id: string

@@ -17,8 +17,8 @@ describe('smoke', () => {
     })
 
     cy.findByRole('main').within(() => {
-      cy.findByRole('textbox', {name: /search/i}).type('Parasite{enter}')
-      cy.findByRole('listitem', {name: /parasite/i}).within(() => {
+      cy.findByRole('textbox', {name: /search/i}).type('Shrek{enter}')
+      cy.findByRole('listitem', {name: /shrek/i}).within(() => {
         cy.findByRole('button', {name: /add to watchlist/i}).click()
       })
     })
@@ -29,12 +29,12 @@ describe('smoke', () => {
 
     cy.findByRole('main').within(() => {
       cy.findAllByRole('listitem').should('have.length', 1)
-      cy.findByRole('link', {name: /parasite/i}).click()
+      cy.findByRole('link', {name: /shrek/i}).click()
     })
 
     cy.findByRole('button', {name: /notes/i}).click()
     cy.findByRole('textbox', {name: /add your personal notes/i}).type(
-      'Great movie',
+      'GOAT movie',
     )
     cy.findByLabelText(/loading/i).should('exist')
     cy.findByLabelText(/loading/i).should('not.exist')
@@ -61,10 +61,10 @@ describe('smoke', () => {
 
     cy.findByRole('main').within(() => {
       cy.findAllByRole('listitem').should('have.length', 1)
-      cy.findByRole('link', {name: /parasite/i}).click()
+      cy.findByRole('link', {name: /shrek/i}).click()
     })
 
-    cy.findByRole('button', {name: /remove from list/i}).click()
+    cy.findByRole('button', {name: /stop tracking/i}).click()
     cy.findByRole('button', {name: /notes/i}).should('not.exist')
     cy.findByRole('radio', {name: /5 stars/}).should('not.exist')
 

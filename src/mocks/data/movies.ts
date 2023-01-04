@@ -1,6 +1,6 @@
 import moviesData from './movies.json'
 import {matchSorter} from 'match-sorter'
-import {Movie} from 'types/movies'
+import {Movie} from 'types/movie'
 
 let movies: Movie[] = [...moviesData]
 

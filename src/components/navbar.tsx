@@ -41,7 +41,7 @@ function Navbar() {
         <Link to="/discover">
           <div className="flex items-center">
             <Logo width="60" height="60" />
-            <h1 className="text-3xl font-semibold ml-2">Movify</h1>
+            <h1 className="text-3xl font-semibold ml-2">Watchly</h1>
           </div>
         </Link>
         <ul className="flex items-center sm:flex-col sm:mb-5">

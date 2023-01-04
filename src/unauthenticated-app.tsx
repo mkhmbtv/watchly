@@ -10,7 +10,7 @@ function UnauthenticatedApp() {
   return (
     <div className="flex flex-col items-center justify-center w-full h-screen">
       <Logo width="120" height="120" />
-      <h1 className="text-4xl mb-4 font-bold">Movify</h1>
+      <h1 className="text-4xl mb-4 font-bold">Watchly</h1>
       <div className="grid grid-cols-2 gap-3">
         <Modal>
           <ModalOpenButton>

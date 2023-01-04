@@ -1,5 +1,5 @@
 {
-  "name": "kino",
+  "name": "watchly",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,13 +7,6 @@
     "@reach/dialog": "^0.17.0",
     "@reach/tooltip": "^0.17.0",
     "@reach/visually-hidden": "^0.17.0",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^29.2.4",
-    "@types/node": "^16.18.3",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.9",
     "clsx": "^1.2.1",
     "debounce-fn": "^5.1.2",
     "match-sorter": "^6.3.1",
@@ -60,7 +53,14 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
     "@testing-library/cypress": "^9.0.0",
+    "@types/jest": "^29.2.4",
+    "@types/node": "^16.18.3",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
     "autoprefixer": "^10.4.13",
     "babel-jest": "^29.3.1",
     "cross-env": "^7.0.3",

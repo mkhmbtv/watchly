@@ -2,7 +2,7 @@ import * as moviesDB from './movies'
 import {HttpError} from '../error'
 import {LogEntry} from 'types/log-entry'
 
-const logEntriesKey = '__movify_log_entries__'
+const logEntriesKey = '__watchly_log_entries__'
 type LogEntryStore = {
   [key: string]: LogEntry
 }

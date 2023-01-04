@@ -2,7 +2,7 @@ import * as React from 'react'
 import {QueryClient, useQuery, useQueryClient} from 'react-query'
 import {useClient} from 'context/auth-context'
 import {client as apiClient} from './api-client'
-import {Movie} from 'types/movies'
+import {Movie} from 'types/movie'
 import moviePosterPlaceholerSvg from 'assets/movie-poster-placeholder.svg'
 
 const loadingMovie = {

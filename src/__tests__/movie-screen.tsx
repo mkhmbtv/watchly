@@ -15,7 +15,7 @@ import * as logEntriesDB from 'mocks/data/log-entries'
 import {formatNumberString} from 'utils/misc'
 import {App} from 'app'
 import {AuthUser} from 'types/user'
-import {Movie} from 'types/movies'
+import {Movie} from 'types/movie'
 import {LogEntry} from 'types/log-entry'
 
 const apiUrl = process.env.REACT_APP_API_URL
@@ -84,7 +84,7 @@ test('renders all the movie information', async () => {
   ).toBeInTheDocument()
 
   expect(
-    screen.queryByRole('button', {name: /remove from list/i}),
+    screen.queryByRole('button', {name: /stop tracking/i}),
   ).not.toBeInTheDocument()
   expect(
     screen.queryByRole('button', {name: /mark as watched/i}),
@@ -115,7 +115,7 @@ test('can create a log entry for the movie', async () => {
   await waitForLoadingToFinish()
 
   expect(
-    screen.getByRole('button', {name: /remove from list/i}),
+    screen.getByRole('button', {name: /stop tracking/i}),
   ).toBeInTheDocument()
   expect(
     screen.getByRole('button', {name: /mark as watched/i}),
@@ -141,7 +141,7 @@ test('can remove a log entry for the movie', async () => {
   await renderMovieScreen()
 
   const removeFromListButton = screen.getByRole('button', {
-    name: /remove from list/i,
+    name: /stop tracking/i,
   })
   userEvent.click(removeFromListButton)
   expect(removeFromListButton).toBeDisabled()
@@ -153,7 +153,7 @@ test('can remove a log entry for the movie', async () => {
   ).toBeInTheDocument()
 
   expect(
-    screen.queryByRole('button', {name: /remove from list/i}),
+    screen.queryByRole('button', {name: /stop tracking/i}),
   ).not.toBeInTheDocument()
   expect(
     screen.queryByRole('button', {name: /mark as watched/i}),

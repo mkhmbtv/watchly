@@ -8,7 +8,7 @@ import {
   useUpdateLogEntry,
   useRemoveLogEntry,
 } from 'utils/log-entries'
-import {Movie} from 'types/movies'
+import {Movie} from 'types/movie'
 import {CircleButton} from './button'
 import {Spinner} from './spinner'
 import {
@@ -101,7 +101,7 @@ function StatusButtons({movie}: StatusButtonsProps) {
       ) : null}
       {logEntry ? (
         <TooltipButton
-          label="Remove from list"
+          label="Stop tracking"
           onClick={() => remove({id: logEntry.id})}
           icon={<FaMinusCircle />}
         />

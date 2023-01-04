@@ -2,7 +2,7 @@ import * as React from 'react'
 import {Link} from 'react-router-dom'
 import {Rating} from './rating'
 import {StatusButtons} from './status-buttons'
-import {Movie} from 'types/movies'
+import {Movie} from 'types/movie'
 import {useLogEntry} from 'utils/log-entries'
 import {formatDate} from 'utils/misc'
 

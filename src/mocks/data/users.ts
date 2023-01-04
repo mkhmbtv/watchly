@@ -2,7 +2,7 @@ import {Buffer} from 'buffer'
 import {HttpError} from '../error'
 import {User, UserCredentials, SanitizedUser, AuthUser} from 'types/user'
 
-const usersKey = '__movify_users__'
+const usersKey = '__watchly_users__'
 type UserStore = {
   [key: string]: User
 }

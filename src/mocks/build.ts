@@ -1,6 +1,6 @@
 import {faker} from '@faker-js/faker'
 import {AuthUser, UserCredentialsWithId} from 'types/user'
-import {Movie} from 'types/movies'
+import {Movie} from 'types/movie'
 import {LogEntryWithMovie} from 'types/log-entry'
 
 function buildUser(

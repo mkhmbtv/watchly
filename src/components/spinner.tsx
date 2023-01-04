@@ -1,10 +1,10 @@
 import * as React from 'react'
 import clsx from 'clsx'
-import {FaSpinner} from 'react-icons/fa'
+import {ImSpinner2} from 'react-icons/im'
 
-function Spinner({className, ...props}: Parameters<typeof FaSpinner>[0]) {
+function Spinner({className, ...props}: Parameters<typeof ImSpinner2>[0]) {
   return (
-    <FaSpinner
+    <ImSpinner2
       aria-label="loading"
       className={clsx('animate-spin inline-block', className)}
       {...props}

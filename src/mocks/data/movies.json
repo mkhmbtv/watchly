@@ -1,73 +1,1501 @@
 [
   {
-    "id": "tt0169547",
-    "image": "https://m.media-amazon.com/images/M/MV5BNTBmZWJkNjctNDhiNC00MGE2LWEwOTctZTk5OGVhMWMyNmVhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_Ratio0.6837_AL_.jpg",
-    "title": "American Beauty",
-    "description": "(1999)",
-    "runtimeStr": "122 min",
-    "genres": "Drama",
-    "contentRating": "R",
-    "imDbRating": "8.4",
-    "imDbRatingVotes": "1152496",
-    "metacriticRating": "84",
-    "plot": "A sexually frustrated suburban father has a mid-life crisis after becoming infatuated with his daughter's best friend.",
-    "stars": "Sam Mendes, Kevin Spacey, Annette Bening, Thora Birch, Wes Bentley",
+    "id": "tt1630029",
+    "image": "https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Avatar: The Way of Water",
+    "description": "(2022)",
+    "runtimeStr": "192 min",
+    "genres": "Action, Adventure, Fantasy",
+    "contentRating": "PG-13",
+    "imDbRating": "7.9",
+    "imDbRatingVotes": "176140",
+    "metacriticRating": "67",
+    "plot": "Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their home.",
+    "stars": "James Cameron, Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
     "starList": [
       {
-        "id": "tt0169547",
-        "name": "Sam Mendes"
+        "id": "tt1630029",
+        "name": "James Cameron"
       },
       {
-        "id": "tt0169547",
-        "name": "Kevin Spacey"
+        "id": "tt1630029",
+        "name": "Sam Worthington"
       },
       {
-        "id": "tt0169547",
-        "name": "Annette Bening"
+        "id": "tt1630029",
+        "name": "Zoe Saldana"
       },
       {
-        "id": "tt0169547",
-        "name": "Thora Birch"
+        "id": "tt1630029",
+        "name": "Sigourney Weaver"
       },
       {
-        "id": "tt0169547",
-        "name": "Wes Bentley"
+        "id": "tt1630029",
+        "name": "Stephen Lang"
       }
     ]
   },
   {
-    "id": "tt6751668",
-    "image": "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_Ratio0.6837_AL_.jpg",
-    "title": "Parasite",
+    "id": "tt8946378",
+    "image": "https://m.media-amazon.com/images/M/MV5BMGUwZjliMTAtNzAxZi00MWNiLWE2NzgtZGUxMGQxZjhhNDRiXkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Knives Out",
     "description": "(2019)",
-    "runtimeStr": "132 min",
-    "genres": "Drama, Thriller",
-    "contentRating": "R",
-    "imDbRating": "8.5",
-    "imDbRatingVotes": "793403",
-    "metacriticRating": "96",
-    "plot": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
-    "stars": "Bong Joon Ho, Song Kang-ho, Lee Sun-kyun, Cho Yeo-jeong, Choi Woo-sik",
+    "runtimeStr": "130 min",
+    "genres": "Comedy, Crime, Drama",
+    "contentRating": "PG-13",
+    "imDbRating": "7.9",
+    "imDbRatingVotes": "661491",
+    "metacriticRating": "82",
+    "plot": "A detective investigates the death of the patriarch of an eccentric, combative family.",
+    "stars": "Rian Johnson, Daniel Craig, Chris Evans, Ana de Armas, Jamie Lee Curtis",
     "starList": [
       {
-        "id": "tt6751668",
-        "name": "Bong Joon Ho"
+        "id": "tt8946378",
+        "name": "Rian Johnson"
       },
       {
-        "id": "tt6751668",
-        "name": "Song Kang-ho"
+        "id": "tt8946378",
+        "name": "Daniel Craig"
       },
       {
-        "id": "tt6751668",
-        "name": "Lee Sun-kyun"
+        "id": "tt8946378",
+        "name": "Chris Evans"
       },
       {
-        "id": "tt6751668",
-        "name": "Cho Yeo-jeong"
+        "id": "tt8946378",
+        "name": "Ana de Armas"
       },
       {
-        "id": "tt6751668",
-        "name": "Choi Woo-sik"
+        "id": "tt8946378",
+        "name": "Jamie Lee Curtis"
+      }
+    ]
+  },
+  {
+    "id": "tt11813216",
+    "image": "https://m.media-amazon.com/images/M/MV5BM2NlZDI0ZDktNTg5OS00ZjQ1LWI4MDEtN2I0MDE5NWRiNzA4XkEyXkFqcGdeQXVyMTY5Nzc4MDY@._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Banshees of Inisherin",
+    "description": "(2022)",
+    "runtimeStr": "114 min",
+    "genres": "Comedy, Drama",
+    "contentRating": "R",
+    "imDbRating": "7.9",
+    "imDbRatingVotes": "59103",
+    "metacriticRating": "87",
+    "plot": "Two lifelong friends find themselves at an impasse when one abruptly ends their relationship, with alarming consequences for both of them.",
+    "stars": "Martin McDonagh, Colin Farrell, Brendan Gleeson, Kerry Condon, Pat Shortt",
+    "starList": [
+      {
+        "id": "tt11813216",
+        "name": "Martin McDonagh"
+      },
+      {
+        "id": "tt11813216",
+        "name": "Colin Farrell"
+      },
+      {
+        "id": "tt11813216",
+        "name": "Brendan Gleeson"
+      },
+      {
+        "id": "tt11813216",
+        "name": "Kerry Condon"
+      },
+      {
+        "id": "tt11813216",
+        "name": "Pat Shortt"
+      }
+    ]
+  },
+  {
+    "id": "tt0085334",
+    "image": "https://m.media-amazon.com/images/M/MV5BOWMyNjE0MzEtMzVjNy00NjIxLTg0ZjMtMWJhNGI1YmVjYTczL2ltYWdlXkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_Ratio0.6837_AL_.jpg",
+    "title": "A Christmas Story",
+    "description": "(1983)",
+    "runtimeStr": "93 min",
+    "genres": "Comedy, Family",
+    "contentRating": "PG",
+    "imDbRating": "7.9",
+    "imDbRatingVotes": "158898",
+    "metacriticRating": "77",
+    "plot": "In the 1940s, a young boy named Ralphie Parker attempts to convince his parents, teacher, and Santa Claus that a Red Ryder Range 200 Shot BB gun really is the perfect Christmas gift.",
+    "stars": "Bob Clark, Peter Billingsley, Melinda Dillon, Darren McGavin, Scott Schwartz",
+    "starList": [
+      {
+        "id": "tt0085334",
+        "name": "Bob Clark"
+      },
+      {
+        "id": "tt0085334",
+        "name": "Peter Billingsley"
+      },
+      {
+        "id": "tt0085334",
+        "name": "Melinda Dillon"
+      },
+      {
+        "id": "tt0085334",
+        "name": "Darren McGavin"
+      },
+      {
+        "id": "tt0085334",
+        "name": "Scott Schwartz"
+      }
+    ]
+  },
+  {
+    "id": "tt1745960",
+    "image": "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Top Gun: Maverick",
+    "description": "(2022)",
+    "runtimeStr": "130 min",
+    "genres": "Action, Drama",
+    "contentRating": "PG-13",
+    "imDbRating": "8.4",
+    "imDbRatingVotes": "475205",
+    "metacriticRating": "78",
+    "plot": "After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it.",
+    "stars": "Joseph Kosinski, Tom Cruise, Jennifer Connelly, Miles Teller, Val Kilmer",
+    "starList": [
+      {
+        "id": "tt1745960",
+        "name": "Joseph Kosinski"
+      },
+      {
+        "id": "tt1745960",
+        "name": "Tom Cruise"
+      },
+      {
+        "id": "tt1745960",
+        "name": "Jennifer Connelly"
+      },
+      {
+        "id": "tt1745960",
+        "name": "Miles Teller"
+      },
+      {
+        "id": "tt1745960",
+        "name": "Val Kilmer"
+      }
+    ]
+  },
+  {
+    "id": "tt0099785",
+    "image": "https://m.media-amazon.com/images/M/MV5BMzFkM2YwOTQtYzk2Mi00N2VlLWE3NTItN2YwNDg1YmY0ZDNmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Home Alone",
+    "description": "(1990)",
+    "runtimeStr": "103 min",
+    "genres": "Comedy, Family",
+    "contentRating": "PG",
+    "imDbRating": "7.7",
+    "imDbRatingVotes": "589201",
+    "metacriticRating": "63",
+    "plot": "An eight-year-old troublemaker, mistakenly left home alone, must defend his home against a pair of burglars on Christmas eve.",
+    "stars": "Chris Columbus, Macaulay Culkin, Joe Pesci, Daniel Stern, John Heard",
+    "starList": [
+      {
+        "id": "tt0099785",
+        "name": "Chris Columbus"
+      },
+      {
+        "id": "tt0099785",
+        "name": "Macaulay Culkin"
+      },
+      {
+        "id": "tt0099785",
+        "name": "Joe Pesci"
+      },
+      {
+        "id": "tt0099785",
+        "name": "Daniel Stern"
+      },
+      {
+        "id": "tt0099785",
+        "name": "John Heard"
+      }
+    ]
+  },
+  {
+    "id": "tt0095016",
+    "image": "https://m.media-amazon.com/images/M/MV5BZjRlNDUxZjAtOGQ4OC00OTNlLTgxNmQtYTBmMDgwZmNmNjkxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Die Hard",
+    "description": "(1988)",
+    "runtimeStr": "132 min",
+    "genres": "Action, Thriller",
+    "contentRating": "R",
+    "imDbRating": "8.2",
+    "imDbRatingVotes": "885259",
+    "metacriticRating": "72",
+    "plot": "A New York City police officer tries to save his estranged wife and several others taken hostage by terrorists during a Christmas party at the Nakatomi Plaza in Los Angeles.",
+    "stars": "John McTiernan, Bruce Willis, Alan Rickman, Bonnie Bedelia, Reginald VelJohnson",
+    "starList": [
+      {
+        "id": "tt0095016",
+        "name": "John McTiernan"
+      },
+      {
+        "id": "tt0095016",
+        "name": "Bruce Willis"
+      },
+      {
+        "id": "tt0095016",
+        "name": "Alan Rickman"
+      },
+      {
+        "id": "tt0095016",
+        "name": "Bonnie Bedelia"
+      },
+      {
+        "id": "tt0095016",
+        "name": "Reginald VelJohnson"
+      }
+    ]
+  },
+  {
+    "id": "tt1877830",
+    "image": "https://m.media-amazon.com/images/M/MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Batman",
+    "description": "(2022)",
+    "runtimeStr": "176 min",
+    "genres": "Action, Crime, Drama",
+    "contentRating": "PG-13",
+    "imDbRating": "7.8",
+    "imDbRatingVotes": "646436",
+    "metacriticRating": "72",
+    "plot": "When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.",
+    "stars": "Matt Reeves, Robert Pattinson, Zoë Kravitz, Jeffrey Wright, Colin Farrell",
+    "starList": [
+      {
+        "id": "tt1877830",
+        "name": "Matt Reeves"
+      },
+      {
+        "id": "tt1877830",
+        "name": "Robert Pattinson"
+      },
+      {
+        "id": "tt1877830",
+        "name": "Zoë Kravitz"
+      },
+      {
+        "id": "tt1877830",
+        "name": "Jeffrey Wright"
+      },
+      {
+        "id": "tt1877830",
+        "name": "Colin Farrell"
+      }
+    ]
+  },
+  {
+    "id": "tt0241527",
+    "image": "https://m.media-amazon.com/images/M/MV5BNmQ0ODBhMjUtNDRhOC00MGQzLTk5MTAtZDliODg5NmU5MjZhXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Harry Potter and the Sorcerer's Stone",
+    "description": "(2001)",
+    "runtimeStr": "152 min",
+    "genres": "Adventure, Family, Fantasy",
+    "contentRating": "PG",
+    "imDbRating": "7.6",
+    "imDbRatingVotes": "783393",
+    "metacriticRating": "65",
+    "plot": "An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world.",
+    "stars": "Chris Columbus, Daniel Radcliffe, Rupert Grint, Richard Harris, Maggie Smith",
+    "starList": [
+      {
+        "id": "tt0241527",
+        "name": "Chris Columbus"
+      },
+      {
+        "id": "tt0241527",
+        "name": "Daniel Radcliffe"
+      },
+      {
+        "id": "tt0241527",
+        "name": "Rupert Grint"
+      },
+      {
+        "id": "tt0241527",
+        "name": "Richard Harris"
+      },
+      {
+        "id": "tt0241527",
+        "name": "Maggie Smith"
+      }
+    ]
+  },
+  {
+    "id": "tt1016150",
+    "image": "https://m.media-amazon.com/images/M/MV5BYTE1MmZiMWYtYTFmZi00YjA3LWI2ODgtMWFlNWYxZjdmNGE3XkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_Ratio0.7857_AL_.jpg",
+    "title": "All Quiet on the Western Front",
+    "description": "(2022)",
+    "runtimeStr": "148 min",
+    "genres": "Action, Drama, War",
+    "contentRating": "R",
+    "imDbRating": "7.8",
+    "imDbRatingVotes": "95248",
+    "metacriticRating": "76",
+    "plot": "A young German soldier's terrifying experiences and distress on the western front during World War I.",
+    "stars": "Edward Berger, Felix Kammerer, Albrecht Schuch, Aaron Hilmer, Moritz Klaus",
+    "starList": [
+      {
+        "id": "tt1016150",
+        "name": "Edward Berger"
+      },
+      {
+        "id": "tt1016150",
+        "name": "Felix Kammerer"
+      },
+      {
+        "id": "tt1016150",
+        "name": "Albrecht Schuch"
+      },
+      {
+        "id": "tt1016150",
+        "name": "Aaron Hilmer"
+      },
+      {
+        "id": "tt1016150",
+        "name": "Moritz Klaus"
+      }
+    ]
+  },
+  {
+    "id": "tt0068646",
+    "image": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_Ratio0.7041_AL_.jpg",
+    "title": "The Godfather",
+    "description": "(1972)",
+    "runtimeStr": "175 min",
+    "genres": "Crime, Drama",
+    "contentRating": "R",
+    "imDbRating": "9.2",
+    "imDbRatingVotes": "1857503",
+    "metacriticRating": "100",
+    "plot": "The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.",
+    "stars": "Francis Ford Coppola, Marlon Brando, Al Pacino, James Caan, Diane Keaton",
+    "starList": [
+      {
+        "id": "tt0068646",
+        "name": "Francis Ford Coppola"
+      },
+      {
+        "id": "tt0068646",
+        "name": "Marlon Brando"
+      },
+      {
+        "id": "tt0068646",
+        "name": "Al Pacino"
+      },
+      {
+        "id": "tt0068646",
+        "name": "James Caan"
+      },
+      {
+        "id": "tt0068646",
+        "name": "Diane Keaton"
+      }
+    ]
+  },
+  {
+    "id": "tt4729430",
+    "image": "https://m.media-amazon.com/images/M/MV5BMWYwOThjM2ItZGYxNy00NTQwLWFlZWEtM2MzM2Q5MmY3NDU5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Klaus",
+    "description": "(2019)",
+    "runtimeStr": "96 min",
+    "genres": "Animation, Adventure, Comedy",
+    "contentRating": "PG",
+    "imDbRating": "8.1",
+    "imDbRatingVotes": "158486",
+    "metacriticRating": "65",
+    "plot": "A simple act of kindness always sparks another, even in a frozen, faraway place. When Smeerensburg's new postman, Jesper, befriends toymaker Klaus, their gifts melt an age-old feud and deliver a sleigh full of holiday traditions.",
+    "stars": "Sergio Pablos, Carlos Martínez López, Jason Schwartzman, J.K. Simmons, Rashida Jones, Will Sasso",
+    "starList": [
+      {
+        "id": "tt4729430",
+        "name": "Sergio Pablos"
+      },
+      {
+        "id": "tt4729430",
+        "name": "Carlos Martínez López"
+      },
+      {
+        "id": "tt4729430",
+        "name": "Jason Schwartzman"
+      },
+      {
+        "id": "tt4729430",
+        "name": "J.K. Simmons"
+      },
+      {
+        "id": "tt4729430",
+        "name": "Rashida Jones"
+      },
+      {
+        "id": "tt4729430",
+        "name": "Will Sasso"
+      }
+    ]
+  },
+  {
+    "id": "tt8579674",
+    "image": "https://m.media-amazon.com/images/M/MV5BOTdmNTFjNDEtNzg0My00ZjkxLTg1ZDAtZTdkMDc2ZmFiNWQ1XkEyXkFqcGdeQXVyNTAzNzgwNTg@._V1_Ratio0.6837_AL_.jpg",
+    "title": "1917",
+    "description": "(2019)",
+    "runtimeStr": "119 min",
+    "genres": "Action, Drama, War",
+    "contentRating": "R",
+    "imDbRating": "8.2",
+    "imDbRatingVotes": "591868",
+    "metacriticRating": "78",
+    "plot": "April 6th, 1917. As an infantry battalion assembles to wage war deep in enemy territory, two soldiers are assigned to race against time and deliver a message that will stop 1,600 men from walking straight into a deadly trap.",
+    "stars": "Sam Mendes, Dean-Charles Chapman, George MacKay, Daniel Mays, Colin Firth",
+    "starList": [
+      {
+        "id": "tt8579674",
+        "name": "Sam Mendes"
+      },
+      {
+        "id": "tt8579674",
+        "name": "Dean-Charles Chapman"
+      },
+      {
+        "id": "tt8579674",
+        "name": "George MacKay"
+      },
+      {
+        "id": "tt8579674",
+        "name": "Daniel Mays"
+      },
+      {
+        "id": "tt8579674",
+        "name": "Colin Firth"
+      }
+    ]
+  },
+  {
+    "id": "tt1392214",
+    "image": "https://m.media-amazon.com/images/M/MV5BMTg0NTIzMjQ1NV5BMl5BanBnXkFtZTcwNDc3MzM5OQ@@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Prisoners",
+    "description": "(2013)",
+    "runtimeStr": "153 min",
+    "genres": "Crime, Drama, Mystery",
+    "contentRating": "R",
+    "imDbRating": "8.1",
+    "imDbRatingVotes": "718673",
+    "metacriticRating": "70",
+    "plot": "When Keller Dover's daughter and her friend go missing, he takes matters into his own hands as the police pursue multiple leads and the pressure mounts.",
+    "stars": "Denis Villeneuve, Hugh Jackman, Jake Gyllenhaal, Viola Davis, Melissa Leo",
+    "starList": [
+      {
+        "id": "tt1392214",
+        "name": "Denis Villeneuve"
+      },
+      {
+        "id": "tt1392214",
+        "name": "Hugh Jackman"
+      },
+      {
+        "id": "tt1392214",
+        "name": "Jake Gyllenhaal"
+      },
+      {
+        "id": "tt1392214",
+        "name": "Viola Davis"
+      },
+      {
+        "id": "tt1392214",
+        "name": "Melissa Leo"
+      }
+    ]
+  },
+  {
+    "id": "tt0104940",
+    "image": "https://m.media-amazon.com/images/M/MV5BN2Y0NWRkNWItZWEwNi00MDNlLWJmZDYtNTkwYzI5Nzg4MjVjXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Muppet Christmas Carol",
+    "description": "(1992)",
+    "runtimeStr": "85 min",
+    "genres": "Comedy, Drama, Family",
+    "contentRating": "G",
+    "imDbRating": "7.7",
+    "imDbRatingVotes": "63099",
+    "metacriticRating": "64",
+    "plot": "The Muppets present their own touching rendition of Charles Dickens' classic tale.",
+    "stars": "Brian Henson, Michael Caine, Dave Goelz, Steve Whitmire, Jerry Nelson",
+    "starList": [
+      {
+        "id": "tt0104940",
+        "name": "Brian Henson"
+      },
+      {
+        "id": "tt0104940",
+        "name": "Michael Caine"
+      },
+      {
+        "id": "tt0104940",
+        "name": "Dave Goelz"
+      },
+      {
+        "id": "tt0104940",
+        "name": "Steve Whitmire"
+      },
+      {
+        "id": "tt0104940",
+        "name": "Jerry Nelson"
+      }
+    ]
+  },
+  {
+    "id": "tt0111161",
+    "image": "https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Shawshank Redemption",
+    "description": "(1994)",
+    "runtimeStr": "142 min",
+    "genres": "Drama",
+    "contentRating": "R",
+    "imDbRating": "9.3",
+    "imDbRatingVotes": "2679335",
+    "metacriticRating": "81",
+    "plot": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    "stars": "Frank Darabont, Tim Robbins, Morgan Freeman, Bob Gunton, William Sadler",
+    "starList": [
+      {
+        "id": "tt0111161",
+        "name": "Frank Darabont"
+      },
+      {
+        "id": "tt0111161",
+        "name": "Tim Robbins"
+      },
+      {
+        "id": "tt0111161",
+        "name": "Morgan Freeman"
+      },
+      {
+        "id": "tt0111161",
+        "name": "Bob Gunton"
+      },
+      {
+        "id": "tt0111161",
+        "name": "William Sadler"
+      }
+    ]
+  },
+  {
+    "id": "tt0120737",
+    "image": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "description": "(2001)",
+    "runtimeStr": "178 min",
+    "genres": "Action, Adventure, Drama",
+    "contentRating": "PG-13",
+    "imDbRating": "8.8",
+    "imDbRatingVotes": "1875792",
+    "metacriticRating": "92",
+    "plot": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+    "stars": "Peter Jackson, Elijah Wood, Ian McKellen, Orlando Bloom, Sean Bean",
+    "starList": [
+      {
+        "id": "tt0120737",
+        "name": "Peter Jackson"
+      },
+      {
+        "id": "tt0120737",
+        "name": "Elijah Wood"
+      },
+      {
+        "id": "tt0120737",
+        "name": "Ian McKellen"
+      },
+      {
+        "id": "tt0120737",
+        "name": "Orlando Bloom"
+      },
+      {
+        "id": "tt0120737",
+        "name": "Sean Bean"
+      }
+    ]
+  },
+  {
+    "id": "tt0089218",
+    "image": "https://m.media-amazon.com/images/M/MV5BODRlMjRkZGEtZWM2Zi00ZjYxLWE0MWUtMmM1YWM2NzZlOTE1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Goonies",
+    "description": "(1985)",
+    "runtimeStr": "114 min",
+    "genres": "Adventure, Comedy, Family",
+    "contentRating": "PG",
+    "imDbRating": "7.7",
+    "imDbRatingVotes": "276659",
+    "metacriticRating": "62",
+    "plot": "A group of young misfits called The Goonies discover an ancient map and set out on an adventure to find a legendary pirate's long-lost treasure.",
+    "stars": "Richard Donner, Sean Astin, Josh Brolin, Jeff Cohen, Corey Feldman",
+    "starList": [
+      {
+        "id": "tt0089218",
+        "name": "Richard Donner"
+      },
+      {
+        "id": "tt0089218",
+        "name": "Sean Astin"
+      },
+      {
+        "id": "tt0089218",
+        "name": "Josh Brolin"
+      },
+      {
+        "id": "tt0089218",
+        "name": "Jeff Cohen"
+      },
+      {
+        "id": "tt0089218",
+        "name": "Corey Feldman"
+      }
+    ]
+  },
+  {
+    "id": "tt0816692",
+    "image": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Interstellar",
+    "description": "(2014)",
+    "runtimeStr": "169 min",
+    "genres": "Adventure, Drama, Sci-Fi",
+    "contentRating": "PG-13",
+    "imDbRating": "8.6",
+    "imDbRatingVotes": "1830503",
+    "metacriticRating": "74",
+    "plot": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    "stars": "Christopher Nolan, Matthew McConaughey, Anne Hathaway, Jessica Chastain, Mackenzie Foy",
+    "starList": [
+      {
+        "id": "tt0816692",
+        "name": "Christopher Nolan"
+      },
+      {
+        "id": "tt0816692",
+        "name": "Matthew McConaughey"
+      },
+      {
+        "id": "tt0816692",
+        "name": "Anne Hathaway"
+      },
+      {
+        "id": "tt0816692",
+        "name": "Jessica Chastain"
+      },
+      {
+        "id": "tt0816692",
+        "name": "Mackenzie Foy"
+      }
+    ]
+  },
+  {
+    "id": "tt1160419",
+    "image": "https://m.media-amazon.com/images/M/MV5BN2FjNmEyNWMtYzM0ZS00NjIyLTg5YzYtYThlMGVjNzE1OGViXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Dune",
+    "description": "(2021)",
+    "runtimeStr": "155 min",
+    "genres": "Action, Adventure, Drama",
+    "contentRating": "PG-13",
+    "imDbRating": "8.0",
+    "imDbRatingVotes": "635737",
+    "metacriticRating": "74",
+    "plot": "A noble family becomes embroiled in a war for control over the galaxy's most valuable asset while its heir becomes troubled by visions of a dark future.",
+    "stars": "Denis Villeneuve, Timothée Chalamet, Rebecca Ferguson, Zendaya, Oscar Isaac",
+    "starList": [
+      {
+        "id": "tt1160419",
+        "name": "Denis Villeneuve"
+      },
+      {
+        "id": "tt1160419",
+        "name": "Timothée Chalamet"
+      },
+      {
+        "id": "tt1160419",
+        "name": "Rebecca Ferguson"
+      },
+      {
+        "id": "tt1160419",
+        "name": "Zendaya"
+      },
+      {
+        "id": "tt1160419",
+        "name": "Oscar Isaac"
+      }
+    ]
+  },
+  {
+    "id": "tt0099685",
+    "image": "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Goodfellas",
+    "description": "(1990)",
+    "runtimeStr": "145 min",
+    "genres": "Biography, Crime, Drama",
+    "contentRating": "R",
+    "imDbRating": "8.7",
+    "imDbRatingVotes": "1162200",
+    "metacriticRating": "91",
+    "plot": "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate.",
+    "stars": "Martin Scorsese, Robert De Niro, Ray Liotta, Joe Pesci, Lorraine Bracco",
+    "starList": [
+      {
+        "id": "tt0099685",
+        "name": "Martin Scorsese"
+      },
+      {
+        "id": "tt0099685",
+        "name": "Robert De Niro"
+      },
+      {
+        "id": "tt0099685",
+        "name": "Ray Liotta"
+      },
+      {
+        "id": "tt0099685",
+        "name": "Joe Pesci"
+      },
+      {
+        "id": "tt0099685",
+        "name": "Lorraine Bracco"
+      }
+    ]
+  },
+  {
+    "id": "tt0110912",
+    "image": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Pulp Fiction",
+    "description": "(1994)",
+    "runtimeStr": "154 min",
+    "genres": "Crime, Drama",
+    "contentRating": "R",
+    "imDbRating": "8.9",
+    "imDbRatingVotes": "2054764",
+    "metacriticRating": "94",
+    "plot": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+    "stars": "Quentin Tarantino, John Travolta, Uma Thurman, Samuel L. Jackson, Bruce Willis",
+    "starList": [
+      {
+        "id": "tt0110912",
+        "name": "Quentin Tarantino"
+      },
+      {
+        "id": "tt0110912",
+        "name": "John Travolta"
+      },
+      {
+        "id": "tt0110912",
+        "name": "Uma Thurman"
+      },
+      {
+        "id": "tt0110912",
+        "name": "Samuel L. Jackson"
+      },
+      {
+        "id": "tt0110912",
+        "name": "Bruce Willis"
+      }
+    ]
+  },
+  {
+    "id": "tt0120338",
+    "image": "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Titanic",
+    "description": "(1997)",
+    "runtimeStr": "194 min",
+    "genres": "Drama, Romance",
+    "contentRating": "PG-13",
+    "imDbRating": "7.9",
+    "imDbRatingVotes": "1176874",
+    "metacriticRating": "75",
+    "plot": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+    "stars": "James Cameron, Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates",
+    "starList": [
+      {
+        "id": "tt0120338",
+        "name": "James Cameron"
+      },
+      {
+        "id": "tt0120338",
+        "name": "Leonardo DiCaprio"
+      },
+      {
+        "id": "tt0120338",
+        "name": "Kate Winslet"
+      },
+      {
+        "id": "tt0120338",
+        "name": "Billy Zane"
+      },
+      {
+        "id": "tt0120338",
+        "name": "Kathy Bates"
+      }
+    ]
+  },
+  {
+    "id": "tt0039628",
+    "image": "https://m.media-amazon.com/images/M/MV5BNjRkOGEwYTUtY2E5Yy00ODg4LTk2ZWItY2IyMzUxOGVhMTM1XkEyXkFqcGdeQXVyNDk0MDg4NDk@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Miracle on 34th Street",
+    "description": "(1947)",
+    "runtimeStr": "96 min",
+    "genres": "Comedy, Drama, Family",
+    "contentRating": "Not Rated",
+    "imDbRating": "7.9",
+    "imDbRatingVotes": "50639",
+    "metacriticRating": "88",
+    "plot": "After a divorced New York mother hires a nice old man to play Santa Claus at Macy's, she is startled by his claim to be the genuine article. When his sanity is questioned, a lawyer defends him in court by arguing that he's not mistaken.",
+    "stars": "George Seaton, Edmund Gwenn, Maureen O'Hara, John Payne, Gene Lockhart",
+    "starList": [
+      {
+        "id": "tt0039628",
+        "name": "George Seaton"
+      },
+      {
+        "id": "tt0039628",
+        "name": "Edmund Gwenn"
+      },
+      {
+        "id": "tt0039628",
+        "name": "Maureen O'Hara"
+      },
+      {
+        "id": "tt0039628",
+        "name": "John Payne"
+      },
+      {
+        "id": "tt0039628",
+        "name": "Gene Lockhart"
+      }
+    ]
+  },
+  {
+    "id": "tt7131622",
+    "image": "https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlZi00YmFjLTk1MmUtNWQwNTM0YjcyNTNkXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Once Upon a Time in Hollywood",
+    "description": "(2019)",
+    "runtimeStr": "161 min",
+    "genres": "Comedy, Drama",
+    "contentRating": "R",
+    "imDbRating": "7.6",
+    "imDbRatingVotes": "739946",
+    "metacriticRating": "83",
+    "plot": "A faded television actor and his stunt double strive to achieve fame and success in the final years of Hollywood's Golden Age in 1969 Los Angeles.",
+    "stars": "Quentin Tarantino, Leonardo DiCaprio, Brad Pitt, Margot Robbie, Emile Hirsch",
+    "starList": [
+      {
+        "id": "tt7131622",
+        "name": "Quentin Tarantino"
+      },
+      {
+        "id": "tt7131622",
+        "name": "Leonardo DiCaprio"
+      },
+      {
+        "id": "tt7131622",
+        "name": "Brad Pitt"
+      },
+      {
+        "id": "tt7131622",
+        "name": "Margot Robbie"
+      },
+      {
+        "id": "tt7131622",
+        "name": "Emile Hirsch"
+      }
+    ]
+  },
+  {
+    "id": "tt10872600",
+    "image": "https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Spider-Man: No Way Home",
+    "description": "(2021)",
+    "runtimeStr": "148 min",
+    "genres": "Action, Adventure, Fantasy",
+    "contentRating": "PG-13",
+    "imDbRating": "8.2",
+    "imDbRatingVotes": "755519",
+    "metacriticRating": "71",
+    "plot": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.",
+    "stars": "Jon Watts, Tom Holland, Zendaya, Benedict Cumberbatch, Jacob Batalon",
+    "starList": [
+      {
+        "id": "tt10872600",
+        "name": "Jon Watts"
+      },
+      {
+        "id": "tt10872600",
+        "name": "Tom Holland"
+      },
+      {
+        "id": "tt10872600",
+        "name": "Zendaya"
+      },
+      {
+        "id": "tt10872600",
+        "name": "Benedict Cumberbatch"
+      },
+      {
+        "id": "tt10872600",
+        "name": "Jacob Batalon"
+      }
+    ]
+  },
+  {
+    "id": "tt0137523",
+    "image": "https://m.media-amazon.com/images/M/MV5BNDIzNDU0YzEtYzE5Ni00ZjlkLTk5ZjgtNjM3NWE4YzA3Nzk3XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Fight Club",
+    "description": "(1999)",
+    "runtimeStr": "139 min",
+    "genres": "Drama",
+    "contentRating": "R",
+    "imDbRating": "8.8",
+    "imDbRatingVotes": "2124874",
+    "metacriticRating": "66",
+    "plot": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+    "stars": "David Fincher, Brad Pitt, Edward Norton, Meat Loaf, Zach Grenier",
+    "starList": [
+      {
+        "id": "tt0137523",
+        "name": "David Fincher"
+      },
+      {
+        "id": "tt0137523",
+        "name": "Brad Pitt"
+      },
+      {
+        "id": "tt0137523",
+        "name": "Edward Norton"
+      },
+      {
+        "id": "tt0137523",
+        "name": "Meat Loaf"
+      },
+      {
+        "id": "tt0137523",
+        "name": "Zach Grenier"
+      }
+    ]
+  },
+  {
+    "id": "tt0993846",
+    "image": "https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Wolf of Wall Street",
+    "description": "(2013)",
+    "runtimeStr": "180 min",
+    "genres": "Biography, Comedy, Crime",
+    "contentRating": "R",
+    "imDbRating": "8.2",
+    "imDbRatingVotes": "1411468",
+    "metacriticRating": "75",
+    "plot": "Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.",
+    "stars": "Martin Scorsese, Leonardo DiCaprio, Jonah Hill, Margot Robbie, Matthew McConaughey",
+    "starList": [
+      {
+        "id": "tt0993846",
+        "name": "Martin Scorsese"
+      },
+      {
+        "id": "tt0993846",
+        "name": "Leonardo DiCaprio"
+      },
+      {
+        "id": "tt0993846",
+        "name": "Jonah Hill"
+      },
+      {
+        "id": "tt0993846",
+        "name": "Margot Robbie"
+      },
+      {
+        "id": "tt0993846",
+        "name": "Matthew McConaughey"
+      }
+    ]
+  },
+  {
+    "id": "tt0330373",
+    "image": "https://m.media-amazon.com/images/M/MV5BMTI1NDMyMjExOF5BMl5BanBnXkFtZTcwOTc4MjQzMQ@@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Harry Potter and the Goblet of Fire",
+    "description": "(2005)",
+    "runtimeStr": "157 min",
+    "genres": "Adventure, Family, Fantasy",
+    "contentRating": "PG-13",
+    "imDbRating": "7.7",
+    "imDbRatingVotes": "629854",
+    "metacriticRating": "81",
+    "plot": "Harry Potter finds himself competing in a hazardous tournament between rival schools of magic, but he is distracted by recurring nightmares.",
+    "stars": "Mike Newell, Daniel Radcliffe, Emma Watson, Rupert Grint, Eric Sykes",
+    "starList": [
+      {
+        "id": "tt0330373",
+        "name": "Mike Newell"
+      },
+      {
+        "id": "tt0330373",
+        "name": "Daniel Radcliffe"
+      },
+      {
+        "id": "tt0330373",
+        "name": "Emma Watson"
+      },
+      {
+        "id": "tt0330373",
+        "name": "Rupert Grint"
+      },
+      {
+        "id": "tt0330373",
+        "name": "Eric Sykes"
+      }
+    ]
+  },
+  {
+    "id": "tt1375666",
+    "image": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Inception",
+    "description": "(2010)",
+    "runtimeStr": "148 min",
+    "genres": "Action, Adventure, Sci-Fi",
+    "contentRating": "PG-13",
+    "imDbRating": "8.8",
+    "imDbRatingVotes": "2352199",
+    "metacriticRating": "74",
+    "plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+    "stars": "Christopher Nolan, Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page, Ken Watanabe",
+    "starList": [
+      {
+        "id": "tt1375666",
+        "name": "Christopher Nolan"
+      },
+      {
+        "id": "tt1375666",
+        "name": "Leonardo DiCaprio"
+      },
+      {
+        "id": "tt1375666",
+        "name": "Joseph Gordon-Levitt"
+      },
+      {
+        "id": "tt1375666",
+        "name": "Elliot Page"
+      },
+      {
+        "id": "tt1375666",
+        "name": "Ken Watanabe"
+      }
+    ]
+  },
+  {
+    "id": "tt2582802",
+    "image": "https://m.media-amazon.com/images/M/MV5BOTA5NDZlZGUtMjAxOS00YTRkLTkwYmMtYWQ0NWEwZDZiNjEzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Whiplash",
+    "description": "(2014)",
+    "runtimeStr": "106 min",
+    "genres": "Drama, Music",
+    "contentRating": "R",
+    "imDbRating": "8.5",
+    "imDbRatingVotes": "862933",
+    "metacriticRating": "89",
+    "plot": "A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.",
+    "stars": "Damien Chazelle, Miles Teller, J.K. Simmons, Melissa Benoist, Paul Reiser",
+    "starList": [
+      {
+        "id": "tt2582802",
+        "name": "Damien Chazelle"
+      },
+      {
+        "id": "tt2582802",
+        "name": "Miles Teller"
+      },
+      {
+        "id": "tt2582802",
+        "name": "J.K. Simmons"
+      },
+      {
+        "id": "tt2582802",
+        "name": "Melissa Benoist"
+      },
+      {
+        "id": "tt2582802",
+        "name": "Paul Reiser"
+      }
+    ]
+  },
+  {
+    "id": "tt0468569",
+    "image": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Dark Knight",
+    "description": "(2008)",
+    "runtimeStr": "152 min",
+    "genres": "Action, Crime, Drama",
+    "contentRating": "PG-13",
+    "imDbRating": "9.0",
+    "imDbRatingVotes": "2652697",
+    "metacriticRating": "84",
+    "plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+    "stars": "Christopher Nolan, Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine",
+    "starList": [
+      {
+        "id": "tt0468569",
+        "name": "Christopher Nolan"
+      },
+      {
+        "id": "tt0468569",
+        "name": "Christian Bale"
+      },
+      {
+        "id": "tt0468569",
+        "name": "Heath Ledger"
+      },
+      {
+        "id": "tt0468569",
+        "name": "Aaron Eckhart"
+      },
+      {
+        "id": "tt0468569",
+        "name": "Michael Caine"
+      }
+    ]
+  },
+  {
+    "id": "tt0499549",
+    "image": "https://m.media-amazon.com/images/M/MV5BZDA0OGQxNTItMDZkMC00N2UyLTg3MzMtYTJmNjg3Nzk5MzRiXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Avatar",
+    "description": "(2009)",
+    "runtimeStr": "162 min",
+    "genres": "Action, Adventure, Fantasy",
+    "contentRating": "PG-13",
+    "imDbRating": "7.9",
+    "imDbRatingVotes": "1287835",
+    "metacriticRating": "83",
+    "plot": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+    "stars": "James Cameron, Sam Worthington, Zoe Saldana, Sigourney Weaver, Michelle Rodriguez",
+    "starList": [
+      {
+        "id": "tt0499549",
+        "name": "James Cameron"
+      },
+      {
+        "id": "tt0499549",
+        "name": "Sam Worthington"
+      },
+      {
+        "id": "tt0499549",
+        "name": "Zoe Saldana"
+      },
+      {
+        "id": "tt0499549",
+        "name": "Sigourney Weaver"
+      },
+      {
+        "id": "tt0499549",
+        "name": "Michelle Rodriguez"
+      }
+    ]
+  },
+  {
+    "id": "tt0144084",
+    "image": "https://m.media-amazon.com/images/M/MV5BZTM2ZGJmNjQtN2UyOS00NjcxLWFjMDktMDE2NzMyNTZlZTBiXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_Ratio0.6837_AL_.jpg",
+    "title": "American Psycho",
+    "description": "(2000)",
+    "runtimeStr": "102 min",
+    "genres": "Crime, Drama, Horror",
+    "contentRating": "R",
+    "imDbRating": "7.6",
+    "imDbRatingVotes": "624071",
+    "metacriticRating": "64",
+    "plot": "A wealthy New York City investment banking executive, Patrick Bateman, hides his alternate psychopathic ego from his co-workers and friends as he delves deeper into his violent, hedonistic fantasies.",
+    "stars": "Mary Harron, Christian Bale, Justin Theroux, Josh Lucas, Bill Sage",
+    "starList": [
+      {
+        "id": "tt0144084",
+        "name": "Mary Harron"
+      },
+      {
+        "id": "tt0144084",
+        "name": "Christian Bale"
+      },
+      {
+        "id": "tt0144084",
+        "name": "Justin Theroux"
+      },
+      {
+        "id": "tt0144084",
+        "name": "Josh Lucas"
+      },
+      {
+        "id": "tt0144084",
+        "name": "Bill Sage"
+      }
+    ]
+  },
+  {
+    "id": "tt0119217",
+    "image": "https://m.media-amazon.com/images/M/MV5BOTI0MzcxMTYtZDVkMy00NjY1LTgyMTYtZmUxN2M3NmQ2NWJhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Good Will Hunting",
+    "description": "(1997)",
+    "runtimeStr": "126 min",
+    "genres": "Drama, Romance",
+    "contentRating": "R",
+    "imDbRating": "8.3",
+    "imDbRatingVotes": "972613",
+    "metacriticRating": "70",
+    "plot": "Will Hunting, a janitor at M.I.T., has a gift for mathematics, but needs help from a psychologist to find direction in his life.",
+    "stars": "Gus Van Sant, Robin Williams, Matt Damon, Ben Affleck, Stellan Skarsgård",
+    "starList": [
+      {
+        "id": "tt0119217",
+        "name": "Gus Van Sant"
+      },
+      {
+        "id": "tt0119217",
+        "name": "Robin Williams"
+      },
+      {
+        "id": "tt0119217",
+        "name": "Matt Damon"
+      },
+      {
+        "id": "tt0119217",
+        "name": "Ben Affleck"
+      },
+      {
+        "id": "tt0119217",
+        "name": "Stellan Skarsgård"
+      }
+    ]
+  },
+  {
+    "id": "tt1856101",
+    "image": "https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Blade Runner 2049",
+    "description": "(2017)",
+    "runtimeStr": "164 min",
+    "genres": "Action, Drama, Mystery",
+    "contentRating": "R",
+    "imDbRating": "8.0",
+    "imDbRatingVotes": "576708",
+    "metacriticRating": "81",
+    "plot": "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years.",
+    "stars": "Denis Villeneuve, Harrison Ford, Ryan Gosling, Ana de Armas, Dave Bautista",
+    "starList": [
+      {
+        "id": "tt1856101",
+        "name": "Denis Villeneuve"
+      },
+      {
+        "id": "tt1856101",
+        "name": "Harrison Ford"
+      },
+      {
+        "id": "tt1856101",
+        "name": "Ryan Gosling"
+      },
+      {
+        "id": "tt1856101",
+        "name": "Ana de Armas"
+      },
+      {
+        "id": "tt1856101",
+        "name": "Dave Bautista"
+      }
+    ]
+  },
+  {
+    "id": "tt0058331",
+    "image": "https://m.media-amazon.com/images/M/MV5BNmJkODczNjItNDI5Yy00MGI1LTkyOWItZDNmNjM4ZGI1ZDVlL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMDI2NDg0NQ@@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Mary Poppins",
+    "description": "(1964)",
+    "runtimeStr": "139 min",
+    "genres": "Comedy, Family, Fantasy",
+    "contentRating": "G",
+    "imDbRating": "7.8",
+    "imDbRatingVotes": "174945",
+    "metacriticRating": "88",
+    "plot": "In turn of the century London, a magical nanny employs music and adventure to help two neglected children become closer to their father.",
+    "stars": "Robert Stevenson, Julie Andrews, Dick Van Dyke, David Tomlinson, Glynis Johns",
+    "starList": [
+      {
+        "id": "tt0058331",
+        "name": "Robert Stevenson"
+      },
+      {
+        "id": "tt0058331",
+        "name": "Julie Andrews"
+      },
+      {
+        "id": "tt0058331",
+        "name": "Dick Van Dyke"
+      },
+      {
+        "id": "tt0058331",
+        "name": "David Tomlinson"
+      },
+      {
+        "id": "tt0058331",
+        "name": "Glynis Johns"
+      }
+    ]
+  },
+  {
+    "id": "tt8367814",
+    "image": "https://m.media-amazon.com/images/M/MV5BMTlkMmVmYjktYTc2NC00ZGZjLWEyOWUtMjc2MDMwMjQwOTA5XkEyXkFqcGdeQXVyNTI4MzE4MDU@._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Gentlemen",
+    "description": "(2019)",
+    "runtimeStr": "113 min",
+    "genres": "Action, Comedy, Crime",
+    "contentRating": "R",
+    "imDbRating": "7.8",
+    "imDbRatingVotes": "342098",
+    "metacriticRating": "51",
+    "plot": "An American expat tries to sell off his highly profitable marijuana empire in London, triggering plots, schemes, bribery and blackmail in an attempt to steal his domain out from under him.",
+    "stars": "Guy Ritchie, Matthew McConaughey, Charlie Hunnam, Michelle Dockery, Jeremy Strong",
+    "starList": [
+      {
+        "id": "tt8367814",
+        "name": "Guy Ritchie"
+      },
+      {
+        "id": "tt8367814",
+        "name": "Matthew McConaughey"
+      },
+      {
+        "id": "tt8367814",
+        "name": "Charlie Hunnam"
+      },
+      {
+        "id": "tt8367814",
+        "name": "Michelle Dockery"
+      },
+      {
+        "id": "tt8367814",
+        "name": "Jeremy Strong"
+      }
+    ]
+  },
+  {
+    "id": "tt0107688",
+    "image": "https://m.media-amazon.com/images/M/MV5BNWE4OTNiM2ItMjY4Ni00ZTViLWFiZmEtZGEyNGY2ZmNlMzIyXkEyXkFqcGdeQXVyMDU5NDcxNw@@._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Nightmare Before Christmas",
+    "description": "(1993)",
+    "runtimeStr": "76 min",
+    "genres": "Animation, Family, Fantasy",
+    "contentRating": "PG",
+    "imDbRating": "7.9",
+    "imDbRatingVotes": "345236",
+    "metacriticRating": "82",
+    "plot": "Jack Skellington, king of Halloween Town, discovers Christmas Town, but his attempts to bring Christmas to his home causes confusion.",
+    "stars": "Henry Selick, Danny Elfman, Chris Sarandon, Catherine O'Hara, William Hickey",
+    "starList": [
+      {
+        "id": "tt0107688",
+        "name": "Henry Selick"
+      },
+      {
+        "id": "tt0107688",
+        "name": "Danny Elfman"
+      },
+      {
+        "id": "tt0107688",
+        "name": "Chris Sarandon"
+      },
+      {
+        "id": "tt0107688",
+        "name": "Catherine O'Hara"
+      },
+      {
+        "id": "tt0107688",
+        "name": "William Hickey"
+      }
+    ]
+  },
+  {
+    "id": "tt0032138",
+    "image": "https://m.media-amazon.com/images/M/MV5BNjUyMTc4MDExMV5BMl5BanBnXkFtZTgwNDg0NDIwMjE@._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Wizard of Oz",
+    "description": "(1939)",
+    "runtimeStr": "102 min",
+    "genres": "Adventure, Family, Fantasy",
+    "contentRating": "PG",
+    "imDbRating": "8.1",
+    "imDbRatingVotes": "402453",
+    "metacriticRating": "92",
+    "plot": "Young Dorothy Gale and her dog Toto are swept away by a tornado from their Kansas farm to the magical Land of Oz, and embark on a quest with three new friends to see the Wizard, who can return her to her home and fulfill the others' wishes.",
+    "stars": "Victor Fleming, George Cukor, Mervyn LeRoy, Norman Taurog, Richard Thorpe, King Vidor, Judy Garland, Frank Morgan, Ray Bolger, Bert Lahr",
+    "starList": [
+      {
+        "id": "tt0032138",
+        "name": "Victor Fleming"
+      },
+      {
+        "id": "tt0032138",
+        "name": "George Cukor"
+      },
+      {
+        "id": "tt0032138",
+        "name": "Mervyn LeRoy"
+      },
+      {
+        "id": "tt0032138",
+        "name": "Norman Taurog"
+      },
+      {
+        "id": "tt0032138",
+        "name": "Richard Thorpe"
+      },
+      {
+        "id": "tt0032138",
+        "name": "King Vidor"
+      },
+      {
+        "id": "tt0032138",
+        "name": "Judy Garland"
+      },
+      {
+        "id": "tt0032138",
+        "name": "Frank Morgan"
+      },
+      {
+        "id": "tt0032138",
+        "name": "Ray Bolger"
+      },
+      {
+        "id": "tt0032138",
+        "name": "Bert Lahr"
+      }
+    ]
+  },
+  {
+    "id": "tt0082971",
+    "image": "https://m.media-amazon.com/images/M/MV5BNTU2ODkyY2MtMjU1NC00NjE1LWEzYjgtMWQ3MzRhMTE0NDc0XkEyXkFqcGdeQXVyMjM4MzQ4OTQ@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Indiana Jones and the Raiders of the Lost Ark",
+    "description": "(1981)",
+    "runtimeStr": "115 min",
+    "genres": "Action, Adventure",
+    "contentRating": "PG",
+    "imDbRating": "8.4",
+    "imDbRatingVotes": "967802",
+    "metacriticRating": "85",
+    "plot": "Archaeology professor Indiana Jones ventures to seize a biblical artefact known as the Ark of the Covenant. While doing so, he puts up a fight against Renee and a troop of Nazis.",
+    "stars": "Steven Spielberg, Harrison Ford, Karen Allen, Paul Freeman, John Rhys-Davies",
+    "starList": [
+      {
+        "id": "tt0082971",
+        "name": "Steven Spielberg"
+      },
+      {
+        "id": "tt0082971",
+        "name": "Harrison Ford"
+      },
+      {
+        "id": "tt0082971",
+        "name": "Karen Allen"
+      },
+      {
+        "id": "tt0082971",
+        "name": "Paul Freeman"
+      },
+      {
+        "id": "tt0082971",
+        "name": "John Rhys-Davies"
       }
     ]
   },
@@ -80,7 +1508,7 @@
     "genres": "Drama, Romance",
     "contentRating": "PG-13",
     "imDbRating": "8.8",
-    "imDbRatingVotes": "2065704",
+    "imDbRatingVotes": "2078829",
     "metacriticRating": "82",
     "plot": "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
     "stars": "Robert Zemeckis, Tom Hanks, Robin Wright, Gary Sinise, Sally Field",
@@ -108,110 +1536,294 @@
     ]
   },
   {
-    "id": "tt0108052",
-    "image": "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_Ratio0.6837_AL_.jpg",
-    "title": "Schindler's List",
-    "description": "(1993)",
-    "runtimeStr": "195 min",
-    "genres": "Biography, Drama, History",
-    "contentRating": "R",
-    "imDbRating": "9.0",
-    "imDbRatingVotes": "1349460",
-    "metacriticRating": "94",
-    "plot": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
-    "stars": "Steven Spielberg, Liam Neeson, Ralph Fiennes, Ben Kingsley, Caroline Goodall",
+    "id": "tt0087332",
+    "image": "https://m.media-amazon.com/images/M/MV5BMTkxMjYyNzgwMl5BMl5BanBnXkFtZTgwMTE3MjYyMTE@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Ghostbusters",
+    "description": "(1984)",
+    "runtimeStr": "105 min",
+    "genres": "Action, Comedy, Fantasy",
+    "contentRating": "PG",
+    "imDbRating": "7.8",
+    "imDbRatingVotes": "418423",
+    "metacriticRating": "71",
+    "plot": "Three parapsychologists forced out of their university funding set up shop as a unique ghost removal service in New York City, attracting frightened yet skeptical customers.",
+    "stars": "Ivan Reitman, Bill Murray, Dan Aykroyd, Sigourney Weaver, Harold Ramis",
     "starList": [
       {
-        "id": "tt0108052",
+        "id": "tt0087332",
+        "name": "Ivan Reitman"
+      },
+      {
+        "id": "tt0087332",
+        "name": "Bill Murray"
+      },
+      {
+        "id": "tt0087332",
+        "name": "Dan Aykroyd"
+      },
+      {
+        "id": "tt0087332",
+        "name": "Sigourney Weaver"
+      },
+      {
+        "id": "tt0087332",
+        "name": "Harold Ramis"
+      }
+    ]
+  },
+  {
+    "id": "tt4154796",
+    "image": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Avengers: Endgame",
+    "description": "(2019)",
+    "runtimeStr": "181 min",
+    "genres": "Action, Adventure, Drama",
+    "contentRating": "PG-13",
+    "imDbRating": "8.4",
+    "imDbRatingVotes": "1130996",
+    "metacriticRating": "78",
+    "plot": "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+    "stars": "Anthony Russo, Joe Russo, Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth",
+    "starList": [
+      {
+        "id": "tt4154796",
+        "name": "Anthony Russo"
+      },
+      {
+        "id": "tt4154796",
+        "name": "Joe Russo"
+      },
+      {
+        "id": "tt4154796",
+        "name": "Robert Downey Jr."
+      },
+      {
+        "id": "tt4154796",
+        "name": "Chris Evans"
+      },
+      {
+        "id": "tt4154796",
+        "name": "Mark Ruffalo"
+      },
+      {
+        "id": "tt4154796",
+        "name": "Chris Hemsworth"
+      }
+    ]
+  },
+  {
+    "id": "tt0304141",
+    "image": "https://m.media-amazon.com/images/M/MV5BMTY4NTIwODg0N15BMl5BanBnXkFtZTcwOTc0MjEzMw@@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Harry Potter and the Prisoner of Azkaban",
+    "description": "(2004)",
+    "runtimeStr": "142 min",
+    "genres": "Adventure, Family, Fantasy",
+    "contentRating": "PG",
+    "imDbRating": "7.9",
+    "imDbRatingVotes": "637704",
+    "metacriticRating": "82",
+    "plot": "Harry Potter, Ron and Hermione return to Hogwarts School of Witchcraft and Wizardry for their third year of study, where they delve into the mystery surrounding an escaped prisoner who poses a dangerous threat to the young wizard.",
+    "stars": "Alfonso Cuarón, Daniel Radcliffe, Emma Watson, Rupert Grint, Richard Griffiths",
+    "starList": [
+      {
+        "id": "tt0304141",
+        "name": "Alfonso Cuarón"
+      },
+      {
+        "id": "tt0304141",
+        "name": "Daniel Radcliffe"
+      },
+      {
+        "id": "tt0304141",
+        "name": "Emma Watson"
+      },
+      {
+        "id": "tt0304141",
+        "name": "Rupert Grint"
+      },
+      {
+        "id": "tt0304141",
+        "name": "Richard Griffiths"
+      }
+    ]
+  },
+  {
+    "id": "tt0172495",
+    "image": "https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Gladiator",
+    "description": "(2000)",
+    "runtimeStr": "155 min",
+    "genres": "Action, Adventure, Drama",
+    "contentRating": "R",
+    "imDbRating": "8.5",
+    "imDbRatingVotes": "1501313",
+    "metacriticRating": "67",
+    "plot": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+    "stars": "Ridley Scott, Russell Crowe, Joaquin Phoenix, Connie Nielsen, Oliver Reed",
+    "starList": [
+      {
+        "id": "tt0172495",
+        "name": "Ridley Scott"
+      },
+      {
+        "id": "tt0172495",
+        "name": "Russell Crowe"
+      },
+      {
+        "id": "tt0172495",
+        "name": "Joaquin Phoenix"
+      },
+      {
+        "id": "tt0172495",
+        "name": "Connie Nielsen"
+      },
+      {
+        "id": "tt0172495",
+        "name": "Oliver Reed"
+      }
+    ]
+  },
+  {
+    "id": "tt0083866",
+    "image": "https://m.media-amazon.com/images/M/MV5BMTQ2ODFlMDAtNzdhOC00ZDYzLWE3YTMtNDU4ZGFmZmJmYTczXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_Ratio0.6837_AL_.jpg",
+    "title": "E.T. the Extra-Terrestrial",
+    "description": "(1982)",
+    "runtimeStr": "115 min",
+    "genres": "Adventure, Family, Sci-Fi",
+    "contentRating": "PG",
+    "imDbRating": "7.9",
+    "imDbRatingVotes": "412594",
+    "metacriticRating": "91",
+    "plot": "A troubled child summons the courage to help a friendly alien escape from Earth and return to his home planet.",
+    "stars": "Steven Spielberg, Henry Thomas, Drew Barrymore, Peter Coyote, Dee Wallace",
+    "starList": [
+      {
+        "id": "tt0083866",
         "name": "Steven Spielberg"
       },
       {
-        "id": "tt0108052",
-        "name": "Liam Neeson"
+        "id": "tt0083866",
+        "name": "Henry Thomas"
       },
       {
-        "id": "tt0108052",
-        "name": "Ralph Fiennes"
+        "id": "tt0083866",
+        "name": "Drew Barrymore"
       },
       {
-        "id": "tt0108052",
-        "name": "Ben Kingsley"
+        "id": "tt0083866",
+        "name": "Peter Coyote"
       },
       {
-        "id": "tt0108052",
-        "name": "Caroline Goodall"
+        "id": "tt0083866",
+        "name": "Dee Wallace"
       }
     ]
   },
   {
-    "id": "tt0102926",
-    "image": "https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_Ratio0.6837_AL_.jpg",
-    "title": "The Silence of the Lambs",
-    "description": "(1991)",
-    "runtimeStr": "118 min",
-    "genres": "Crime, Drama, Thriller",
+    "id": "tt0113277",
+    "image": "https://m.media-amazon.com/images/M/MV5BYjZjNTJlZGUtZTE1Ny00ZDc4LTgwYjUtMzk0NDgwYzZjYTk1XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Heat",
+    "description": "(1995)",
+    "runtimeStr": "170 min",
+    "genres": "Action, Crime, Drama",
     "contentRating": "R",
-    "imDbRating": "8.6",
-    "imDbRatingVotes": "1425891",
-    "metacriticRating": "85",
-    "plot": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
-    "stars": "Jonathan Demme, Jodie Foster, Anthony Hopkins, Lawrence A. Bonney, Kasi Lemmons",
+    "imDbRating": "8.3",
+    "imDbRatingVotes": "656763",
+    "metacriticRating": "76",
+    "plot": "A group of high-end professional thieves start to feel the heat from the LAPD when they unknowingly leave a clue at their latest heist.",
+    "stars": "Michael Mann, Al Pacino, Robert De Niro, Val Kilmer, Jon Voight",
     "starList": [
       {
-        "id": "tt0102926",
-        "name": "Jonathan Demme"
+        "id": "tt0113277",
+        "name": "Michael Mann"
       },
       {
-        "id": "tt0102926",
-        "name": "Jodie Foster"
+        "id": "tt0113277",
+        "name": "Al Pacino"
       },
       {
-        "id": "tt0102926",
-        "name": "Anthony Hopkins"
+        "id": "tt0113277",
+        "name": "Robert De Niro"
       },
       {
-        "id": "tt0102926",
-        "name": "Lawrence A. Bonney"
+        "id": "tt0113277",
+        "name": "Val Kilmer"
       },
       {
-        "id": "tt0102926",
-        "name": "Kasi Lemmons"
+        "id": "tt0113277",
+        "name": "Jon Voight"
       }
     ]
   },
   {
-    "id": "tt0407887",
-    "image": "https://m.media-amazon.com/images/M/MV5BMTI1MTY2OTIxNV5BMl5BanBnXkFtZTYwNjQ4NjY3._V1_Ratio0.6837_AL_.jpg",
-    "title": "The Departed",
-    "description": "(2006)",
-    "runtimeStr": "151 min",
-    "genres": "Crime, Drama, Thriller",
-    "contentRating": "R",
-    "imDbRating": "8.5",
-    "imDbRatingVotes": "1319605",
-    "metacriticRating": "85",
-    "plot": "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.",
-    "stars": "Martin Scorsese, Leonardo DiCaprio, Matt Damon, Jack Nicholson, Mark Wahlberg",
+    "id": "tt2015381",
+    "image": "https://m.media-amazon.com/images/M/MV5BZTkwZjU3MTctMGExMi00YjU5LTgwMDMtOWNkZDRlZjQ4NmZhXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Guardians of the Galaxy",
+    "description": "(2014)",
+    "runtimeStr": "121 min",
+    "genres": "Action, Adventure, Comedy",
+    "contentRating": "PG-13",
+    "imDbRating": "8.0",
+    "imDbRatingVotes": "1181532",
+    "metacriticRating": "76",
+    "plot": "A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe.",
+    "stars": "James Gunn, Chris Pratt, Vin Diesel, Bradley Cooper, Zoe Saldana",
     "starList": [
       {
-        "id": "tt0407887",
-        "name": "Martin Scorsese"
+        "id": "tt2015381",
+        "name": "James Gunn"
       },
       {
-        "id": "tt0407887",
-        "name": "Leonardo DiCaprio"
+        "id": "tt2015381",
+        "name": "Chris Pratt"
       },
       {
-        "id": "tt0407887",
-        "name": "Matt Damon"
+        "id": "tt2015381",
+        "name": "Vin Diesel"
       },
       {
-        "id": "tt0407887",
-        "name": "Jack Nicholson"
+        "id": "tt2015381",
+        "name": "Bradley Cooper"
       },
       {
-        "id": "tt0407887",
-        "name": "Mark Wahlberg"
+        "id": "tt2015381",
+        "name": "Zoe Saldana"
+      }
+    ]
+  },
+  {
+    "id": "tt0780536",
+    "image": "https://m.media-amazon.com/images/M/MV5BMTUwOGFiM2QtOWMxYS00MjU2LThmZDMtZDM2MWMzNzllNjdhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_Ratio0.6837_AL_.jpg",
+    "title": "In Bruges",
+    "description": "(2008)",
+    "runtimeStr": "107 min",
+    "genres": "Comedy, Crime, Drama",
+    "contentRating": "R",
+    "imDbRating": "7.9",
+    "imDbRatingVotes": "430853",
+    "metacriticRating": "67",
+    "plot": "Guilt-stricken after a job gone wrong, hitman Ray and his partner await orders from their ruthless boss in Bruges, Belgium, the last place in the world Ray wants to be.",
+    "stars": "Martin McDonagh, Colin Farrell, Brendan Gleeson, Ciarán Hinds, Elizabeth Berrington",
+    "starList": [
+      {
+        "id": "tt0780536",
+        "name": "Martin McDonagh"
+      },
+      {
+        "id": "tt0780536",
+        "name": "Colin Farrell"
+      },
+      {
+        "id": "tt0780536",
+        "name": "Brendan Gleeson"
+      },
+      {
+        "id": "tt0780536",
+        "name": "Ciarán Hinds"
+      },
+      {
+        "id": "tt0780536",
+        "name": "Elizabeth Berrington"
       }
     ]
   },
@@ -224,7 +1836,7 @@
     "genres": "Action, Adventure, Drama",
     "contentRating": "PG-13",
     "imDbRating": "9.0",
-    "imDbRatingVotes": "1837293",
+    "imDbRatingVotes": "1846461",
     "metacriticRating": "94",
     "plot": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
     "stars": "Peter Jackson, Elijah Wood, Viggo Mortensen, Ian McKellen, Orlando Bloom",
@@ -252,146 +1864,1198 @@
     ]
   },
   {
-    "id": "tt0112573",
-    "image": "https://m.media-amazon.com/images/M/MV5BMzkzMmU0YTYtOWM3My00YzBmLWI0YzctOGYyNTkwMWE5MTJkXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_Ratio0.6837_AL_.jpg",
-    "title": "Braveheart",
-    "description": "(1995)",
-    "runtimeStr": "178 min",
-    "genres": "Biography, Drama, History",
+    "id": "tt6751668",
+    "image": "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Parasite",
+    "description": "(2019)",
+    "runtimeStr": "132 min",
+    "genres": "Drama, Thriller",
     "contentRating": "R",
-    "imDbRating": "8.4",
-    "imDbRatingVotes": "1035731",
-    "metacriticRating": "68",
-    "plot": "Scottish warrior William Wallace leads his countrymen in a rebellion to free his homeland from the tyranny of King Edward I of England.",
-    "stars": "Mel Gibson, Sophie Marceau, Patrick McGoohan, Angus Macfadyen",
+    "imDbRating": "8.5",
+    "imDbRatingVotes": "804068",
+    "metacriticRating": "96",
+    "plot": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
+    "stars": "Bong Joon Ho, Song Kang-ho, Lee Sun-kyun, Cho Yeo-jeong, Choi Woo-sik",
     "starList": [
       {
-        "id": "tt0112573",
-        "name": "Mel Gibson"
+        "id": "tt6751668",
+        "name": "Bong Joon Ho"
       },
       {
-        "id": "tt0112573",
-        "name": "Mel Gibson"
+        "id": "tt6751668",
+        "name": "Song Kang-ho"
       },
       {
-        "id": "tt0112573",
-        "name": "Sophie Marceau"
+        "id": "tt6751668",
+        "name": "Lee Sun-kyun"
       },
       {
-        "id": "tt0112573",
-        "name": "Patrick McGoohan"
+        "id": "tt6751668",
+        "name": "Cho Yeo-jeong"
       },
       {
-        "id": "tt0112573",
-        "name": "Angus Macfadyen"
+        "id": "tt6751668",
+        "name": "Choi Woo-sik"
       }
     ]
   },
   {
-    "id": "tt0073486",
-    "image": "https://m.media-amazon.com/images/M/MV5BZjA0OWVhOTAtYWQxNi00YzNhLWI4ZjYtNjFjZTEyYjJlNDVlL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_Ratio0.6837_AL_.jpg",
-    "title": "One Flew Over the Cuckoo's Nest",
-    "description": "(1975)",
-    "runtimeStr": "133 min",
+    "id": "tt2267998",
+    "image": "https://m.media-amazon.com/images/M/MV5BMTk0MDQ3MzAzOV5BMl5BanBnXkFtZTgwNzU1NzE3MjE@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Gone Girl",
+    "description": "(2014)",
+    "runtimeStr": "149 min",
+    "genres": "Drama, Mystery, Thriller",
+    "contentRating": "R",
+    "imDbRating": "8.1",
+    "imDbRatingVotes": "984876",
+    "metacriticRating": "79",
+    "plot": "With his wife's disappearance having become the focus of an intense media circus, a man sees the spotlight turned on him when it's suspected that he may not be innocent.",
+    "stars": "David Fincher, Ben Affleck, Rosamund Pike, Neil Patrick Harris, Tyler Perry",
+    "starList": [
+      {
+        "id": "tt2267998",
+        "name": "David Fincher"
+      },
+      {
+        "id": "tt2267998",
+        "name": "Ben Affleck"
+      },
+      {
+        "id": "tt2267998",
+        "name": "Rosamund Pike"
+      },
+      {
+        "id": "tt2267998",
+        "name": "Neil Patrick Harris"
+      },
+      {
+        "id": "tt2267998",
+        "name": "Tyler Perry"
+      }
+    ]
+  },
+  {
+    "id": "tt0059742",
+    "image": "https://m.media-amazon.com/images/M/MV5BODIxNjhkYjEtYzUyMi00YTNjLWE1YjktNjAyY2I2MWNkNmNmL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_Ratio0.7041_AL_.jpg",
+    "title": "The Sound of Music",
+    "description": "(1965)",
+    "runtimeStr": "172 min",
+    "genres": "Biography, Drama, Family",
+    "contentRating": "G",
+    "imDbRating": "8.1",
+    "imDbRatingVotes": "237706",
+    "metacriticRating": "63",
+    "plot": "A young novice is sent by her convent in 1930s Austria to become a governess to the seven children of a widowed naval officer.",
+    "stars": "Robert Wise, Julie Andrews, Christopher Plummer, Eleanor Parker, Richard Haydn",
+    "starList": [
+      {
+        "id": "tt0059742",
+        "name": "Robert Wise"
+      },
+      {
+        "id": "tt0059742",
+        "name": "Julie Andrews"
+      },
+      {
+        "id": "tt0059742",
+        "name": "Christopher Plummer"
+      },
+      {
+        "id": "tt0059742",
+        "name": "Eleanor Parker"
+      },
+      {
+        "id": "tt0059742",
+        "name": "Richard Haydn"
+      }
+    ]
+  },
+  {
+    "id": "tt0180093",
+    "image": "https://m.media-amazon.com/images/M/MV5BOTdiNzJlOWUtNWMwNS00NmFlLWI0YTEtZmI3YjIzZWUyY2Y3XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Requiem for a Dream",
+    "description": "(2000)",
+    "runtimeStr": "102 min",
     "genres": "Drama",
     "contentRating": "R",
-    "imDbRating": "8.7",
-    "imDbRatingVotes": "1004930",
-    "metacriticRating": "84",
-    "plot": "In the Fall of 1963, a Korean War veteran and criminal pleads insanity and is admitted to a mental institution, where he rallies up the scared patients against the tyrannical nurse.",
-    "stars": "Milos Forman, Jack Nicholson, Louise Fletcher, Michael Berryman, Peter Brocco",
+    "imDbRating": "8.3",
+    "imDbRatingVotes": "844161",
+    "metacriticRating": "68",
+    "plot": "The drug-induced utopias of four Coney Island people are shattered when their addictions run deep.",
+    "stars": "Darren Aronofsky, Ellen Burstyn, Jared Leto, Jennifer Connelly, Marlon Wayans",
     "starList": [
       {
-        "id": "tt0073486",
-        "name": "Milos Forman"
+        "id": "tt0180093",
+        "name": "Darren Aronofsky"
       },
       {
-        "id": "tt0073486",
-        "name": "Jack Nicholson"
+        "id": "tt0180093",
+        "name": "Ellen Burstyn"
       },
       {
-        "id": "tt0073486",
-        "name": "Louise Fletcher"
+        "id": "tt0180093",
+        "name": "Jared Leto"
       },
       {
-        "id": "tt0073486",
-        "name": "Michael Berryman"
+        "id": "tt0180093",
+        "name": "Jennifer Connelly"
       },
       {
-        "id": "tt0073486",
-        "name": "Peter Brocco"
+        "id": "tt0180093",
+        "name": "Marlon Wayans"
       }
     ]
   },
   {
-    "id": "tt0086879",
-    "image": "https://m.media-amazon.com/images/M/MV5BNWJlNzUzNGMtYTAwMS00ZjI2LWFmNWQtODcxNWUxODA5YmU1XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_Ratio0.6837_AL_.jpg",
-    "title": "Amadeus",
-    "description": "(1984)",
-    "runtimeStr": "160 min",
-    "genres": "Biography, Drama, Music",
-    "contentRating": "R",
-    "imDbRating": "8.4",
-    "imDbRatingVotes": "401233",
-    "metacriticRating": "88",
-    "plot": "The life, success and troubles of Wolfgang Amadeus Mozart, as told by Antonio Salieri, the contemporaneous composer who was deeply jealous of Mozart's talent and claimed to have murdered him.",
-    "stars": "Milos Forman, F. Murray Abraham, Tom Hulce, Elizabeth Berridge, Roy Dotrice",
+    "id": "tt0093779",
+    "image": "https://m.media-amazon.com/images/M/MV5BYzdiOTVjZmQtNjAyNy00YjA2LTk5ZTAtNmJkMGQ5N2RmNjUxXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Princess Bride",
+    "description": "(1987)",
+    "runtimeStr": "98 min",
+    "genres": "Adventure, Family, Fantasy",
+    "contentRating": "PG",
+    "imDbRating": "8.0",
+    "imDbRatingVotes": "429696",
+    "metacriticRating": "77",
+    "plot": "While home sick in bed, a young boy's grandfather reads him the story of a farmboy-turned-pirate who encounters numerous obstacles, enemies and allies in his quest to be reunited with his true love.",
+    "stars": "Rob Reiner, Cary Elwes, Mandy Patinkin, Robin Wright, Chris Sarandon",
     "starList": [
       {
-        "id": "tt0086879",
-        "name": "Milos Forman"
+        "id": "tt0093779",
+        "name": "Rob Reiner"
       },
       {
-        "id": "tt0086879",
+        "id": "tt0093779",
+        "name": "Cary Elwes"
+      },
+      {
+        "id": "tt0093779",
+        "name": "Mandy Patinkin"
+      },
+      {
+        "id": "tt0093779",
+        "name": "Robin Wright"
+      },
+      {
+        "id": "tt0093779",
+        "name": "Chris Sarandon"
+      }
+    ]
+  },
+  {
+    "id": "tt0361748",
+    "image": "https://m.media-amazon.com/images/M/MV5BOTJiNDEzOWYtMTVjOC00ZjlmLWE0NGMtZmE1OWVmZDQ2OWJhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Inglourious Basterds",
+    "description": "(2009)",
+    "runtimeStr": "153 min",
+    "genres": "Adventure, Drama, War",
+    "contentRating": "R",
+    "imDbRating": "8.3",
+    "imDbRatingVotes": "1450550",
+    "metacriticRating": "69",
+    "plot": "In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same.",
+    "stars": "Quentin Tarantino, Brad Pitt, Diane Kruger, Eli Roth, Mélanie Laurent",
+    "starList": [
+      {
+        "id": "tt0361748",
+        "name": "Quentin Tarantino"
+      },
+      {
+        "id": "tt0361748",
+        "name": "Brad Pitt"
+      },
+      {
+        "id": "tt0361748",
+        "name": "Diane Kruger"
+      },
+      {
+        "id": "tt0361748",
+        "name": "Eli Roth"
+      },
+      {
+        "id": "tt0361748",
+        "name": "Mélanie Laurent"
+      }
+    ]
+  },
+  {
+    "id": "tt0071562",
+    "image": "https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_Ratio0.7041_AL_.jpg",
+    "title": "The Godfather Part II",
+    "description": "(1974)",
+    "runtimeStr": "202 min",
+    "genres": "Crime, Drama",
+    "contentRating": "R",
+    "imDbRating": "9.0",
+    "imDbRatingVotes": "1271497",
+    "metacriticRating": "90",
+    "plot": "The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate.",
+    "stars": "Francis Ford Coppola, Al Pacino, Robert De Niro, Robert Duvall, Diane Keaton",
+    "starList": [
+      {
+        "id": "tt0071562",
+        "name": "Francis Ford Coppola"
+      },
+      {
+        "id": "tt0071562",
+        "name": "Al Pacino"
+      },
+      {
+        "id": "tt0071562",
+        "name": "Robert De Niro"
+      },
+      {
+        "id": "tt0071562",
+        "name": "Robert Duvall"
+      },
+      {
+        "id": "tt0071562",
+        "name": "Diane Keaton"
+      }
+    ]
+  },
+  {
+    "id": "tt0088763",
+    "image": "https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Back to the Future",
+    "description": "(1985)",
+    "runtimeStr": "116 min",
+    "genres": "Adventure, Comedy, Sci-Fi",
+    "contentRating": "PG",
+    "imDbRating": "8.5",
+    "imDbRatingVotes": "1206579",
+    "metacriticRating": "87",
+    "plot": "Marty McFly, a 17-year-old high school student, is accidentally sent 30 years into the past in a time-traveling DeLorean invented by his close friend, the maverick scientist Doc Brown.",
+    "stars": "Robert Zemeckis, Michael J. Fox, Christopher Lloyd, Lea Thompson, Crispin Glover",
+    "starList": [
+      {
+        "id": "tt0088763",
+        "name": "Robert Zemeckis"
+      },
+      {
+        "id": "tt0088763",
+        "name": "Michael J. Fox"
+      },
+      {
+        "id": "tt0088763",
+        "name": "Christopher Lloyd"
+      },
+      {
+        "id": "tt0088763",
+        "name": "Lea Thompson"
+      },
+      {
+        "id": "tt0088763",
+        "name": "Crispin Glover"
+      }
+    ]
+  },
+  {
+    "id": "tt5052448",
+    "image": "https://m.media-amazon.com/images/M/MV5BMjUxMDQwNjcyNl5BMl5BanBnXkFtZTgwNzcwMzc0MTI@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Get Out",
+    "description": "(I) (2017)",
+    "runtimeStr": "104 min",
+    "genres": "Horror, Mystery, Thriller",
+    "contentRating": "R",
+    "imDbRating": "7.7",
+    "imDbRatingVotes": "614352",
+    "metacriticRating": "85",
+    "plot": "A young African-American visits his white girlfriend's parents for the weekend, where his simmering uneasiness about their reception of him eventually reaches a boiling point.",
+    "stars": "Jordan Peele, Daniel Kaluuya, Allison Williams, Bradley Whitford, Catherine Keener",
+    "starList": [
+      {
+        "id": "tt5052448",
+        "name": "Jordan Peele"
+      },
+      {
+        "id": "tt5052448",
+        "name": "Daniel Kaluuya"
+      },
+      {
+        "id": "tt5052448",
+        "name": "Allison Williams"
+      },
+      {
+        "id": "tt5052448",
+        "name": "Bradley Whitford"
+      },
+      {
+        "id": "tt5052448",
+        "name": "Catherine Keener"
+      }
+    ]
+  },
+  {
+    "id": "tt1853728",
+    "image": "https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Django Unchained",
+    "description": "(2012)",
+    "runtimeStr": "165 min",
+    "genres": "Drama, Western",
+    "contentRating": "R",
+    "imDbRating": "8.4",
+    "imDbRatingVotes": "1554857",
+    "metacriticRating": "81",
+    "plot": "With the help of a German bounty-hunter, a freed slave sets out to rescue his wife from a brutal plantation-owner in Mississippi.",
+    "stars": "Quentin Tarantino, Jamie Foxx, Christoph Waltz, Leonardo DiCaprio, Kerry Washington",
+    "starList": [
+      {
+        "id": "tt1853728",
+        "name": "Quentin Tarantino"
+      },
+      {
+        "id": "tt1853728",
+        "name": "Jamie Foxx"
+      },
+      {
+        "id": "tt1853728",
+        "name": "Christoph Waltz"
+      },
+      {
+        "id": "tt1853728",
+        "name": "Leonardo DiCaprio"
+      },
+      {
+        "id": "tt1853728",
+        "name": "Kerry Washington"
+      }
+    ]
+  },
+  {
+    "id": "tt0107290",
+    "image": "https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Jurassic Park",
+    "description": "(1993)",
+    "runtimeStr": "127 min",
+    "genres": "Action, Adventure, Sci-Fi",
+    "contentRating": "PG-13",
+    "imDbRating": "8.2",
+    "imDbRatingVotes": "990183",
+    "metacriticRating": "68",
+    "plot": "A pragmatic paleontologist touring an almost complete theme park on an island in Central America is tasked with protecting a couple of kids after a power failure causes the park's cloned dinosaurs to run loose.",
+    "stars": "Steven Spielberg, Sam Neill, Laura Dern, Jeff Goldblum, Richard Attenborough",
+    "starList": [
+      {
+        "id": "tt0107290",
+        "name": "Steven Spielberg"
+      },
+      {
+        "id": "tt0107290",
+        "name": "Sam Neill"
+      },
+      {
+        "id": "tt0107290",
+        "name": "Laura Dern"
+      },
+      {
+        "id": "tt0107290",
+        "name": "Jeff Goldblum"
+      },
+      {
+        "id": "tt0107290",
+        "name": "Richard Attenborough"
+      }
+    ]
+  },
+  {
+    "id": "tt0112864",
+    "image": "https://m.media-amazon.com/images/M/MV5BZjI0ZWFiMmQtMjRlZi00ZmFhLWI4NmYtMjQ5YmY0MzIyMzRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Die Hard with a Vengeance",
+    "description": "(1995)",
+    "runtimeStr": "128 min",
+    "genres": "Action, Adventure, Thriller",
+    "contentRating": "R",
+    "imDbRating": "7.6",
+    "imDbRatingVotes": "390754",
+    "metacriticRating": "58",
+    "plot": "John McClane and a Harlem store owner are targeted by German terrorist Simon in New York City, where he plans to rob the Federal Reserve Building.",
+    "stars": "John McTiernan, Bruce Willis, Jeremy Irons, Samuel L. Jackson, Graham Greene",
+    "starList": [
+      {
+        "id": "tt0112864",
+        "name": "John McTiernan"
+      },
+      {
+        "id": "tt0112864",
+        "name": "Bruce Willis"
+      },
+      {
+        "id": "tt0112864",
+        "name": "Jeremy Irons"
+      },
+      {
+        "id": "tt0112864",
+        "name": "Samuel L. Jackson"
+      },
+      {
+        "id": "tt0112864",
+        "name": "Graham Greene"
+      }
+    ]
+  },
+  {
+    "id": "tt3783958",
+    "image": "https://m.media-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_Ratio0.6837_AL_.jpg",
+    "title": "La La Land",
+    "description": "(2016)",
+    "runtimeStr": "128 min",
+    "genres": "Comedy, Drama, Music",
+    "contentRating": "PG-13",
+    "imDbRating": "8.0",
+    "imDbRatingVotes": "591063",
+    "metacriticRating": "94",
+    "plot": "While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations for the future.",
+    "stars": "Damien Chazelle, Ryan Gosling, Emma Stone, Rosemarie DeWitt, J.K. Simmons",
+    "starList": [
+      {
+        "id": "tt3783958",
+        "name": "Damien Chazelle"
+      },
+      {
+        "id": "tt3783958",
+        "name": "Ryan Gosling"
+      },
+      {
+        "id": "tt3783958",
+        "name": "Emma Stone"
+      },
+      {
+        "id": "tt3783958",
+        "name": "Rosemarie DeWitt"
+      },
+      {
+        "id": "tt3783958",
+        "name": "J.K. Simmons"
+      }
+    ]
+  },
+  {
+    "id": "tt0126029",
+    "image": "https://m.media-amazon.com/images/M/MV5BOGZhM2FhNTItODAzNi00YjA0LWEyN2UtNjJlYWQzYzU1MDg5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Shrek",
+    "description": "(2001)",
+    "runtimeStr": "90 min",
+    "genres": "Animation, Adventure, Comedy",
+    "contentRating": "PG",
+    "imDbRating": "7.9",
+    "imDbRatingVotes": "680428",
+    "metacriticRating": "84",
+    "plot": "A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back.",
+    "stars": "Andrew Adamson, Vicky Jenson, Mike Myers, Eddie Murphy, Cameron Diaz, John Lithgow",
+    "starList": [
+      {
+        "id": "tt0126029",
+        "name": "Andrew Adamson"
+      },
+      {
+        "id": "tt0126029",
+        "name": "Vicky Jenson"
+      },
+      {
+        "id": "tt0126029",
+        "name": "Mike Myers"
+      },
+      {
+        "id": "tt0126029",
+        "name": "Eddie Murphy"
+      },
+      {
+        "id": "tt0126029",
+        "name": "Cameron Diaz"
+      },
+      {
+        "id": "tt0126029",
+        "name": "John Lithgow"
+      }
+    ]
+  },
+  {
+    "id": "tt0167261",
+    "image": "https://m.media-amazon.com/images/M/MV5BZGMxZTdjZmYtMmE2Ni00ZTdkLWI5NTgtNjlmMjBiNzU2MmI5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Lord of the Rings: The Two Towers",
+    "description": "(2002)",
+    "runtimeStr": "179 min",
+    "genres": "Action, Adventure, Drama",
+    "contentRating": "PG-13",
+    "imDbRating": "8.8",
+    "imDbRatingVotes": "1667340",
+    "metacriticRating": "87",
+    "plot": "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.",
+    "stars": "Peter Jackson, Elijah Wood, Ian McKellen, Viggo Mortensen, Orlando Bloom",
+    "starList": [
+      {
+        "id": "tt0167261",
+        "name": "Peter Jackson"
+      },
+      {
+        "id": "tt0167261",
+        "name": "Elijah Wood"
+      },
+      {
+        "id": "tt0167261",
+        "name": "Ian McKellen"
+      },
+      {
+        "id": "tt0167261",
+        "name": "Viggo Mortensen"
+      },
+      {
+        "id": "tt0167261",
+        "name": "Orlando Bloom"
+      }
+    ]
+  },
+  {
+    "id": "tt7286456",
+    "image": "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Joker",
+    "description": "(I) (2019)",
+    "runtimeStr": "122 min",
+    "genres": "Crime, Drama, Thriller",
+    "contentRating": "R",
+    "imDbRating": "8.4",
+    "imDbRatingVotes": "1285758",
+    "metacriticRating": "59",
+    "plot": "A mentally troubled stand-up comedian embarks on a downward spiral that leads to the creation of an iconic villain.",
+    "stars": "Todd Phillips, Joaquin Phoenix, Robert De Niro, Zazie Beetz, Frances Conroy",
+    "starList": [
+      {
+        "id": "tt7286456",
+        "name": "Todd Phillips"
+      },
+      {
+        "id": "tt7286456",
+        "name": "Joaquin Phoenix"
+      },
+      {
+        "id": "tt7286456",
+        "name": "Robert De Niro"
+      },
+      {
+        "id": "tt7286456",
+        "name": "Zazie Beetz"
+      },
+      {
+        "id": "tt7286456",
+        "name": "Frances Conroy"
+      }
+    ]
+  },
+  {
+    "id": "tt0054047",
+    "image": "https://m.media-amazon.com/images/M/MV5BMzYyNzU0MTM1OF5BMl5BanBnXkFtZTcwMzE1ODE1NA@@._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Magnificent Seven",
+    "description": "(1960)",
+    "runtimeStr": "128 min",
+    "genres": "Action, Adventure, Western",
+    "contentRating": "Approved",
+    "imDbRating": "7.7",
+    "imDbRatingVotes": "96273",
+    "metacriticRating": "74",
+    "plot": "Seven gunfighters are hired by Mexican peasants to liberate their village from oppressive bandits.",
+    "stars": "John Sturges, Yul Brynner, Steve McQueen, Charles Bronson, Eli Wallach",
+    "starList": [
+      {
+        "id": "tt0054047",
+        "name": "John Sturges"
+      },
+      {
+        "id": "tt0054047",
+        "name": "Yul Brynner"
+      },
+      {
+        "id": "tt0054047",
+        "name": "Steve McQueen"
+      },
+      {
+        "id": "tt0054047",
+        "name": "Charles Bronson"
+      },
+      {
+        "id": "tt0054047",
+        "name": "Eli Wallach"
+      }
+    ]
+  },
+  {
+    "id": "tt0110413",
+    "image": "https://m.media-amazon.com/images/M/MV5BOTgyMWQ0ZWUtN2Q2MS00NmY0LWI3OWMtNjFkMzZlNDZjNTk0XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Léon: The Professional",
+    "description": "(1994)",
+    "runtimeStr": "110 min",
+    "genres": "Action, Crime, Drama",
+    "contentRating": "R",
+    "imDbRating": "8.5",
+    "imDbRatingVotes": "1162093",
+    "metacriticRating": "64",
+    "plot": "12-year-old Mathilda is reluctantly taken in by Léon, a professional assassin, after her family is murdered. An unusual relationship forms as she becomes his protégée and learns the assassin's trade.",
+    "stars": "Luc Besson, Jean Reno, Gary Oldman, Natalie Portman, Danny Aiello",
+    "starList": [
+      {
+        "id": "tt0110413",
+        "name": "Luc Besson"
+      },
+      {
+        "id": "tt0110413",
+        "name": "Jean Reno"
+      },
+      {
+        "id": "tt0110413",
+        "name": "Gary Oldman"
+      },
+      {
+        "id": "tt0110413",
+        "name": "Natalie Portman"
+      },
+      {
+        "id": "tt0110413",
+        "name": "Danny Aiello"
+      }
+    ]
+  },
+  {
+    "id": "tt2278388",
+    "image": "https://m.media-amazon.com/images/M/MV5BMzM5NjUxOTEyMl5BMl5BanBnXkFtZTgwNjEyMDM0MDE@._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Grand Budapest Hotel",
+    "description": "(2014)",
+    "runtimeStr": "99 min",
+    "genres": "Adventure, Comedy, Crime",
+    "contentRating": "R",
+    "imDbRating": "8.1",
+    "imDbRatingVotes": "812361",
+    "metacriticRating": "88",
+    "plot": "A writer encounters the owner of an aging high-class hotel, who tells him of his early years serving as a lobby boy in the hotel's glorious years under an exceptional concierge.",
+    "stars": "Wes Anderson, Ralph Fiennes, F. Murray Abraham, Mathieu Amalric, Adrien Brody",
+    "starList": [
+      {
+        "id": "tt2278388",
+        "name": "Wes Anderson"
+      },
+      {
+        "id": "tt2278388",
+        "name": "Ralph Fiennes"
+      },
+      {
+        "id": "tt2278388",
         "name": "F. Murray Abraham"
       },
       {
-        "id": "tt0086879",
-        "name": "Tom Hulce"
+        "id": "tt2278388",
+        "name": "Mathieu Amalric"
       },
       {
-        "id": "tt0086879",
-        "name": "Elizabeth Berridge"
-      },
-      {
-        "id": "tt0086879",
-        "name": "Roy Dotrice"
+        "id": "tt2278388",
+        "name": "Adrien Brody"
       }
     ]
   },
   {
-    "id": "tt0056172",
-    "image": "https://m.media-amazon.com/images/M/MV5BYWY5ZjhjNGYtZmI2Ny00ODM0LWFkNzgtZmI1YzA2N2MxMzA0XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_Ratio0.6837_AL_.jpg",
-    "title": "Lawrence of Arabia",
-    "description": "(1962)",
-    "runtimeStr": "218 min",
-    "genres": "Adventure, Biography, Drama",
-    "contentRating": "Approved",
-    "imDbRating": "8.3",
-    "imDbRatingVotes": "294250",
-    "metacriticRating": "100",
-    "plot": "The story of T.E. Lawrence, the English officer who successfully united and led the diverse, often warring, Arab tribes during World War I in order to fight the Turks.",
-    "stars": "David Lean, Peter O'Toole, Alec Guinness, Anthony Quinn, Jack Hawkins",
+    "id": "tt0099487",
+    "image": "https://m.media-amazon.com/images/M/MV5BMWY2MGRkNjgtZDczNi00YWJjLTkwNmUtMTY0NTE5ZDhkZjgwXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Edward Scissorhands",
+    "description": "(1990)",
+    "runtimeStr": "105 min",
+    "genres": "Drama, Fantasy, Romance",
+    "contentRating": "PG-13",
+    "imDbRating": "7.9",
+    "imDbRatingVotes": "494981",
+    "metacriticRating": "74",
+    "plot": "An artificial man, who was incompletely constructed and has scissors for hands, leads a solitary life. Then one day, a suburban lady meets him and introduces him to her world.",
+    "stars": "Tim Burton, Johnny Depp, Winona Ryder, Dianne Wiest, Anthony Michael Hall",
     "starList": [
       {
-        "id": "tt0056172",
-        "name": "David Lean"
+        "id": "tt0099487",
+        "name": "Tim Burton"
       },
       {
-        "id": "tt0056172",
-        "name": "Peter O'Toole"
+        "id": "tt0099487",
+        "name": "Johnny Depp"
       },
       {
-        "id": "tt0056172",
-        "name": "Alec Guinness"
+        "id": "tt0099487",
+        "name": "Winona Ryder"
       },
       {
-        "id": "tt0056172",
-        "name": "Anthony Quinn"
+        "id": "tt0099487",
+        "name": "Dianne Wiest"
       },
       {
-        "id": "tt0056172",
-        "name": "Jack Hawkins"
+        "id": "tt0099487",
+        "name": "Anthony Michael Hall"
+      }
+    ]
+  },
+  {
+    "id": "tt0108052",
+    "image": "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Schindler's List",
+    "description": "(1993)",
+    "runtimeStr": "195 min",
+    "genres": "Biography, Drama, History",
+    "contentRating": "R",
+    "imDbRating": "9.0",
+    "imDbRatingVotes": "1355914",
+    "metacriticRating": "94",
+    "plot": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+    "stars": "Steven Spielberg, Liam Neeson, Ralph Fiennes, Ben Kingsley, Caroline Goodall",
+    "starList": [
+      {
+        "id": "tt0108052",
+        "name": "Steven Spielberg"
+      },
+      {
+        "id": "tt0108052",
+        "name": "Liam Neeson"
+      },
+      {
+        "id": "tt0108052",
+        "name": "Ralph Fiennes"
+      },
+      {
+        "id": "tt0108052",
+        "name": "Ben Kingsley"
+      },
+      {
+        "id": "tt0108052",
+        "name": "Caroline Goodall"
+      }
+    ]
+  },
+  {
+    "id": "tt1130884",
+    "image": "https://m.media-amazon.com/images/M/MV5BYzhiNDkyNzktNTZmYS00ZTBkLTk2MDAtM2U0YjU1MzgxZjgzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Shutter Island",
+    "description": "(2010)",
+    "runtimeStr": "138 min",
+    "genres": "Mystery, Thriller",
+    "contentRating": "R",
+    "imDbRating": "8.2",
+    "imDbRatingVotes": "1316204",
+    "metacriticRating": "63",
+    "plot": "In 1954, a U.S. Marshal investigates the disappearance of a murderer who escaped from a hospital for the criminally insane.",
+    "stars": "Martin Scorsese, Leonardo DiCaprio, Emily Mortimer, Mark Ruffalo, Ben Kingsley",
+    "starList": [
+      {
+        "id": "tt1130884",
+        "name": "Martin Scorsese"
+      },
+      {
+        "id": "tt1130884",
+        "name": "Leonardo DiCaprio"
+      },
+      {
+        "id": "tt1130884",
+        "name": "Emily Mortimer"
+      },
+      {
+        "id": "tt1130884",
+        "name": "Mark Ruffalo"
+      },
+      {
+        "id": "tt1130884",
+        "name": "Ben Kingsley"
+      }
+    ]
+  },
+  {
+    "id": "tt0067992",
+    "image": "https://m.media-amazon.com/images/M/MV5BZTllNDU0ZTItYTYxMC00OTI4LThlNDAtZjNiNzdhMWZiYjNmXkEyXkFqcGdeQXVyNzY1NDgwNjQ@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Willy Wonka & the Chocolate Factory",
+    "description": "(1971)",
+    "runtimeStr": "100 min",
+    "genres": "Family, Fantasy, Musical",
+    "contentRating": "G",
+    "imDbRating": "7.8",
+    "imDbRatingVotes": "204611",
+    "metacriticRating": "67",
+    "plot": "A poor but hopeful boy seeks one of the five coveted golden tickets that will send him on a tour of Willy Wonka's mysterious chocolate factory.",
+    "stars": "Mel Stuart, Gene Wilder, Jack Albertson, Peter Ostrum, Roy Kinnear",
+    "starList": [
+      {
+        "id": "tt0067992",
+        "name": "Mel Stuart"
+      },
+      {
+        "id": "tt0067992",
+        "name": "Gene Wilder"
+      },
+      {
+        "id": "tt0067992",
+        "name": "Jack Albertson"
+      },
+      {
+        "id": "tt0067992",
+        "name": "Peter Ostrum"
+      },
+      {
+        "id": "tt0067992",
+        "name": "Roy Kinnear"
+      }
+    ]
+  },
+  {
+    "id": "tt4912910",
+    "image": "https://m.media-amazon.com/images/M/MV5BNjRlZmM0ODktY2RjNS00ZDdjLWJhZGYtNDljNWZkMGM5MTg0XkEyXkFqcGdeQXVyNjAwMjI5MDk@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Mission: Impossible - Fallout",
+    "description": "(2018)",
+    "runtimeStr": "147 min",
+    "genres": "Action, Adventure, Thriller",
+    "contentRating": "PG-13",
+    "imDbRating": "7.7",
+    "imDbRatingVotes": "335105",
+    "metacriticRating": "86",
+    "plot": "Ethan Hunt and his IMF team, along with some familiar allies, race against time after a mission gone wrong.",
+    "stars": "Christopher McQuarrie, Tom Cruise, Henry Cavill, Ving Rhames, Simon Pegg",
+    "starList": [
+      {
+        "id": "tt4912910",
+        "name": "Christopher McQuarrie"
+      },
+      {
+        "id": "tt4912910",
+        "name": "Tom Cruise"
+      },
+      {
+        "id": "tt4912910",
+        "name": "Henry Cavill"
+      },
+      {
+        "id": "tt4912910",
+        "name": "Ving Rhames"
+      },
+      {
+        "id": "tt4912910",
+        "name": "Simon Pegg"
+      }
+    ]
+  },
+  {
+    "id": "tt0117381",
+    "image": "https://m.media-amazon.com/images/M/MV5BZTM2NWI2OGYtYWNhMi00ZTlmLTg2ZTAtMmI5NWRjODA5YTE1XkEyXkFqcGdeQXVyODE2OTYwNTg@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Primal Fear",
+    "description": "(1996)",
+    "runtimeStr": "129 min",
+    "genres": "Crime, Drama, Mystery",
+    "contentRating": "R",
+    "imDbRating": "7.7",
+    "imDbRatingVotes": "222075",
+    "metacriticRating": "47",
+    "plot": "An altar boy is accused of murdering a priest, and the truth is buried several layers deep.",
+    "stars": "Gregory Hoblit, Richard Gere, Laura Linney, Edward Norton, John Mahoney",
+    "starList": [
+      {
+        "id": "tt0117381",
+        "name": "Gregory Hoblit"
+      },
+      {
+        "id": "tt0117381",
+        "name": "Richard Gere"
+      },
+      {
+        "id": "tt0117381",
+        "name": "Laura Linney"
+      },
+      {
+        "id": "tt0117381",
+        "name": "Edward Norton"
+      },
+      {
+        "id": "tt0117381",
+        "name": "John Mahoney"
+      }
+    ]
+  },
+  {
+    "id": "tt0108358",
+    "image": "https://m.media-amazon.com/images/M/MV5BODRkYzA4MGItODE2MC00ZjkwLWI2NDEtYzU1NzFiZGU1YzA0XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Tombstone",
+    "description": "(1993)",
+    "runtimeStr": "130 min",
+    "genres": "Biography, Drama, History",
+    "contentRating": "R",
+    "imDbRating": "7.8",
+    "imDbRatingVotes": "151311",
+    "metacriticRating": "50",
+    "plot": "A successful lawman's plans to retire anonymously in Tombstone, Arizona are disrupted by the kind of outlaws he was famous for eliminating.",
+    "stars": "George P. Cosmatos, Kevin Jarre, Kurt Russell, Val Kilmer, Sam Elliott, Bill Paxton",
+    "starList": [
+      {
+        "id": "tt0108358",
+        "name": "George P. Cosmatos"
+      },
+      {
+        "id": "tt0108358",
+        "name": "Kevin Jarre"
+      },
+      {
+        "id": "tt0108358",
+        "name": "Kurt Russell"
+      },
+      {
+        "id": "tt0108358",
+        "name": "Val Kilmer"
+      },
+      {
+        "id": "tt0108358",
+        "name": "Sam Elliott"
+      },
+      {
+        "id": "tt0108358",
+        "name": "Bill Paxton"
+      }
+    ]
+  },
+  {
+    "id": "tt0078748",
+    "image": "https://m.media-amazon.com/images/M/MV5BOGQzZTBjMjQtOTVmMS00NGE5LWEyYmMtOGQ1ZGZjNmRkYjFhXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Alien",
+    "description": "(1979)",
+    "runtimeStr": "117 min",
+    "genres": "Horror, Sci-Fi",
+    "contentRating": "R",
+    "imDbRating": "8.5",
+    "imDbRatingVotes": "884335",
+    "metacriticRating": "89",
+    "plot": "The crew of a commercial spacecraft encounter a deadly lifeform after investigating an unknown transmission.",
+    "stars": "Ridley Scott, Sigourney Weaver, Tom Skerritt, John Hurt, Veronica Cartwright",
+    "starList": [
+      {
+        "id": "tt0078748",
+        "name": "Ridley Scott"
+      },
+      {
+        "id": "tt0078748",
+        "name": "Sigourney Weaver"
+      },
+      {
+        "id": "tt0078748",
+        "name": "Tom Skerritt"
+      },
+      {
+        "id": "tt0078748",
+        "name": "John Hurt"
+      },
+      {
+        "id": "tt0078748",
+        "name": "Veronica Cartwright"
+      }
+    ]
+  },
+  {
+    "id": "tt10370710",
+    "image": "https://m.media-amazon.com/images/M/MV5BOGZlODBlMzgtYzdmMC00ZDk0LWI0ZWQtOGJmNTcyNDYzY2EwXkEyXkFqcGdeQXVyMTI3ODAyMzE2._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Worst Person in the World",
+    "description": "(2021)",
+    "runtimeStr": "128 min",
+    "genres": "Comedy, Drama, Romance",
+    "contentRating": "R",
+    "imDbRating": "7.8",
+    "imDbRatingVotes": "69576",
+    "metacriticRating": "90",
+    "plot": "The chronicles of four years in the life of Julie, a young woman who navigates the troubled waters of her love life and struggles to find her career path, leading her to take a realistic look at who she really is.",
+    "stars": "Joachim Trier, Renate Reinsve, Anders Danielsen Lie, Herbert Nordrum, Hans Olav Brenner",
+    "starList": [
+      {
+        "id": "tt10370710",
+        "name": "Joachim Trier"
+      },
+      {
+        "id": "tt10370710",
+        "name": "Renate Reinsve"
+      },
+      {
+        "id": "tt10370710",
+        "name": "Anders Danielsen Lie"
+      },
+      {
+        "id": "tt10370710",
+        "name": "Herbert Nordrum"
+      },
+      {
+        "id": "tt10370710",
+        "name": "Hans Olav Brenner"
+      }
+    ]
+  },
+  {
+    "id": "tt0407887",
+    "image": "https://m.media-amazon.com/images/M/MV5BMTI1MTY2OTIxNV5BMl5BanBnXkFtZTYwNjQ4NjY3._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Departed",
+    "description": "(2006)",
+    "runtimeStr": "151 min",
+    "genres": "Crime, Drama, Thriller",
+    "contentRating": "R",
+    "imDbRating": "8.5",
+    "imDbRatingVotes": "1326358",
+    "metacriticRating": "85",
+    "plot": "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.",
+    "stars": "Martin Scorsese, Leonardo DiCaprio, Matt Damon, Jack Nicholson, Mark Wahlberg",
+    "starList": [
+      {
+        "id": "tt0407887",
+        "name": "Martin Scorsese"
+      },
+      {
+        "id": "tt0407887",
+        "name": "Leonardo DiCaprio"
+      },
+      {
+        "id": "tt0407887",
+        "name": "Matt Damon"
+      },
+      {
+        "id": "tt0407887",
+        "name": "Jack Nicholson"
+      },
+      {
+        "id": "tt0407887",
+        "name": "Mark Wahlberg"
+      }
+    ]
+  },
+  {
+    "id": "tt0114369",
+    "image": "https://m.media-amazon.com/images/M/MV5BOTUwODM5MTctZjczMi00OTk4LTg3NWUtNmVhMTAzNTNjYjcyXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_Ratio0.6837_AL_.jpg",
+    "title": "Se7en",
+    "description": "(1995)",
+    "runtimeStr": "127 min",
+    "genres": "Crime, Drama, Mystery",
+    "contentRating": "R",
+    "imDbRating": "8.6",
+    "imDbRatingVotes": "1652887",
+    "metacriticRating": "65",
+    "plot": "Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.",
+    "stars": "David Fincher, Morgan Freeman, Brad Pitt, Kevin Spacey, Andrew Kevin Walker",
+    "starList": [
+      {
+        "id": "tt0114369",
+        "name": "David Fincher"
+      },
+      {
+        "id": "tt0114369",
+        "name": "Morgan Freeman"
+      },
+      {
+        "id": "tt0114369",
+        "name": "Brad Pitt"
+      },
+      {
+        "id": "tt0114369",
+        "name": "Kevin Spacey"
+      },
+      {
+        "id": "tt0114369",
+        "name": "Andrew Kevin Walker"
+      }
+    ]
+  },
+  {
+    "id": "tt0482571",
+    "image": "https://m.media-amazon.com/images/M/MV5BMjA4NDI0MTIxNF5BMl5BanBnXkFtZTYwNTM0MzY2._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Prestige",
+    "description": "(2006)",
+    "runtimeStr": "130 min",
+    "genres": "Drama, Mystery, Sci-Fi",
+    "contentRating": "PG-13",
+    "imDbRating": "8.5",
+    "imDbRatingVotes": "1334231",
+    "metacriticRating": "66",
+    "plot": "After a tragic accident, two stage magicians in 1890s London engage in a battle to create the ultimate illusion while sacrificing everything they have to outwit each other.",
+    "stars": "Christopher Nolan, Christian Bale, Hugh Jackman, Scarlett Johansson, Michael Caine",
+    "starList": [
+      {
+        "id": "tt0482571",
+        "name": "Christopher Nolan"
+      },
+      {
+        "id": "tt0482571",
+        "name": "Christian Bale"
+      },
+      {
+        "id": "tt0482571",
+        "name": "Hugh Jackman"
+      },
+      {
+        "id": "tt0482571",
+        "name": "Scarlett Johansson"
+      },
+      {
+        "id": "tt0482571",
+        "name": "Michael Caine"
+      }
+    ]
+  },
+  {
+    "id": "tt0120689",
+    "image": "https://m.media-amazon.com/images/M/MV5BMTUxMzQyNjA5MF5BMl5BanBnXkFtZTYwOTU2NTY3._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Green Mile",
+    "description": "(1999)",
+    "runtimeStr": "189 min",
+    "genres": "Crime, Drama, Fantasy",
+    "contentRating": "R",
+    "imDbRating": "8.6",
+    "imDbRatingVotes": "1302613",
+    "metacriticRating": "61",
+    "plot": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.",
+    "stars": "Frank Darabont, Tom Hanks, Michael Clarke Duncan, David Morse, Bonnie Hunt",
+    "starList": [
+      {
+        "id": "tt0120689",
+        "name": "Frank Darabont"
+      },
+      {
+        "id": "tt0120689",
+        "name": "Tom Hanks"
+      },
+      {
+        "id": "tt0120689",
+        "name": "Michael Clarke Duncan"
+      },
+      {
+        "id": "tt0120689",
+        "name": "David Morse"
+      },
+      {
+        "id": "tt0120689",
+        "name": "Bonnie Hunt"
+      }
+    ]
+  },
+  {
+    "id": "tt3460252",
+    "image": "https://m.media-amazon.com/images/M/MV5BMjA1MTc1NTg5NV5BMl5BanBnXkFtZTgwOTM2MDEzNzE@._V1_Ratio0.6837_AL_.jpg",
+    "title": "The Hateful Eight",
+    "description": "(2015)",
+    "runtimeStr": "168 min",
+    "genres": "Crime, Drama, Mystery",
+    "contentRating": "R",
+    "imDbRating": "7.8",
+    "imDbRatingVotes": "604616",
+    "metacriticRating": "68",
+    "plot": "In the dead of a Wyoming winter, a bounty hunter and his prisoner find shelter in a cabin currently inhabited by a collection of nefarious characters.",
+    "stars": "Quentin Tarantino, Samuel L. Jackson, Kurt Russell, Jennifer Jason Leigh, Walton Goggins",
+    "starList": [
+      {
+        "id": "tt3460252",
+        "name": "Quentin Tarantino"
+      },
+      {
+        "id": "tt3460252",
+        "name": "Samuel L. Jackson"
+      },
+      {
+        "id": "tt3460252",
+        "name": "Kurt Russell"
+      },
+      {
+        "id": "tt3460252",
+        "name": "Jennifer Jason Leigh"
+      },
+      {
+        "id": "tt3460252",
+        "name": "Walton Goggins"
       }
     ]
   }
