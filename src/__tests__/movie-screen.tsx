@@ -9,7 +9,7 @@ import {
   waitForLoadingToFinish,
 } from 'mocks/test-utils'
 import {buildMovie, buildLogEntry} from 'mocks/build'
-import * as session from 'services/session'
+import * as userService from 'services/user'
 import * as moviesDB from 'mocks/data/movies'
 import * as logEntriesDB from 'mocks/data/log-entries'
 import {formatNumberString} from 'utils/misc'
@@ -21,7 +21,7 @@ import {LogEntry} from 'types/log-entry'
 const apiUrl = process.env.REACT_APP_API_URL
 
 afterEach(async () => {
-  await session.logout()
+  await userService.logout()
 })
 
 type RenderParams = {

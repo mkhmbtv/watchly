@@ -1,4 +1,4 @@
-import * as session from 'services/session'
+import * as userService from 'services/user'
 
 type ClientOptions = {
   data?: Record<string, unknown>
@@ -29,7 +29,7 @@ function client<TResponse>(
     .fetch(`${process.env.REACT_APP_API_URL}/${endpoint}`, config)
     .then(async response => {
       if (response.status === 401) {
-        await session.logout()
+        await userService.logout()
         window.location.assign(window.location.href)
         return Promise.reject({message: 'Please re-authenticate'})
       }

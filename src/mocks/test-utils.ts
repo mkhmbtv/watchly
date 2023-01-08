@@ -7,7 +7,7 @@ import {
 import userEvent from '@testing-library/user-event'
 import {buildUser} from 'mocks/build'
 import * as usersDB from 'mocks/data/users'
-import * as session from 'services/session'
+import * as userService from 'services/user'
 import {AppProviders} from 'context'
 import {AuthUser, UserCredentialsWithId} from 'types/user'
 
@@ -27,7 +27,7 @@ async function loginAsUser(userProperties?: Partial<UserCredentialsWithId>) {
   const user = buildUser(userProperties)
   await usersDB.create(user)
   const authUser = await usersDB.authenticate(user)
-  window.localStorage.setItem(session.localStorageKey, authUser.token)
+  window.localStorage.setItem(userService.localStorageKey, authUser.token)
   return authUser
 }
 

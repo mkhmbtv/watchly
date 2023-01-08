@@ -1,8 +1,8 @@
 import {rest, server, RestRequest} from 'mocks/server/test-server'
 import {client} from '../api-client'
-import * as session from 'services/session'
+import * as userService from 'services/user'
 
-jest.mock('services/session')
+jest.mock('services/user')
 
 const apiUrl = process.env.REACT_APP_API_URL
 
@@ -96,5 +96,5 @@ test('logs the user out if the request returns a status of 401', async () => {
   const error = (await client(endpoint).catch(e => e)) as {message: string}
 
   expect(error.message).toMatchInlineSnapshot(`"Please re-authenticate"`)
-  expect(session.logout).toHaveBeenCalledTimes(1)
+  expect(userService.logout).toHaveBeenCalledTimes(1)
 })

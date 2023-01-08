@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as session from 'services/session'
+import * as userService from 'services/user'
 import {useQueryClient} from 'react-query'
 import {AuthUser, UserCredentials} from 'types/user'
 import {useAsync} from 'hooks/useAsync'
@@ -33,22 +33,22 @@ function AuthProvider({children}: {children: React.ReactNode}) {
 
   const login = React.useCallback(
     (formData: UserCredentials) =>
-      session.login(formData).then(user => setData(user)),
+      userService.login(formData).then(user => setData(user)),
     [setData],
   )
   const register = React.useCallback(
     (formData: UserCredentials) =>
-      session.register(formData).then(user => setData(user)),
+      userService.register(formData).then(user => setData(user)),
     [setData],
   )
   const logout = React.useCallback(() => {
-    session.logout()
+    userService.logout()
     queryClient.clear()
     setData(null)
   }, [queryClient, setData])
 
   React.useEffect(() => {
-    const userDataPromise = session.getUserData(queryClient)
+    const userDataPromise = userService.getUserData(queryClient)
     run(userDataPromise)
   }, [queryClient, run])
 
