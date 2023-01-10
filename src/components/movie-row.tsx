@@ -31,10 +31,10 @@ function MovieRow({movie}: Props) {
             className="max-h-full w-full border-white border-4 border-solid hover:border-4 hover:border-solid hover:border-green-500"
           />
         </div>
-        <div className="flex-1 text-gray-800">
+        <div className="flex-1 text-gray-800 sm:w-10/12">
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-xl font-medium ">
+              <h2 className="text-xl font-medium">
                 {title}
                 <span className="ml-1 text-base font-thin">{description}</span>
               </h2>
@@ -50,7 +50,11 @@ function MovieRow({movie}: Props) {
         </div>
       </Link>
       {!movie.loadingMovie ? (
-        <div className="absolute left-36 bottom-5 flex gap-8 text-gray-500">
+        <div
+          className="absolute left-36 bottom-5 flex gap-8 text-gray-500
+          sm:flex-col sm:justify-around sm:gap-0 sm:bottom-0 sm:h-full sm:ml-5 sm:left-[88%]
+        "
+        >
           <StatusButtons movie={movie} />
         </div>
       ) : null}
