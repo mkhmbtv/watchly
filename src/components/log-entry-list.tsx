@@ -36,7 +36,7 @@ function LogEntryList({
   return (
     <ul>
       {filteredListItems?.map(li => (
-        <li key={li.id}>
+        <li key={li.id} aria-label={li.movie.title}>
           <MovieRow movie={li.movie} />
         </li>
       ))}

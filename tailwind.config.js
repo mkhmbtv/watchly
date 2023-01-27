@@ -29,11 +29,17 @@ module.exports = {
       red: {
         500: 'var(--color-red-500)',
       },
+      blue: {
+        500: 'var(--color-blue-500)',
+      },
       yellow: {
         500: 'var(--color-yellow-500)',
       },
       orange: {
         500: 'var(--color-orange-500)',
+      },
+      violet: {
+        500: 'var(--color-violet-500)',
       },
     },
     extend: {
